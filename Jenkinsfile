@@ -6,12 +6,7 @@ pipeline {
                         git 'https://github.com/CharlotteUppsall/AgilePeacock.git'
                     }
                 }
-            stage ('Build'){
-                steps {
-                    bat 'mvn compile'
-                   }
-                }
-          
+   
 stage('Robot Framework System tests with Selenium') {
             steps {
                 bat 'robot -d Results  Tests'
