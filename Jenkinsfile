@@ -3,7 +3,7 @@ pipeline {
             stages{
                 stage('Test 1'){
                     steps{
-                        git 'https://github.com/CharlotteUppsall/AgilePeacock.git'
+                        git 'https://github.com/OSKARHAGMAN/AgilePeacock.git'
                     }
                 }
    
