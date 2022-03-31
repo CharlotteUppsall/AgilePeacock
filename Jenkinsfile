@@ -1,11 +1,7 @@
 pipeline {
         agent any
             stages{
-                stage('Test 1'){
-                    steps{
-                        git 'https://github.com/OSKARHAGMAN/AgilePeacock.git'
-                    }
-                }
+      
    
 stage('Robot Framework') {
             steps {
