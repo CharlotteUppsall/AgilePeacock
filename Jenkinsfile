@@ -3,7 +3,7 @@ pipeline {
             stages{
                
    
-stage('Robot Framework System tests with Selenium') {
+stage('Robot Framework Login Test') {
             steps {
                 bat 'robot -d Results  Tests'
 
