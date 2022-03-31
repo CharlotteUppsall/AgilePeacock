@@ -1,14 +1,21 @@
 pipeline {
-    agent any
-    stages {
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/CharlotteUppsall/AgilePeacock.git'
-            }
-        }
-      stage('Robot Framework System tests with Selenium') {
+        agent any
+            stages{
+                stage('Checkout'){
+                    steps{
+                        git 'https://github.com/CharlotteUppsall/AgilePeacock.git'
+                    }
+                }
+            stage ('Build'){
+                steps {
+                    bat 'mvn compile'
+                   }
+                }
+          
+stage('Robot Framework System tests with Selenium') {
             steps {
                 bat 'robot -d Results  Tests'
+
             }
             post {
                 always {
@@ -30,5 +37,5 @@ pipeline {
                 }
             }
         }
+       }
     }
-}
