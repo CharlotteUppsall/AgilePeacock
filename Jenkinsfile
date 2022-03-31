@@ -1,15 +1,15 @@
 pipeline {
         agent any
             stages{
-                stage('Checkout'){
+                stage('Test 1'){
                     steps{
                         git 'https://github.com/CharlotteUppsall/AgilePeacock.git'
                     }
                 }
    
-stage('Robot Framework System tests with Selenium') {
+stage('Robot Framework') {
             steps {
-                bat 'robot -d Results  Tests'
+                bat 'robot -d Results Tests'
 
             }
             post {
