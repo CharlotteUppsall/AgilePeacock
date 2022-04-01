@@ -8,7 +8,7 @@ Start WebTest
     Maximize Browser Window
     Go To  https://app.labelf.ai/login
     Wait Until Page Contains  Labelf
-    Sleep  5s
+    Wait Until Page Contains Element  //*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/div
     Click Button  //*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/button[3]
 End WebTest
     Close All Browsers
