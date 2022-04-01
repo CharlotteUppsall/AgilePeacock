@@ -17,3 +17,6 @@ User Can Create New Model
 #    Scroll Element Into View  //*[@id="app"]/div[2]/div/div/div[2]/div/div[3]/div/div[3]/div/div[2]/div/div/div[2]/button/div
 #    Click Element  //*[@id="app"]/div[2]/div/div/div[2]/div/div[3]/div/div[3]/div/div[2]/div/div/div[2]/button/div
 #    Wait Until Page Contains  Please click on the column
+
+User Can Delete Model
+
