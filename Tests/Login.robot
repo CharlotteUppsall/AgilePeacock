@@ -5,8 +5,8 @@ Suite Setup  Start WebTest
 Suite Teardown  End WebTest
 *** Test Cases ***
 
-User Can Create New Model
-    Login Into Labelf
+# User Can Create New Model
+#    Login Into Labelf
 #    Wait Until Page Contains Element  //*[@id="app"]/div[7]/div[1]/main/div/div/div[1]/nav/div[1]/a/div
 #    Click Element  //*[@id="app"]/div[7]/div[1]/main/div/div/div[1]/nav/div[1]/a/div
 #    Wait Until Page Contains  Add a model
@@ -19,4 +19,11 @@ User Can Create New Model
 #    Wait Until Page Contains  Please click on the column
 
 User Can Delete Model
-
+    Login Into Labelf
+    Wait Until Page Contains  Models
+    Wait Until Page Contains Element  //*[@id="app"]/div[9]/div[1]/main/div/div/div[3]/div/div[1]/div/div/div/nav/div/div[3]/div/button
+    Click Button   //*[@id="app"]/div[9]/div[1]/main/div/div/div[3]/div/div[1]/div/div/div/nav/div/div[3]/div/button
+    Wait Until Page Contains Element  //*[@id="app"]/div[4]/div/div/div[2]/a
+    Click Element  //*[@id="app"]/div[4]/div/div/div[2]/a
+    Wait Until Page Contains Element  //*[@id="app"]/div[8]/div/div/div[3]/button
+    Click Button  //*[@id="app"]/div[8]/div/div/div[3]/button
