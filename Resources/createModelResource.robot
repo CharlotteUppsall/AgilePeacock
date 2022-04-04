@@ -15,17 +15,15 @@ Create Model
     Wait Until Page Contains Element  ${continuebutton}
     Click Element  ${continuebutton}
     Wait Until Page Contains Element  ${choosedatasetbutton}
-    #Sleep  5s
-    Click Button  ${choosedatasetbutton}
+    Sleep  5s
+    Click Element  ${choosedatasetbutton}
     Wait Until Page Contains Element  ${uploadpagecontinue}
-    #sleep  5s
+    Sleep  5s
     Click Element  ${uploadpagecontinue}
     Wait Until Page Contains Element  ${inputnametextfield}
-    #sleep  5s
     Clear Element Text  ${inputnametextfield}
     Input Text  ${inputnametextfield}  ${modelname}
     Click Element  ${createmodelbutton}
-   # sleep  5s
     Verify Created Model
 
 
