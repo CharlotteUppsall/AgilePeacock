@@ -23,7 +23,7 @@ Suite Teardown  End WebTest
 #    Verify Number Of Existing Models
 
 User Can Delete Model
-    Login Into Labelf
+    Login
     Wait Until Page Contains  Models
     Wait Until Page Contains Element  //*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div/div/div/nav/div/div[3]/div/button
     Click Button   //*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div/div/div/nav/div/div[3]/div/button

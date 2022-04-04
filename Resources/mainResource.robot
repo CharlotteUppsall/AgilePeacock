@@ -12,7 +12,7 @@ Start WebTest
     Click Button  //*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/button[3]
 End WebTest
     Close All Browsers
-Login Into Labelf
+Login
     Input Text  //*[@id="app"]/div/main/div/div/div/div/div/div[1]/form/div[1]/div[2]/div[1]/div/input   ${e-mail}
     Input Text  //*[@id="password"]  ${password}
     Wait Until Page Contains  Labelf
