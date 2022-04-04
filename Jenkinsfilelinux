@@ -14,7 +14,7 @@ stage('Robot Framework Login Test') {
                           step(
                                 [
                                   $class              : 'RobotPublisher',
-                                  outputPath          : 'results',
+                                  outputPath          : 'Results',
                                   outputFileName      : '**/output.xml',
                                   reportFileName      : '**/report.html',
                                   logFileName         : '**/log.html',
