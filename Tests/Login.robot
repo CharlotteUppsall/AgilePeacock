@@ -1,6 +1,7 @@
 *** Settings ***
 Library  SeleniumLibrary
 Resource  ../Resources/mainResource.robot
+Library  ../Scripts/remove_text.py
 Suite Setup  Start WebTest
 Suite Teardown  End WebTest
 *** Test Cases ***
@@ -21,9 +22,12 @@ Suite Teardown  End WebTest
 User Can Delete Model
     Login Into Labelf
     Wait Until Page Contains  Models
-    Wait Until Page Contains Element  //*[@id="app"]/div[9]/div[1]/main/div/div/div[3]/div/div[1]/div/div/div/nav/div/div[3]/div/button
-    Click Button   //*[@id="app"]/div[9]/div[1]/main/div/div/div[3]/div/div[1]/div/div/div/nav/div/div[3]/div/button
-    Wait Until Page Contains Element  //*[@id="app"]/div[4]/div/div/div[2]/a
-    Click Element  //*[@id="app"]/div[4]/div/div/div[2]/a
-    Wait Until Page Contains Element  //*[@id="app"]/div[8]/div/div/div[3]/button
-    Click Button  //*[@id="app"]/div[8]/div/div/div[3]/button
+    Wait Until Page Contains Element  //*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div/div/div/nav/div/div[3]/div/button
+    Click Button   //*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div/div/div/nav/div/div[3]/div/button
+    Wait Until Page Contains Element  //*[@id="app"]/div[2]/div/div/div[2]/a
+    Click Element  //*[@id="app"]/div[2]/div/div/div[2]/a
+    Wait Until Page Contains Element  //*[@id="app"]/div[6]/div/div/div[3]/button
+    Click Button  //*[@id="app"]/div[6]/div/div/div[3]/button
+    Wait Until Page Contains  You can create a new model by clicking the "NEW MODEL" button in the top right corner
+    Sleep  5s
+    Verify Number Of Existing Models
