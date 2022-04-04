@@ -5,8 +5,6 @@ Suite Setup  Start WebTest
 Suite Teardown  End WebTest
 *** Test Cases ***
 
-# User Can Create New Model
-#    Login Into Labelf
 #    Wait Until Page Contains Element  //*[@id="app"]/div[7]/div[1]/main/div/div/div[1]/nav/div[1]/a/div
 #    Click Element  //*[@id="app"]/div[7]/div[1]/main/div/div/div[1]/nav/div[1]/a/div
 #    Wait Until Page Contains  Add a model
