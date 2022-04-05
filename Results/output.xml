@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220405 14:44:18.950" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220405 14:48:41.793" rpa="false" schemaversion="2">
 <suite id="s1" name="Tests" source="C:\Users\hagma\PycharmProjects\AgilePeacock\Tests">
 <suite id="s1-s1" name="CreateModel" source="C:\Users\hagma\PycharmProjects\AgilePeacock\Tests\CreateModel.robot">
 <kw name="Start WebTest" library="mainResource" type="SETUP">
@@ -7,33 +7,33 @@
 <arg>about:blank</arg>
 <arg>headlesschrome</arg>
 <doc>Opens a new browser instance to the given ``url``.</doc>
-<msg timestamp="20220405 14:44:19.107" level="INFO">Opening browser 'headlesschrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20220405 14:44:19.107" endtime="20220405 14:44:20.193"/>
+<msg timestamp="20220405 14:48:41.952" level="INFO">Opening browser 'headlesschrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220405 14:48:41.952" endtime="20220405 14:48:43.262"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>https://app.labelf.ai/login</arg>
 <doc>Navigates the active browser instance to the provided ``url``.</doc>
-<msg timestamp="20220405 14:44:20.193" level="INFO">Opening url 'https://app.labelf.ai/login'</msg>
-<status status="PASS" starttime="20220405 14:44:20.193" endtime="20220405 14:44:21.251"/>
+<msg timestamp="20220405 14:48:43.262" level="INFO">Opening url 'https://app.labelf.ai/login'</msg>
+<status status="PASS" starttime="20220405 14:48:43.262" endtime="20220405 14:48:44.459"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220405 14:44:24.253" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220405 14:44:21.252" endtime="20220405 14:44:24.253"/>
+<msg timestamp="20220405 14:48:47.460" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220405 14:48:44.459" endtime="20220405 14:48:47.460"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>//*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/div</arg>
 <doc>Waits until element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220405 14:44:24.253" endtime="20220405 14:44:24.271"/>
+<status status="PASS" starttime="20220405 14:48:47.460" endtime="20220405 14:48:47.509"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>//*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/button[3]</arg>
 <doc>Clicks button identified by ``locator``.</doc>
-<msg timestamp="20220405 14:44:24.271" level="INFO">Clicking button '//*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/button[3]'.</msg>
-<status status="PASS" starttime="20220405 14:44:24.271" endtime="20220405 14:44:24.317"/>
+<msg timestamp="20220405 14:48:47.510" level="INFO">Clicking button '//*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/button[3]'.</msg>
+<status status="PASS" starttime="20220405 14:48:47.509" endtime="20220405 14:48:47.594"/>
 </kw>
-<status status="PASS" starttime="20220405 14:44:19.107" endtime="20220405 14:44:24.317"/>
+<status status="PASS" starttime="20220405 14:48:41.951" endtime="20220405 14:48:47.595"/>
 </kw>
 <test id="s1-s1-t1" name="User Can Create A Model">
 <kw name="Login" library="mainResource">
@@ -41,157 +41,157 @@
 <arg>//*[@id="app"]/div/main/div/div/div/div/div/div[1]/form/div[1]/div[2]/div[1]/div/input</arg>
 <arg>${e-mail}</arg>
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<msg timestamp="20220405 14:44:24.319" level="INFO">Typing text 'oskar.hagman@iths.se' into text field '//*[@id="app"]/div/main/div/div/div/div/div/div[1]/form/div[1]/div[2]/div[1]/div/input'.</msg>
-<status status="PASS" starttime="20220405 14:44:24.319" endtime="20220405 14:44:24.485"/>
+<msg timestamp="20220405 14:48:47.596" level="INFO">Typing text 'oskar.hagman@iths.se' into text field '//*[@id="app"]/div/main/div/div/div/div/div/div[1]/form/div[1]/div[2]/div[1]/div/input'.</msg>
+<status status="PASS" starttime="20220405 14:48:47.596" endtime="20220405 14:48:47.784"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//*[@id="password"]</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<msg timestamp="20220405 14:44:24.485" level="INFO">Typing text '123456789' into text field '//*[@id="password"]'.</msg>
-<status status="PASS" starttime="20220405 14:44:24.485" endtime="20220405 14:44:24.583"/>
+<msg timestamp="20220405 14:48:47.785" level="INFO">Typing text '123456789' into text field '//*[@id="password"]'.</msg>
+<status status="PASS" starttime="20220405 14:48:47.784" endtime="20220405 14:48:47.879"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Labelf</arg>
 <doc>Waits until ``text`` appears on current page.</doc>
-<status status="PASS" starttime="20220405 14:44:24.583" endtime="20220405 14:44:24.592"/>
+<status status="PASS" starttime="20220405 14:48:47.880" endtime="20220405 14:48:47.889"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>//*[@id="app"]/div/main/div/div/div/div/div/div[2]/button[2]</arg>
 <doc>Click element identified by ``locator``.</doc>
-<msg timestamp="20220405 14:44:24.592" level="INFO">Clicking element '//*[@id="app"]/div/main/div/div/div/div/div/div[2]/button[2]'.</msg>
-<status status="PASS" starttime="20220405 14:44:24.592" endtime="20220405 14:44:24.635"/>
+<msg timestamp="20220405 14:48:47.889" level="INFO">Clicking element '//*[@id="app"]/div/main/div/div/div/div/div/div[2]/button[2]'.</msg>
+<status status="PASS" starttime="20220405 14:48:47.889" endtime="20220405 14:48:47.932"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Models</arg>
 <doc>Waits until ``text`` appears on current page.</doc>
-<status status="PASS" starttime="20220405 14:44:24.635" endtime="20220405 14:44:25.086"/>
+<status status="PASS" starttime="20220405 14:48:47.932" endtime="20220405 14:48:48.359"/>
 </kw>
-<status status="PASS" starttime="20220405 14:44:24.318" endtime="20220405 14:44:25.086"/>
+<status status="PASS" starttime="20220405 14:48:47.596" endtime="20220405 14:48:48.359"/>
 </kw>
 <kw name="Create Model" library="createModelResource">
 <kw name="Press Create New Model" library="createModelResource">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${newmodelbutton}</arg>
 <doc>Waits until element ``locator`` appears on current page.</doc>
-<status status="PASS" starttime="20220405 14:44:25.088" endtime="20220405 14:44:25.100"/>
+<status status="PASS" starttime="20220405 14:48:48.360" endtime="20220405 14:48:48.580"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${newmodelbutton}</arg>
 <doc>Click element identified by ``locator``.</doc>
-<msg timestamp="20220405 14:44:25.100" level="INFO">Clicking element '//*[@id="app"]/div[6]/div[1]/main/div/div/div[1]/nav/div[1]/a'.</msg>
-<status status="PASS" starttime="20220405 14:44:25.100" endtime="20220405 14:44:25.144"/>
+<msg timestamp="20220405 14:48:48.581" level="INFO">Clicking element '//*[@id="app"]/div[6]/div[1]/main/div/div/div[1]/nav/div[1]/a'.</msg>
+<status status="PASS" starttime="20220405 14:48:48.580" endtime="20220405 14:48:48.614"/>
 </kw>
-<status status="PASS" starttime="20220405 14:44:25.088" endtime="20220405 14:44:25.144"/>
+<status status="PASS" starttime="20220405 14:48:48.360" endtime="20220405 14:48:48.615"/>
 </kw>
 <kw name="Press Continue To Model Creation" library="createModelResource">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${continuebutton}</arg>
 <doc>Waits until element ``locator`` appears on current page.</doc>
-<status status="PASS" starttime="20220405 14:44:25.144" endtime="20220405 14:44:25.374"/>
+<status status="PASS" starttime="20220405 14:48:48.615" endtime="20220405 14:48:48.827"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${continuebutton}</arg>
 <doc>Click element identified by ``locator``.</doc>
-<msg timestamp="20220405 14:44:25.375" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[1]/div/div/div[2]'.</msg>
-<status status="PASS" starttime="20220405 14:44:25.375" endtime="20220405 14:44:25.466"/>
+<msg timestamp="20220405 14:48:48.827" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[1]/div/div/div[2]'.</msg>
+<status status="PASS" starttime="20220405 14:48:48.827" endtime="20220405 14:48:48.914"/>
 </kw>
-<status status="PASS" starttime="20220405 14:44:25.144" endtime="20220405 14:44:25.466"/>
+<status status="PASS" starttime="20220405 14:48:48.615" endtime="20220405 14:48:48.914"/>
 </kw>
 <kw name="Press Dataset Button" library="createModelResource">
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <arg>${choosedatasetbutton}</arg>
 <doc>Scrolls an element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20220405 14:44:25.466" endtime="20220405 14:44:25.755"/>
+<status status="PASS" starttime="20220405 14:48:48.915" endtime="20220405 14:48:49.197"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${choosedatasetbutton}</arg>
 <doc>Waits until element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220405 14:44:25.755" endtime="20220405 14:44:25.768"/>
+<status status="PASS" starttime="20220405 14:48:49.197" endtime="20220405 14:48:49.211"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${choosedatasetbutton}</arg>
 <doc>Click element identified by ``locator``.</doc>
-<msg timestamp="20220405 14:44:25.769" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[2]/div/div[3]/div/div[2]/div/div/div[2]/button'.</msg>
-<status status="PASS" starttime="20220405 14:44:25.768" endtime="20220405 14:44:25.801"/>
+<msg timestamp="20220405 14:48:49.212" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[2]/div/div[3]/div/div[2]/div/div/div[2]/button'.</msg>
+<status status="PASS" starttime="20220405 14:48:49.211" endtime="20220405 14:48:49.244"/>
 </kw>
-<status status="PASS" starttime="20220405 14:44:25.466" endtime="20220405 14:44:25.801"/>
+<status status="PASS" starttime="20220405 14:48:48.914" endtime="20220405 14:48:49.244"/>
 </kw>
 <kw name="Press Continue On Text Classification Page" library="createModelResource">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${uploadpagecontinue}</arg>
 <doc>Waits until element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220405 14:44:25.801" endtime="20220405 14:44:26.249"/>
+<status status="PASS" starttime="20220405 14:48:49.245" endtime="20220405 14:48:49.690"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${uploadpagecontinue}</arg>
 <doc>Click element identified by ``locator``.</doc>
-<msg timestamp="20220405 14:44:26.249" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[3]/div/div/div[2]/button'.</msg>
-<status status="PASS" starttime="20220405 14:44:26.249" endtime="20220405 14:44:26.299"/>
+<msg timestamp="20220405 14:48:49.691" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[3]/div/div/div[2]/button'.</msg>
+<status status="PASS" starttime="20220405 14:48:49.690" endtime="20220405 14:48:49.736"/>
 </kw>
-<status status="PASS" starttime="20220405 14:44:25.801" endtime="20220405 14:44:26.299"/>
+<status status="PASS" starttime="20220405 14:48:49.244" endtime="20220405 14:48:49.736"/>
 </kw>
 <kw name="Insert Model Name" library="createModelResource">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${inputnametextfield}</arg>
 <doc>Waits until element ``locator`` appears on current page.</doc>
-<status status="PASS" starttime="20220405 14:44:26.299" endtime="20220405 14:44:26.311"/>
+<status status="PASS" starttime="20220405 14:48:49.736" endtime="20220405 14:48:49.753"/>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <arg>${inputnametextfield}</arg>
 <arg>CTRL+a+BACKSPACE</arg>
 <doc>Simulates user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20220405 14:44:26.312" level="INFO">Sending key(s) ('CTRL+a+BACKSPACE',) to //*[@id="app"]/div[2]/div/div/div[2]/div/div[4]/div/form/div[1]/div/div/div[1]/div/div/div[1]/div/input element.</msg>
-<msg timestamp="20220405 14:44:26.316" level="INFO">Pressing special key CONTROL down.</msg>
-<msg timestamp="20220405 14:44:26.317" level="INFO">Sending key a</msg>
-<msg timestamp="20220405 14:44:26.317" level="INFO">Pressing special key BACKSPACE down.</msg>
-<msg timestamp="20220405 14:44:26.317" level="INFO">Releasing special key CONTROL.</msg>
-<msg timestamp="20220405 14:44:26.317" level="INFO">Releasing special key BACKSPACE.</msg>
-<status status="PASS" starttime="20220405 14:44:26.312" endtime="20220405 14:44:26.661"/>
+<msg timestamp="20220405 14:48:49.754" level="INFO">Sending key(s) ('CTRL+a+BACKSPACE',) to //*[@id="app"]/div[2]/div/div/div[2]/div/div[4]/div/form/div[1]/div/div/div[1]/div/div/div[1]/div/input element.</msg>
+<msg timestamp="20220405 14:48:49.758" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20220405 14:48:49.758" level="INFO">Sending key a</msg>
+<msg timestamp="20220405 14:48:49.758" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20220405 14:48:49.758" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20220405 14:48:49.758" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20220405 14:48:49.753" endtime="20220405 14:48:50.095"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${inputnametextfield}</arg>
 <arg>${modelname}</arg>
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<msg timestamp="20220405 14:44:26.661" level="INFO">Typing text 'TestModel' into text field '//*[@id="app"]/div[2]/div/div/div[2]/div/div[4]/div/form/div[1]/div/div/div[1]/div/div/div[1]/div/input'.</msg>
-<status status="PASS" starttime="20220405 14:44:26.661" endtime="20220405 14:44:26.772"/>
+<msg timestamp="20220405 14:48:50.096" level="INFO">Typing text 'TestModel' into text field '//*[@id="app"]/div[2]/div/div/div[2]/div/div[4]/div/form/div[1]/div/div/div[1]/div/div/div[1]/div/input'.</msg>
+<status status="PASS" starttime="20220405 14:48:50.096" endtime="20220405 14:48:50.209"/>
 </kw>
-<status status="PASS" starttime="20220405 14:44:26.299" endtime="20220405 14:44:26.772"/>
+<status status="PASS" starttime="20220405 14:48:49.736" endtime="20220405 14:48:50.209"/>
 </kw>
 <kw name="Press Create Model Button" library="createModelResource">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
 <arg>${createmodelbutton}</arg>
-<doc>Waits until element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220405 14:44:26.772" endtime="20220405 14:44:26.789"/>
+<doc>Scrolls an element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220405 14:48:50.210" endtime="20220405 14:48:50.482"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${createmodelbutton}</arg>
 <doc>Click element identified by ``locator``.</doc>
-<msg timestamp="20220405 14:44:26.789" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[4]/div/form/div[2]/button'.</msg>
-<status status="PASS" starttime="20220405 14:44:26.789" endtime="20220405 14:44:26.839"/>
+<msg timestamp="20220405 14:48:50.482" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[4]/div/form/div[2]/button'.</msg>
+<status status="PASS" starttime="20220405 14:48:50.482" endtime="20220405 14:48:50.527"/>
 </kw>
-<status status="PASS" starttime="20220405 14:44:26.772" endtime="20220405 14:44:26.839"/>
+<status status="PASS" starttime="20220405 14:48:50.209" endtime="20220405 14:48:50.527"/>
 </kw>
 <kw name="Verify Created Model" library="createModelResource">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>${modelname}</arg>
 <doc>Waits until ``text`` appears on current page.</doc>
-<status status="PASS" starttime="20220405 14:44:26.839" endtime="20220405 14:44:28.127"/>
+<status status="PASS" starttime="20220405 14:48:50.527" endtime="20220405 14:48:51.377"/>
 </kw>
-<status status="PASS" starttime="20220405 14:44:26.839" endtime="20220405 14:44:28.127"/>
+<status status="PASS" starttime="20220405 14:48:50.527" endtime="20220405 14:48:51.377"/>
 </kw>
-<status status="PASS" starttime="20220405 14:44:25.087" endtime="20220405 14:44:28.127"/>
+<status status="PASS" starttime="20220405 14:48:48.360" endtime="20220405 14:48:51.377"/>
 </kw>
-<status status="PASS" starttime="20220405 14:44:24.317" endtime="20220405 14:44:28.128"/>
+<status status="PASS" starttime="20220405 14:48:47.595" endtime="20220405 14:48:51.377"/>
 </test>
 <kw name="End WebTest" library="mainResource" type="TEARDOWN">
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220405 14:44:28.129" endtime="20220405 14:44:30.267"/>
+<status status="PASS" starttime="20220405 14:48:51.379" endtime="20220405 14:48:53.673"/>
 </kw>
-<status status="PASS" starttime="20220405 14:44:28.129" endtime="20220405 14:44:30.267"/>
+<status status="PASS" starttime="20220405 14:48:51.378" endtime="20220405 14:48:53.673"/>
 </kw>
-<status status="PASS" starttime="20220405 14:44:18.970" endtime="20220405 14:44:30.267"/>
+<status status="PASS" starttime="20220405 14:48:41.812" endtime="20220405 14:48:53.673"/>
 </suite>
 <suite id="s1-s2" name="Delete Model" source="C:\Users\hagma\PycharmProjects\AgilePeacock\Tests\delete_model.robot">
 <kw name="Start WebTest" library="mainResource" type="SETUP">
@@ -199,33 +199,33 @@
 <arg>about:blank</arg>
 <arg>headlesschrome</arg>
 <doc>Opens a new browser instance to the given ``url``.</doc>
-<msg timestamp="20220405 14:44:30.289" level="INFO">Opening browser 'headlesschrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20220405 14:44:30.288" endtime="20220405 14:44:32.037"/>
+<msg timestamp="20220405 14:48:53.684" level="INFO">Opening browser 'headlesschrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220405 14:48:53.684" endtime="20220405 14:48:54.883"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>https://app.labelf.ai/login</arg>
 <doc>Navigates the active browser instance to the provided ``url``.</doc>
-<msg timestamp="20220405 14:44:32.037" level="INFO">Opening url 'https://app.labelf.ai/login'</msg>
-<status status="PASS" starttime="20220405 14:44:32.037" endtime="20220405 14:44:33.697"/>
+<msg timestamp="20220405 14:48:54.884" level="INFO">Opening url 'https://app.labelf.ai/login'</msg>
+<status status="PASS" starttime="20220405 14:48:54.884" endtime="20220405 14:48:56.253"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220405 14:44:36.698" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220405 14:44:33.697" endtime="20220405 14:44:36.698"/>
+<msg timestamp="20220405 14:48:59.255" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220405 14:48:56.253" endtime="20220405 14:48:59.255"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>//*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/div</arg>
 <doc>Waits until element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220405 14:44:36.698" endtime="20220405 14:44:36.715"/>
+<status status="PASS" starttime="20220405 14:48:59.255" endtime="20220405 14:48:59.271"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>//*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/button[3]</arg>
 <doc>Clicks button identified by ``locator``.</doc>
-<msg timestamp="20220405 14:44:36.716" level="INFO">Clicking button '//*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/button[3]'.</msg>
-<status status="PASS" starttime="20220405 14:44:36.716" endtime="20220405 14:44:36.758"/>
+<msg timestamp="20220405 14:48:59.271" level="INFO">Clicking button '//*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/button[3]'.</msg>
+<status status="PASS" starttime="20220405 14:48:59.271" endtime="20220405 14:48:59.317"/>
 </kw>
-<status status="PASS" starttime="20220405 14:44:30.288" endtime="20220405 14:44:36.758"/>
+<status status="PASS" starttime="20220405 14:48:53.684" endtime="20220405 14:48:59.317"/>
 </kw>
 <test id="s1-s2-t1" name="User Can Delete Model">
 <kw name="Login" library="mainResource">
@@ -233,119 +233,119 @@
 <arg>//*[@id="app"]/div/main/div/div/div/div/div/div[1]/form/div[1]/div[2]/div[1]/div/input</arg>
 <arg>${e-mail}</arg>
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<msg timestamp="20220405 14:44:36.759" level="INFO">Typing text 'oskar.hagman@iths.se' into text field '//*[@id="app"]/div/main/div/div/div/div/div/div[1]/form/div[1]/div[2]/div[1]/div/input'.</msg>
-<status status="PASS" starttime="20220405 14:44:36.759" endtime="20220405 14:44:36.920"/>
+<msg timestamp="20220405 14:48:59.318" level="INFO">Typing text 'oskar.hagman@iths.se' into text field '//*[@id="app"]/div/main/div/div/div/div/div/div[1]/form/div[1]/div[2]/div[1]/div/input'.</msg>
+<status status="PASS" starttime="20220405 14:48:59.318" endtime="20220405 14:48:59.489"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//*[@id="password"]</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<msg timestamp="20220405 14:44:36.920" level="INFO">Typing text '123456789' into text field '//*[@id="password"]'.</msg>
-<status status="PASS" starttime="20220405 14:44:36.920" endtime="20220405 14:44:37.014"/>
+<msg timestamp="20220405 14:48:59.489" level="INFO">Typing text '123456789' into text field '//*[@id="password"]'.</msg>
+<status status="PASS" starttime="20220405 14:48:59.489" endtime="20220405 14:48:59.589"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Labelf</arg>
 <doc>Waits until ``text`` appears on current page.</doc>
-<status status="PASS" starttime="20220405 14:44:37.015" endtime="20220405 14:44:37.023"/>
+<status status="PASS" starttime="20220405 14:48:59.589" endtime="20220405 14:48:59.598"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>//*[@id="app"]/div/main/div/div/div/div/div/div[2]/button[2]</arg>
 <doc>Click element identified by ``locator``.</doc>
-<msg timestamp="20220405 14:44:37.023" level="INFO">Clicking element '//*[@id="app"]/div/main/div/div/div/div/div/div[2]/button[2]'.</msg>
-<status status="PASS" starttime="20220405 14:44:37.023" endtime="20220405 14:44:37.059"/>
+<msg timestamp="20220405 14:48:59.599" level="INFO">Clicking element '//*[@id="app"]/div/main/div/div/div/div/div/div[2]/button[2]'.</msg>
+<status status="PASS" starttime="20220405 14:48:59.598" endtime="20220405 14:48:59.645"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Models</arg>
 <doc>Waits until ``text`` appears on current page.</doc>
-<status status="PASS" starttime="20220405 14:44:37.059" endtime="20220405 14:44:37.682"/>
+<status status="PASS" starttime="20220405 14:48:59.645" endtime="20220405 14:49:00.195"/>
 </kw>
-<status status="PASS" starttime="20220405 14:44:36.759" endtime="20220405 14:44:37.682"/>
+<status status="PASS" starttime="20220405 14:48:59.318" endtime="20220405 14:49:00.196"/>
 </kw>
 <kw name="Delete Model" library="deleteModelResources">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Models</arg>
 <doc>Waits until ``text`` appears on current page.</doc>
-<status status="PASS" starttime="20220405 14:44:37.683" endtime="20220405 14:44:37.688"/>
+<status status="PASS" starttime="20220405 14:49:00.196" endtime="20220405 14:49:00.255"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${dropdown_menu}</arg>
 <doc>Waits until element ``locator`` appears on current page.</doc>
-<status status="PASS" starttime="20220405 14:44:37.688" endtime="20220405 14:44:37.696"/>
+<status status="PASS" starttime="20220405 14:49:00.255" endtime="20220405 14:49:00.263"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${dropdown_menu}</arg>
 <doc>Clicks button identified by ``locator``.</doc>
-<msg timestamp="20220405 14:44:37.696" level="INFO">Clicking button '//*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div/div/div/nav/div/div[3]/div/button'.</msg>
-<status status="PASS" starttime="20220405 14:44:37.696" endtime="20220405 14:44:37.744"/>
+<msg timestamp="20220405 14:49:00.264" level="INFO">Clicking button '//*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div/div/div/nav/div/div[3]/div/button'.</msg>
+<status status="PASS" starttime="20220405 14:49:00.263" endtime="20220405 14:49:00.314"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${delete_button}</arg>
 <doc>Waits until element ``locator`` appears on current page.</doc>
-<status status="PASS" starttime="20220405 14:44:37.744" endtime="20220405 14:44:37.753"/>
+<status status="PASS" starttime="20220405 14:49:00.314" endtime="20220405 14:49:00.325"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${delete_button}</arg>
 <doc>Click element identified by ``locator``.</doc>
-<msg timestamp="20220405 14:44:37.753" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/a'.</msg>
-<status status="PASS" starttime="20220405 14:44:37.753" endtime="20220405 14:44:37.797"/>
+<msg timestamp="20220405 14:49:00.326" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/a'.</msg>
+<status status="PASS" starttime="20220405 14:49:00.326" endtime="20220405 14:49:00.365"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${confirm_delete}</arg>
 <doc>Waits until element ``locator`` appears on current page.</doc>
-<status status="PASS" starttime="20220405 14:44:37.797" endtime="20220405 14:44:37.805"/>
+<status status="PASS" starttime="20220405 14:49:00.365" endtime="20220405 14:49:00.376"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${confirm_delete}</arg>
 <doc>Clicks button identified by ``locator``.</doc>
-<msg timestamp="20220405 14:44:37.806" level="INFO">Clicking button '//*[@id="app"]/div[6]/div/div/div[3]/button'.</msg>
-<status status="PASS" starttime="20220405 14:44:37.806" endtime="20220405 14:44:37.851"/>
+<msg timestamp="20220405 14:49:00.376" level="INFO">Clicking button '//*[@id="app"]/div[6]/div/div/div[3]/button'.</msg>
+<status status="PASS" starttime="20220405 14:49:00.376" endtime="20220405 14:49:00.424"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>You can create a new model by clicking the "NEW MODEL" button in the top right corner</arg>
 <doc>Waits until ``text`` appears on current page.</doc>
-<status status="PASS" starttime="20220405 14:44:37.851" endtime="20220405 14:44:38.484"/>
+<status status="PASS" starttime="20220405 14:49:00.424" endtime="20220405 14:49:01.064"/>
 </kw>
-<status status="PASS" starttime="20220405 14:44:37.683" endtime="20220405 14:44:38.485"/>
+<status status="PASS" starttime="20220405 14:49:00.196" endtime="20220405 14:49:01.064"/>
 </kw>
 <kw name="Verify Number Of Existing Models" library="deleteModelResources">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${my_models}</arg>
 <doc>Waits until element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220405 14:44:38.485" endtime="20220405 14:44:39.124"/>
+<status status="PASS" starttime="20220405 14:49:01.065" endtime="20220405 14:49:01.703"/>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${element_text}</var>
 <arg>${my_models}</arg>
 <doc>Returns the text value of element identified by ``locator``.</doc>
-<msg timestamp="20220405 14:44:39.145" level="INFO">${element_text} = My Models (0)</msg>
-<status status="PASS" starttime="20220405 14:44:39.124" endtime="20220405 14:44:39.145"/>
+<msg timestamp="20220405 14:49:01.716" level="INFO">${element_text} = My Models (0)</msg>
+<status status="PASS" starttime="20220405 14:49:01.703" endtime="20220405 14:49:01.716"/>
 </kw>
 <kw name="Convert Into Number" library="remove_text">
 <var>${actual_amount}</var>
 <arg>${element_text}</arg>
 <doc>Remove text from number, convert to int and return number</doc>
-<msg timestamp="20220405 14:44:39.145" level="INFO">${actual_amount} = 0</msg>
-<status status="PASS" starttime="20220405 14:44:39.145" endtime="20220405 14:44:39.145"/>
+<msg timestamp="20220405 14:49:01.717" level="INFO">${actual_amount} = 0</msg>
+<status status="PASS" starttime="20220405 14:49:01.716" endtime="20220405 14:49:01.717"/>
 </kw>
 <kw name="Should Be True" library="BuiltIn">
 <arg>${actual_amount} == 0</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" starttime="20220405 14:44:39.145" endtime="20220405 14:44:39.145"/>
+<status status="PASS" starttime="20220405 14:49:01.717" endtime="20220405 14:49:01.717"/>
 </kw>
-<status status="PASS" starttime="20220405 14:44:38.485" endtime="20220405 14:44:39.145"/>
+<status status="PASS" starttime="20220405 14:49:01.064" endtime="20220405 14:49:01.717"/>
 </kw>
 <doc>Test that verifies model is deleted.</doc>
 <tag>delete_model</tag>
-<status status="PASS" starttime="20220405 14:44:36.758" endtime="20220405 14:44:39.146"/>
+<status status="PASS" starttime="20220405 14:48:59.317" endtime="20220405 14:49:01.718"/>
 </test>
 <kw name="End WebTest" library="mainResource" type="TEARDOWN">
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220405 14:44:39.147" endtime="20220405 14:44:43.493"/>
+<status status="PASS" starttime="20220405 14:49:01.719" endtime="20220405 14:49:03.851"/>
 </kw>
-<status status="PASS" starttime="20220405 14:44:39.147" endtime="20220405 14:44:43.493"/>
+<status status="PASS" starttime="20220405 14:49:01.719" endtime="20220405 14:49:03.851"/>
 </kw>
-<status status="PASS" starttime="20220405 14:44:30.274" endtime="20220405 14:44:43.493"/>
+<status status="PASS" starttime="20220405 14:48:53.675" endtime="20220405 14:49:03.851"/>
 </suite>
 <suite id="s1-s3" name="Login" source="C:\Users\hagma\PycharmProjects\AgilePeacock\Tests\Login.robot">
 <kw name="Start WebTest" library="mainResource" type="SETUP">
@@ -353,33 +353,33 @@
 <arg>about:blank</arg>
 <arg>headlesschrome</arg>
 <doc>Opens a new browser instance to the given ``url``.</doc>
-<msg timestamp="20220405 14:44:43.507" level="INFO">Opening browser 'headlesschrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20220405 14:44:43.507" endtime="20220405 14:44:44.670"/>
+<msg timestamp="20220405 14:49:03.865" level="INFO">Opening browser 'headlesschrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220405 14:49:03.864" endtime="20220405 14:49:04.987"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>https://app.labelf.ai/login</arg>
 <doc>Navigates the active browser instance to the provided ``url``.</doc>
-<msg timestamp="20220405 14:44:44.670" level="INFO">Opening url 'https://app.labelf.ai/login'</msg>
-<status status="PASS" starttime="20220405 14:44:44.670" endtime="20220405 14:44:46.323"/>
+<msg timestamp="20220405 14:49:04.988" level="INFO">Opening url 'https://app.labelf.ai/login'</msg>
+<status status="PASS" starttime="20220405 14:49:04.988" endtime="20220405 14:49:06.224"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220405 14:44:49.324" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220405 14:44:46.323" endtime="20220405 14:44:49.324"/>
+<msg timestamp="20220405 14:49:09.226" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220405 14:49:06.224" endtime="20220405 14:49:09.226"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>//*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/div</arg>
 <doc>Waits until element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220405 14:44:49.324" endtime="20220405 14:44:49.341"/>
+<status status="PASS" starttime="20220405 14:49:09.226" endtime="20220405 14:49:09.243"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>//*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/button[3]</arg>
 <doc>Clicks button identified by ``locator``.</doc>
-<msg timestamp="20220405 14:44:49.341" level="INFO">Clicking button '//*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/button[3]'.</msg>
-<status status="PASS" starttime="20220405 14:44:49.341" endtime="20220405 14:44:49.386"/>
+<msg timestamp="20220405 14:49:09.243" level="INFO">Clicking button '//*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/button[3]'.</msg>
+<status status="PASS" starttime="20220405 14:49:09.243" endtime="20220405 14:49:09.290"/>
 </kw>
-<status status="PASS" starttime="20220405 14:44:43.507" endtime="20220405 14:44:49.386"/>
+<status status="PASS" starttime="20220405 14:49:03.864" endtime="20220405 14:49:09.290"/>
 </kw>
 <test id="s1-s3-t1" name="User Log In">
 <kw name="Login" library="mainResource">
@@ -387,48 +387,48 @@
 <arg>//*[@id="app"]/div/main/div/div/div/div/div/div[1]/form/div[1]/div[2]/div[1]/div/input</arg>
 <arg>${e-mail}</arg>
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<msg timestamp="20220405 14:44:49.392" level="INFO">Typing text 'oskar.hagman@iths.se' into text field '//*[@id="app"]/div/main/div/div/div/div/div/div[1]/form/div[1]/div[2]/div[1]/div/input'.</msg>
-<status status="PASS" starttime="20220405 14:44:49.391" endtime="20220405 14:44:49.570"/>
+<msg timestamp="20220405 14:49:09.292" level="INFO">Typing text 'oskar.hagman@iths.se' into text field '//*[@id="app"]/div/main/div/div/div/div/div/div[1]/form/div[1]/div[2]/div[1]/div/input'.</msg>
+<status status="PASS" starttime="20220405 14:49:09.292" endtime="20220405 14:49:09.463"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//*[@id="password"]</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<msg timestamp="20220405 14:44:49.570" level="INFO">Typing text '123456789' into text field '//*[@id="password"]'.</msg>
-<status status="PASS" starttime="20220405 14:44:49.570" endtime="20220405 14:44:49.664"/>
+<msg timestamp="20220405 14:49:09.464" level="INFO">Typing text '123456789' into text field '//*[@id="password"]'.</msg>
+<status status="PASS" starttime="20220405 14:49:09.463" endtime="20220405 14:49:09.560"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Labelf</arg>
 <doc>Waits until ``text`` appears on current page.</doc>
-<status status="PASS" starttime="20220405 14:44:49.664" endtime="20220405 14:44:49.675"/>
+<status status="PASS" starttime="20220405 14:49:09.560" endtime="20220405 14:49:09.569"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>//*[@id="app"]/div/main/div/div/div/div/div/div[2]/button[2]</arg>
 <doc>Click element identified by ``locator``.</doc>
-<msg timestamp="20220405 14:44:49.675" level="INFO">Clicking element '//*[@id="app"]/div/main/div/div/div/div/div/div[2]/button[2]'.</msg>
-<status status="PASS" starttime="20220405 14:44:49.675" endtime="20220405 14:44:49.719"/>
+<msg timestamp="20220405 14:49:09.569" level="INFO">Clicking element '//*[@id="app"]/div/main/div/div/div/div/div/div[2]/button[2]'.</msg>
+<status status="PASS" starttime="20220405 14:49:09.569" endtime="20220405 14:49:09.616"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Models</arg>
 <doc>Waits until ``text`` appears on current page.</doc>
-<status status="PASS" starttime="20220405 14:44:49.719" endtime="20220405 14:44:50.339"/>
+<status status="PASS" starttime="20220405 14:49:09.616" endtime="20220405 14:49:10.040"/>
 </kw>
-<status status="PASS" starttime="20220405 14:44:49.390" endtime="20220405 14:44:50.339"/>
+<status status="PASS" starttime="20220405 14:49:09.291" endtime="20220405 14:49:10.041"/>
 </kw>
 <doc>On the login page, the test will insert credentials, log in and go to the start page/ "Models view"</doc>
 <tag>Login</tag>
-<status status="PASS" starttime="20220405 14:44:49.387" endtime="20220405 14:44:50.339"/>
+<status status="PASS" starttime="20220405 14:49:09.290" endtime="20220405 14:49:10.041"/>
 </test>
 <kw name="End WebTest" library="mainResource" type="TEARDOWN">
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220405 14:44:50.340" endtime="20220405 14:44:52.989"/>
+<status status="PASS" starttime="20220405 14:49:10.043" endtime="20220405 14:49:12.195"/>
 </kw>
-<status status="PASS" starttime="20220405 14:44:50.340" endtime="20220405 14:44:52.989"/>
+<status status="PASS" starttime="20220405 14:49:10.042" endtime="20220405 14:49:12.195"/>
 </kw>
-<status status="PASS" starttime="20220405 14:44:43.500" endtime="20220405 14:44:52.989"/>
+<status status="PASS" starttime="20220405 14:49:03.858" endtime="20220405 14:49:12.195"/>
 </suite>
-<status status="PASS" starttime="20220405 14:44:18.952" endtime="20220405 14:44:52.994"/>
+<status status="PASS" starttime="20220405 14:48:41.794" endtime="20220405 14:49:12.197"/>
 </suite>
 <statistics>
 <total>

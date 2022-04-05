@@ -13,6 +13,7 @@ Insert Model Name
     Input Text  ${inputnametextfield}  ${modelname}
 Press Create Model Button
     Scroll Element Into View  ${createmodelbutton}
+    Sleep  3s
     Click Element  ${createmodelbutton}
 Press Continue On Text Classification Page
     Wait Until Element Is Visible  ${uploadpagecontinue}
