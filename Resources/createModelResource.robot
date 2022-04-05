@@ -12,7 +12,7 @@ Insert Model Name
     Press Keys  ${inputnametextfield}  CTRL+a+BACKSPACE
     Input Text  ${inputnametextfield}  ${modelname}
 Press Create Model Button
-    Wait Until Element Is Visible  ${createmodelbutton}
+    Scroll Element Into View  ${createmodelbutton}
     Click Element  ${createmodelbutton}
 Press Continue On Text Classification Page
     Wait Until Element Is Visible  ${uploadpagecontinue}
