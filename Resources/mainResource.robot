@@ -4,8 +4,8 @@ ${password}  123456789
 
 *** Keywords ***
 Start WebTest
-    Open Browser  about:blank  chrome
-    Maximize Browser Window
+    Open Browser  about:blank  headlesschrome
+
     Go To  https://app.labelf.ai/login
     Wait Until Page Contains  Labelf
     Sleep  5s
@@ -18,3 +18,4 @@ Login
     Wait Until Page Contains  Labelf
     Click Element  //*[@id="app"]/div/main/div/div/div/div/div/div[2]/button[2]
     Wait Until Page Contains  Models
+
