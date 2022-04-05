@@ -4,8 +4,8 @@ ${password}  123456789
 
 *** Keywords ***
 Start WebTest
-    Open Browser  about:blank  chrome
-    Maximize Browser Window
+    Open Browser  about:blank  headlesschrome
+
     Go To  https://app.labelf.ai/login
     Wait Until Page Contains  Labelf
     Wait Until Page Contains Element  //*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/div
