@@ -6,10 +6,10 @@ Library  ../Scripts/remove_text.py
 Suite Setup  Start WebTest
 Suite Teardown  End WebTest
 
+
 *** Test Cases ***
-User Can Delete Model
-    [Documentation]  Test that verifies model is deleted.
-    [Tags]  delete_model1
-    Login
-    Delete Model
-    Verify Number Of Existing Models
+
+User Log In
+    [Documentation]  On the login page, the test will insert credentials, log in and go to the start page/ "Models view"
+    [Tags]  Login
+    Login Into Labelf
