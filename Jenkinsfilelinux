@@ -38,7 +38,7 @@ stage('AG-16 Create Model') {
                           step(
                                 [
                                   $class              : 'RobotPublisher',
-                                  outputPath          : 'results',
+                                  outputPath          : 'Results',
                                   outputFileName      : '**/AG-16-CreateModel-output.xml',
                                   reportFileName      : '**/AG-16-CreateModel-report.html',
                                   logFileName         : '**/AG-16-CreateModel-log.html',
@@ -63,7 +63,7 @@ stage('AG-16 Delete Model') {
                           step(
                                 [
                                   $class              : 'RobotPublisher',
-                                  outputPath          : 'results',
+                                  outputPath          : 'Results',
                                   outputFileName      : '**/AG-16-DeleteModel-output.xml',
                                   reportFileName      : '**/AG-16-DeleteModel-report.html',
                                   logFileName         : '**/AG-16-DeleteModel-log.html',
