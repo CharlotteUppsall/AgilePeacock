@@ -5,7 +5,7 @@ pipeline {
    
 stage('AG-16 Login') {
             steps {
-                sh 'robot -d Results  Tests/Login.robot'
+                sh 'robot -d Results  Tests/user_login.robot'
 
                     }
                     post {
@@ -30,7 +30,7 @@ stage('AG-16 Login') {
                 }
 stage('AG-16 Create Model') {
             steps {
-                sh 'robot -d Results  Tests/CreateModel.robot'
+                sh 'robot -d Results  Tests/create_model.robot'
             }
             post {
                 always {
