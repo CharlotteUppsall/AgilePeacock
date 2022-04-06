@@ -6,7 +6,6 @@ ${password}  123456789
 Start WebTest
     Open Browser  about:blank  headlesschrome
     Go To  https://app.labelf.ai/login
-    sleep  3s
     Wait Until Element Is Visible  //*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/div
     Click Button  //*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/button[3]
 End WebTest
