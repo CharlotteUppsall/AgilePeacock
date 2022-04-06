@@ -9,7 +9,7 @@ Suite Teardown  End WebTest
 *** Test Cases ***
 User Can Delete Model
     [Documentation]  Test that verifies model is deleted.
-    [Tags]  delete_model
+    [Tags]  AG_16
     Login
     Delete Model
     Verify Number Of Existing Models
