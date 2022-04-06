@@ -12,4 +12,3 @@ User Can Delete Model
     [Tags]  delete_model
     Login
     Delete Model
-    Verify Number Of Existing Models
