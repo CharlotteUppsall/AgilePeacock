@@ -12,4 +12,3 @@ User Can Delete Model
     [Tags]  AG_16
     Login
     Delete Model
-    Verify Number Of Existing Models
