@@ -19,8 +19,8 @@ Press Continue On Text Classification Page
     Wait Until Element Is Visible  ${uploadpagecontinue}
     Click Element  ${uploadpagecontinue}
 Press Dataset Button
-    Scroll Element Into View  ${choosedatasetbutton}
     Wait Until Element Is Visible  ${choosedatasetbutton}
+    Scroll Element Into View  ${choosedatasetbutton}
     Click Element  ${choosedatasetbutton}
 Press Continue To Model Creation
     Wait Until Page Contains Element  ${continuebutton}

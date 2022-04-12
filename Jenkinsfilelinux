@@ -3,9 +3,9 @@ pipeline {
             stages{
                
    
-stage('AG-16 Login') {
+stage('AG-16') {
             steps {
-                sh 'robot -d Results  Tests/user_login.robot'
+                sh 'robot -d Results  Tests/AG-16.robot'
 
                     }
                     post {
@@ -28,57 +28,7 @@ stage('AG-16 Login') {
                         }
                     }
                 }
-stage('AG-16 Create Model') {
-            steps {
-                sh 'robot -d Results  Tests/create_model.robot'
-            }
-            post {
-                always {
-                    script {
-                          step(
-                                [
-                                  $class              : 'RobotPublisher',
-                                  outputPath          : 'Results',
-                                  outputFileName      : '**/output.xml',
-                                  reportFileName      : '**/report.html',
-                                  logFileName         : '**/log.html',
-                                  disableArchiveOutput: false,
-                                  passThreshold       : 50,
-                                  unstableThreshold   : 40,
-                                  otherFiles          : "**/*.png,**/*.jpg",
-                                ]
-                          )
-                    }
-                }
-            }
-        }
+                
 
-stage('AG-16 Delete Model') {
-            steps {
-                sh 'robot -d Results  Tests/delete_model.robot'
-            }
-            post {
-                always {
-                    script {
-                          step(
-                                [
-                                  $class              : 'RobotPublisher',
-                                  outputPath          : 'Results',
-                                  outputFileName      : '**/output.xml',
-                                  reportFileName      : '**/report.html',
-                                  logFileName         : '**/log.html',
-                                  disableArchiveOutput: false,
-                                  passThreshold       : 50,
-                                  unstableThreshold   : 40,
-                                  otherFiles          : "**/*.png,**/*.jpg",
-                                ]
-                          )
-                    }
-                }
-            }
-        }
-        
-        
-        
        }
     }
