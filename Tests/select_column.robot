@@ -1,7 +1,6 @@
 *** Settings ***
 Library  SeleniumLibrary
 Resource  ../Resources/mainResource.robot
-Resource  ../Resources/deleteModelResources.robot
 Resource  ../Resources/select_column_resources.robot
 Resource  ../Resources/createModelResource.robot
 Library  ../Scripts/remove_text.py
