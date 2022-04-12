@@ -2,47 +2,60 @@
 ${e_mail_stag}  joakim.sorkka@iths.se
 ${password_stag}  123456789
 ${checkbox_should_be}  check_box
+${choose_dataset_right}  //*[@id="app"]/div[2]/div/div/div[2]/div/div[2]/div/div[2]/div/div[2]/div/div/div[2]/button
+${label_switch}  //*[@id="app"]/div[2]/div/div/div[2]/div/div[3]/div/div/nav/div/div[3]/div[2]/div[1]/div
+${continue_button}  //*[@id="app"]/div[2]/div/div/div[2]/div/div[3]/div/div/div[2]/button
+${intent_checkbox}  //*[@id="app"]/div[2]/div/div/div[2]/div/div[4]/div/div/div[1]/div/table/thead/tr[1]/th[2]
+${category_checkbox}  //*[@id="app"]/div[2]/div/div/div[2]/div/div[4]/div/div/div[1]/div/table/thead/tr[1]/th[1]
 *** Keywords ***
+Choose Dataset
+    Wait Until Element Is Visible  ${choose_dataset_right}
+    Scroll Element Into View  ${choosedatasetbutton}
+    Click Element  ${choose_dataset_right}
+    Wait Until Page Contains  Please click on the column containing the text you want to classify
+Enable Train Directly On Labels
+    Wait Until Element Is Visible  ${label_switch}
+    Click Element  ${label_switch}
+Verify Train Directly On Labels Is Enabled
+    Wait Until Page Contains  Select the column which contains the labels
+Press Continue
+    Wait Until Element Is Visible  ${continue_button}
+    Click Element  ${continue_button}
+    Verify Continue Is Pressed
+Verify Continue Is Pressed
+    Wait Until Page Contains  Please click on the column containing the labels
+Press Intent Checkbox
+    Wait Until Element is Visible  ${intent_checkbox}
+    Click Element  ${intent_checkbox}
+Press Category Checkbox
+    Wait Until Element is Visible  ${category_checkbox}
+    Click Element  ${category_checkbox}
+Verify Category Button Is Checked
+# Compares if expected string matches actual string.
+    ${check_box1}  Get Text  //*[@id="app"]/div[2]/div/div/div[2]/div/div[4]/div/div/div[1]/div/table/thead/tr[1]/th[1]/i
+    Should Be Equal As Strings  ${check_box1}  ${checkbox_should_be}
+Verify Intent Button Is Checked
+# Compares if expected string matches actual string.
+    ${check_box2}  Get Text  //*[@id="app"]/div[2]/div/div/div[2]/div/div[4]/div/div/div[1]/div/table/thead/tr[1]/th[2]/i
+    Should Be Equal As Strings  ${check_box2}  ${checkbox_should_be}
+Exit Model Creation
+    Click Element  //*[@id="app"]/div[2]/div/div/nav/div/a/div
+    Verify Model Creation Exit
+Verify Model Creation Exit
+    Wait Until Page Contains  Welcome to Labelf!
 A Dataset With Existing Labels Has Been Selected
     Login
     Press Create New Model
     Press Continue To Model Creation
-    Sleep  2s
-    Scroll Element Into View  ${choosedatasetbutton}
-    Wait Until Element Is Visible  //*[@id="app"]/div[2]/div/div/div[2]/div/div[2]/div/div[2]/div/div[2]/div/div/div[2]/button
-    Click Element  //*[@id="app"]/div[2]/div/div/div[2]/div/div[2]/div/div[2]/div/div[2]/div/div/div[2]/button
-    Sleep  2s
+    Choose Dataset
 "Train Directly On Labels From An Existing Column" Has Been Enabled
-    Click Element  //*[@id="app"]/div[2]/div/div/div[2]/div/div[3]/div/div/nav/div/div[3]/div[2]/div[1]/div
-    Wait Until Page Contains  Select the column which contains the labels
+    Enable Train Directly On Labels
+    Verify Train Directly On Labels Is Enabled
 The User Clicks Continue
-    Wait Until Element Is Visible  //*[@id="app"]/div[2]/div/div/div[2]/div/div[3]/div/div/div[2]/button
-    Click Element  //*[@id="app"]/div[2]/div/div/div[2]/div/div[3]/div/div/div[2]/button
-    Sleep  3s
-    Wait Until Page Contains  Please click on the column containing the labels
-    Sleep  2s
+    Press Continue
 It Shall Be Possible To Select A Column Which Contains The Labels
-    Click Element  //*[@id="app"]/div[2]/div/div/div[2]/div/div[4]/div/div/div[1]/div/table/thead/tr[1]/th[2]
-    Sleep  2s
-    Click Element  //*[@id="app"]/div[2]/div/div/div[2]/div/div[4]/div/div/div[1]/div/table/thead/tr[1]/th[1]
-    Sleep  2s
+    Press Intent Checkbox
+    Verify Intent Button Is Checked
+    Press Category Checkbox
     Verify Category Button Is Checked
-    Sleep  3s
-    Click Element  //*[@id="app"]/div[2]/div/div/nav/div/a/div
-    Wait Until Page Contains  Welcome to Labelf!
-    Sleep  2s
-Enter Account Information Stag
-    Input Text  //*[@id="app"]/div/main/div/div/div/div/div/div[1]/form/div[1]/div[2]/div[1]/div/input   ${e_mail_stag}
-    Input Text  //*[@id="password"]  ${password_stag}
-    Wait Until Page Contains  Labelf
-Press Login Button Stag
-    Click Element  //*[@id="app"]/div/main/div/div/div/div/div/div[2]/button[2]
-Verify Login Stag
-    Wait Until Page Contains  Models
-Login To Stag
-    Enter Account Information Stag
-    Press Login Button Stag
-    Verify Login Stag
-Verify Category Button Is Checked
-    ${check_box}  Get Text  //*[@id="app"]/div[2]/div/div/div[2]/div/div[4]/div/div/div[1]/div/table/thead/tr[1]/th[1]/i
-    Should Be Equal As Strings  ${check_box}  ${checkbox_should_be}
+
