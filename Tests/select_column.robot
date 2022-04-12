@@ -9,7 +9,7 @@ Suite Teardown  End WebTest
 
 *** Test Cases ***
 
-User Can Select Column Which Contains The Labels
+User Can Select Column Containing The Labels
     [Documentation]  Verifies that a user can select a column containing labels
     [Tags]  AG_18
     Given A Dataset With Existing Labels Has Been Selected
