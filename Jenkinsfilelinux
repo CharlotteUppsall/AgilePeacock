@@ -3,7 +3,7 @@ pipeline {
             stages{
                
    
-stage('AG-16 Login') {
+stage('AG-16') {
             steps {
                 sh 'robot -d Results  Tests/AG-16.robot'
 
