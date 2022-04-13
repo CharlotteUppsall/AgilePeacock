@@ -22,3 +22,13 @@ Verify Labels In Overview Match Expected Labels
     Scroll Element Into View  //*[@id="plotly"]/div[1]/div
     Sleep  3s
     Wait Until Page Contains  ACCOUNT
+    Wait Until Page Contains  CANCELLATION_FEE
+    Wait Until Page Contains  CONTACT
+    Wait Until Page Contains  DELIVERY
+    Wait Until Page Contains  FEEDBACK
+    Wait Until Page Contains  INVOICES
+    Wait Until Page Contains  NEWSLETTER
+    Wait Until Page Contains  ORDER
+    Wait Until Page Contains  PAYMENT
+    Wait Until Page Contains  REFUNDS
+    Wait Until Page Contains  SHIPPING
