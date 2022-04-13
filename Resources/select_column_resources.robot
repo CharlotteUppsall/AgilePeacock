@@ -2,7 +2,10 @@
 ${e_mail_stag}  joakim.sorkka@iths.se
 ${password_stag}  123456789
 ${checkbox_should_be}  check_box
-${choose_dataset_right}  //*[@id="app"]/div[2]/div/div/div[2]/div/div[2]/div/div[2]/div/div[2]/div/div/div[2]/button
+${choose_dataset_untrained_model}  //*[@id="app"]/div[2]/div/div/div[2]/div/div[2]/div/div[2]/div/div[2]/div/div/div[2]/button
+${choose_dataset_cultural_centers}  //*[@id="app"]/div[2]/div/div/div[2]/div/div[2]/div/div[2]/div/div[3]/div/div/div[2]/button
+${choose_dataset_customer_support}  //*[@id="app"]/div[2]/div/div/div[2]/div/div[2]/div/div[2]/div/div[1]/div/div/div[2]/button
+${choose_dataset_no_labels}  //*[@id="app"]/div[2]/div/div/div[2]/div/div[2]/div/div[2]/div/div[4]/div/div/div[2]/button
 ${label_switch}  //*[@id="app"]/div[2]/div/div/div[2]/div/div[3]/div/div/nav/div/div[3]/div[2]/div[1]/div
 ${continue_button2}  //*[@id="app"]/div[2]/div/div/div[2]/div/div[3]/div/div/div[2]/button
 ${intent_checkbox}  //*[@id="app"]/div[2]/div/div/div[2]/div/div[4]/div/div/div[1]/div/table/thead/tr[1]/th[2]
@@ -10,12 +13,31 @@ ${category_checkbox}  //*[@id="app"]/div[2]/div/div/div[2]/div/div[4]/div/div/di
 ${exit_button}  //*[@id="app"]/div[2]/div/div/nav/div/a/div
 *** Keywords ***
 Choose Dataset
-    Wait Until Element Is Visible  ${choose_dataset_right}
+    # Chooses the dataset named "Untrained Model"
+    Wait Until Element Is Visible  ${choose_dataset_untrained_model}
     Scroll Element Into View  ${choosedatasetbutton}
-    Click Element  ${choose_dataset_right}
+    Click Element  ${choose_dataset_untrained_model}
+    Wait Until Page Contains  Please click on the column containing the text you want to classify
+Choose Dataset2
+    # Chooses the dataset named "Cultural Centers Survey"
+    Wait Until Element Is Visible  ${choose_dataset_cultural_centers}
+    Scroll Element Into View  ${choosedatasetbutton}
+    Click Element  ${choose_dataset_cultural_centers}
+    Wait Until Page Contains  Please click on the column containing the text you want to classify
+Choose Dataset3
+    # Chooses the dataset named "Customer Support"
+    Wait Until Element Is Visible  ${choose_dataset_customer_support}
+    Scroll Element Into View  ${choosedatasetbutton}
+    Click Element  ${choose_dataset_customer_support}
+    Wait Until Page Contains  Please click on the column containing the text you want to classify
+Choose Dataset4
+    # Chooses the dataset named "rows with no labels"
+    Wait Until Element Is Visible  ${choose_dataset_no_labels}
+    Scroll Element Into View  ${choosedatasetbutton}
+    Click Element  ${choose_dataset_no_labels}
     Wait Until Page Contains  Please click on the column containing the text you want to classify
 Enable Train Directly On Labels
-    Wait Until Element Is Visible  ${label_switch}
+    Wait Until Element Is Enabled  ${label_switch}
     Click Element  ${label_switch}
 Verify Train Directly On Labels Is Enabled
     Wait Until Page Contains  Select the column which contains the labels
@@ -32,15 +54,23 @@ Press Category Checkbox
     Wait Until Element is Visible  ${category_checkbox}
     Click Element  ${category_checkbox}
 Verify Category Button Is Checked
-# Compares if expected string matches actual string.
+# Compares if expected string taken from xpath matches actual string when category button is checked.
     ${check_box1}  Get Text  ${category_checkbox}/i
     Should Be Equal As Strings  ${check_box1}  ${checkbox_should_be}
 Verify Intent Button Is Checked
-# Compares if expected string matches actual string.
+# Compares if expected string taken from xpath matches actual string when intent button is checked.
     ${check_box2}  Get Text  ${intent_checkbox}/i
     Should Be Equal As Strings  ${check_box2}  ${checkbox_should_be}
+Verify Category Button Is Checked No Choice
+# Compares if expected string matches actual string when there is no choice and button is automatically checked.
+    Wait Until Element Is Visible  //*[@id="app"]/div[2]/div/div/div[2]/div/div[4]/div/div/div[1]/div/table/thead/tr[1]/th/i
+    ${check_box3}  Get Text  //*[@id="app"]/div[2]/div/div/div[2]/div/div[4]/div/div/div[1]/div/table/thead/tr[1]/th/i
+    Should Be Equal As Strings  ${check_box3}  ${checkbox_should_be}
 Exit Model Creation
     Click Element  ${exit_button}
+    Verify Model Creation Exit
+Exit Model Creation2
+    Click Element  //*[@id="app"]/div[2]/div/div/nav/div/a/div
     Verify Model Creation Exit
 Verify Model Creation Exit
     Wait Until Page Contains  Welcome to Labelf!
@@ -59,4 +89,19 @@ It Shall Be Possible To Select A Column Which Contains The Labels
     Verify Intent Button Is Checked
     Press Category Checkbox
     Verify Category Button Is Checked
-
+    Exit Model Creation
+The Column That Contains The Labels Has Been Selected
+    Verify Category Button Is Checked No Choice
+    Exit Model Creation
+A Dataset With Existing Labels Has Been Selected - Dataset 2
+    Press Create New Model
+    Press Continue To Model Creation
+    Choose Dataset2
+A Dataset With Existing Labels Has Been Selected - Dataset 3
+    Press Create New Model
+    Press Continue To Model Creation
+    Choose Dataset3
+A Dataset With Existing Labels Has Been Selected - Dataset 4
+    Press Create New Model
+    Press Continue To Model Creation
+    Choose Dataset4
