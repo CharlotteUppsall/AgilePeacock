@@ -10,6 +10,7 @@ ${label_switch}  //*[@id="app"]/div[2]/div/div/div[2]/div/div[3]/div/div/nav/div
 ${continue_button2}  //*[@id="app"]/div[2]/div/div/div[2]/div/div[3]/div/div/div[2]/button
 ${intent_checkbox}  //*[@id="app"]/div[2]/div/div/div[2]/div/div[4]/div/div/div[1]/div/table/thead/tr[1]/th[2]
 ${category_checkbox}  //*[@id="app"]/div[2]/div/div/div[2]/div/div[4]/div/div/div[1]/div/table/thead/tr[1]/th[1]
+${category_checkbox_one_choice}  //*[@id="app"]/div[2]/div/div/div[2]/div/div[4]/div/div/div[1]/div/table/thead/tr[1]/th/i
 ${exit_button}  //*[@id="app"]/div[2]/div/div/nav/div/a/div
 *** Keywords ***
 Choose Dataset
@@ -63,14 +64,11 @@ Verify Intent Button Is Checked
     Should Be Equal As Strings  ${check_box2}  ${checkbox_should_be}
 Verify Category Button Is Checked No Choice
 # Compares if expected string matches actual string when there is no choice and button is automatically checked.
-    Wait Until Element Is Visible  //*[@id="app"]/div[2]/div/div/div[2]/div/div[4]/div/div/div[1]/div/table/thead/tr[1]/th/i
-    ${check_box3}  Get Text  //*[@id="app"]/div[2]/div/div/div[2]/div/div[4]/div/div/div[1]/div/table/thead/tr[1]/th/i
+    Wait Until Element Is Visible  ${category_checkbox_one_choice}
+    ${check_box3}  Get Text  ${category_checkbox_one_choice}
     Should Be Equal As Strings  ${check_box3}  ${checkbox_should_be}
 Exit Model Creation
     Click Element  ${exit_button}
-    Verify Model Creation Exit
-Exit Model Creation2
-    Click Element  //*[@id="app"]/div[2]/div/div/nav/div/a/div
     Verify Model Creation Exit
 Verify Model Creation Exit
     Wait Until Page Contains  Welcome to Labelf!
