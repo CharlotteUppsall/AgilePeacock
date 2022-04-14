@@ -9,6 +9,7 @@ Press Existing Model
     Press Create New Model
     Press Continue To Model Creation
     Press Dataset Button  #Det är housing question dataset continue-knappen
+    Sleep  3s
     Wait Until Element Is Visible  ${slide_button2}
     Click Element  ${slide_button2}
 
