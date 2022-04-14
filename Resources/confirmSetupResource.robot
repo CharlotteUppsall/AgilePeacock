@@ -13,7 +13,7 @@ Press Existing Model
     click element at coordinates  ${slide_button2}  5  0
 
 Verify Setup
-    Wait Until Page Contains   Select the column which contains the labels
+    Wait Until Page Contains   4
     #Både den texten som kom fram efter man tryckt slide-knappen och verifiering att det blir ett till steg som nr4
 
 Confirm Setup
