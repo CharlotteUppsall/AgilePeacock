@@ -10,7 +10,7 @@ Press Existing Model
     Press Continue To Model Creation
     Press Dataset Button  #Det är housing question dataset continue-knappen
     Wait Until Element Is Visible  ${slide_button2}
-    click element at coordinates  ${slide_button2}  10  0
+    click element at coordinates  ${slide_button2}  5  0
 
 Verify Setup
     Wait Until Page Contains   Select the column which contains the labels
