@@ -1,5 +1,5 @@
 *** Variables ***
-${slide_button2}   //*[@id="app"]/div[2]/div/div/div[2]/div/div[3]/div/div/nav/div/div[3]/div[2]/div[1]/div
+${slide_button2}   //*[@id="app"]/div[2]/div/div/div[2]/div/div[3]/div/div/nav/div/div[3]/div[2]/div[1]/div/div[1]
 # ^ Knappen som heter "Train directly on labels from an existing column" är denne slide-knapp
 ${password}  123456789
 
@@ -9,7 +9,6 @@ Press Existing Model
     Press Create New Model
     Press Continue To Model Creation
     Press Dataset Button  #Det är housing question dataset continue-knappen
-    Sleep  3s
     Wait Until Element Is Visible  ${slide_button2}
     Click Element  ${slide_button2}
 
