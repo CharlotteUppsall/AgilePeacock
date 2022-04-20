@@ -17,7 +17,7 @@ Choose Dataset
     # Chooses the dataset named "Untrained Model"
     Wait Until Element Is Visible  ${choose_dataset_untrained_model}
     Scroll Element Into View  ${choosedatasetbutton}
-    Click Element  ${choose_dataset_untrained_model}
+    Click Element At Coordinates  ${choose_dataset_untrained_model}  10  0
     Wait Until Page Contains  Please click on the column containing the text you want to classify
 Choose Dataset2
     # Chooses the dataset named "Cultural Centers Survey"
