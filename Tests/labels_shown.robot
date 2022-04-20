@@ -10,7 +10,7 @@ Suite Teardown  End WebTest
 
 *** Test Cases ***
 Overview of labels are displayed
-    [Documentation]  Test that will
+    [Documentation]  Test will verify that labels from chosen dataset is present after creating model
     [Tags]  AG_64
     Login
     Press Create New Model
@@ -19,8 +19,13 @@ Overview of labels are displayed
     Wait Until Page Contains  Please click on the column containing the text you want to classify
     Verify Text Button Is Checked
     Select Train Directly On Labels
+    Confirm Labels Are Shown Before Clicking On The Overview Button
+    Navigate To Model Overview
     Confirm Labels In Bar Chart
-    #Confirm Labels In Pie Chart
+    Scroll Down To Pie Chart
+    Confirm Labels In Pie Chart
+
+
 
 #Delete Model After Test
  #   Delete Model

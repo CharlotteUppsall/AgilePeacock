@@ -11,8 +11,6 @@ ${overview_button}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div
 ${dismiss_training_model_button}  //*[@id="app"]/div[3]/div/div/button
 ${labels_bar_chart}   //*[@id="plotly"]/div[1]/div
 ${labels_pie_chart}  //*[@id="plotly"]/div[1]/div
-${connect_blabla_button}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[5]/div/div[3]/nav/div/span/button
-${connect_blabla_button_grey}  //*[@id="app"]/div[9]/div[1]/main/div/div/div[2]/div/div[1]/div/div[5]/div/div[3]/nav/div/span
 
 *** Keywords ***
 Press Dataset With Existing Labels Button
@@ -36,21 +34,25 @@ Select Train Directly On Labels
     Wait Until Element Is Visible  ${final_create_model_button}
     Click Element  ${final_create_model_button}
 
-#Confirm Labels Are Shown after the model completed training
-
-#Confirm Labels Are Shown before clicking on the overview button
-
-#Confirm Labels Are Shown längre ner på sidan overview
-
-Confirm Labels In Bar Chart
+Confirm Labels Are Shown Before Clicking On The Overview Button
     Sleep  5s
     Wait Until Page Contains  My Models
-    Sleep  5s
+    Wait Until Page Contains  Account
+    Wait Until Page Contains  Billing
+    Wait Until Page Contains  Delivery
+    Wait Until Page Contains  Order
+    Wait Until Page Contains  Refunds
+    Wait Until Page Contains  Tech
+
+Navigate To Model Overview
+    Wait Until Page Contains  My Models
     Click Element  ${overview_button}
     Sleep  5s
     Wait Until Page Contains  training
     Click Element  ${dismiss_training_model_button}
     Wait Until Page Contains  Test your model
+
+Confirm Labels In Bar Chart
     Scroll Element Into View  ${labels_bar_chart}
     Wait Until Page Contains  Account
     Wait Until Page Contains  Billing
@@ -59,20 +61,17 @@ Confirm Labels In Bar Chart
     Wait Until Page Contains  Refunds
     Wait Until Page Contains  Tech
 
-scrolltest
-    open browser
-    maximize browser window
-    sleep  3
-    execute javascript  window.scrollTo(0,1500)
+Scroll Down To Pie Chart
+    Sleep  3
+    Execute Javascript  window.scrollTo(0,1700)
 
 Confirm Labels In Pie Chart
-    #Scroll Element Into View  ${labels_pie_chart}
-    Scroll Element Into View  ${connect_blabla_button}
-    Wait Until Page Contains  Predicted Label Distribution
+    Wait Until Element Is Visible  ${labels_pie_chart}
     Wait Until Page Contains  Account
     Wait Until Page Contains  Billing
     Wait Until Page Contains  Delivery
     Wait Until Page Contains  Order
     Wait Until Page Contains  Refunds
     Wait Until Page Contains  Tech
-    #Men hur veta att det är just texten i cirkeldiagrammet den kollar på
+    #Men hur veta att det är just texten i cirkeldiagrammet den kollar på (osäker pga samma keys som bar chart)
+
