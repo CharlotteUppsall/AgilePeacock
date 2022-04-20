@@ -1,0 +1,29 @@
+*** Settings ***
+Library  SeleniumLibrary
+Resource  ../Resources/mainResource.robot
+Resource  ../Resources/deleteModelResources.robot
+Resource  ../Resources/createModelResource.robot
+Resource  ../Resources/labelsShownResource.robot
+Library  ../Scripts/remove_text.py
+Suite Setup  Start WebTest
+Suite Teardown  End WebTest
+
+*** Test Cases ***
+Overview of labels are displayed
+    [Documentation]  Test that will
+    [Tags]  AG_64
+    Login
+    Press Create New Model
+    Press Continue To Model Creation
+    Press Dataset With Existing Labels Button
+    Wait Until Page Contains  Please click on the column containing the text you want to classify
+    Verify Text Button Is Checked
+    Select Train Directly On Labels
+    Confirm Labels In Bar Chart
+    #Confirm Labels In Pie Chart
+
+#Delete Model After Test
+ #   Delete Model
+
+
+
