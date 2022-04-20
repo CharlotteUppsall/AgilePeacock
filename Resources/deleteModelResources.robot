@@ -1,7 +1,7 @@
 *** Variables ***
 ${dropdown_menu}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div/div/div/nav/div/div[3]/div/button
-${delete_button}  //*[@id="app"]/div[2]/div/div/div[2]/a
-${confirm_delete}  //*[@id="app"]/div[6]/div/div/div[3]/button
+${delete_button}  //*[@id="app"]/div[3]/div/div/div[2]/a
+${confirm_delete}  //*[@id="app"]/div[3]/div/div/div[3]/button
 ${my_models}  //*[@id="app"]/div[6]/div[1]/main/div/div/nav/div/div[1]
 
 

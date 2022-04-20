@@ -1,3 +1,0 @@
-# AgilePeacock
-Labelf project 
-
