@@ -6,8 +6,7 @@ ${category_account}   //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1
 ${add_demo_model_to_workspace}  //*[@id="app"]/div[2]/div/div/div[2]/div/div[2]/div/div[2]/div/div/div/div[2]/button
 *** Keywords ***
 Verify Demo Model Is Created
-    Sleep  5s
-    Wait Until Page Contains  support ticket routing model (1)
+    Wait Until Page Contains  support ticket routing model (1)  timeout=10
 Press Add Model To Workspace
     Wait Until Page Contains Element  ${add_demo_model_to_workspace}
     Scroll Element Into View  ${add_demo_model_to_workspace}
