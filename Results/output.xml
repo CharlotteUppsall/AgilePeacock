@@ -1,488 +1,1304 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220411 12:01:17.381" rpa="false" schemaversion="2">
-<suite id="s1" name="Tests" source="C:\Users\hagma\PycharmProjects\AgilePeacock\Tests">
-<suite id="s1-s1" name="Create Model" source="C:\Users\hagma\PycharmProjects\AgilePeacock\Tests\create_model.robot">
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220420 20:11:32.096" rpa="false" schemaversion="2">
+<suite id="s1" name="AG-18" source="C:\Users\hagma\PycharmProjects\AgilePeacock\Tests\AG-18.robot">
 <kw name="Start WebTest" library="mainResource" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>about:blank</arg>
 <arg>headlesschrome</arg>
 <doc>Opens a new browser instance to the given ``url``.</doc>
-<msg timestamp="20220411 12:01:17.576" level="INFO">Opening browser 'headlesschrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20220411 12:01:17.576" endtime="20220411 12:01:18.763"/>
+<msg timestamp="20220420 20:11:32.312" level="INFO">Opening browser 'headlesschrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220420 20:11:32.312" endtime="20220420 20:11:33.534"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220420 20:11:33.534" endtime="20220420 20:11:33.648"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>https://app.labelf.ai/login</arg>
 <doc>Navigates the active browser instance to the provided ``url``.</doc>
-<msg timestamp="20220411 12:01:18.763" level="INFO">Opening url 'https://app.labelf.ai/login'</msg>
-<status status="PASS" starttime="20220411 12:01:18.763" endtime="20220411 12:01:24.647"/>
+<msg timestamp="20220420 20:11:33.648" level="INFO">Opening url 'https://app.labelf.ai/login'</msg>
+<status status="PASS" starttime="20220420 20:11:33.648" endtime="20220420 20:11:41.754"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>//*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/div</arg>
 <doc>Waits until element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220411 12:01:24.647" endtime="20220411 12:01:24.667"/>
+<status status="PASS" starttime="20220420 20:11:41.754" endtime="20220420 20:11:41.776"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>//*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/button[3]</arg>
 <doc>Clicks button identified by ``locator``.</doc>
-<msg timestamp="20220411 12:01:24.667" level="INFO">Clicking button '//*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/button[3]'.</msg>
-<status status="PASS" starttime="20220411 12:01:24.667" endtime="20220411 12:01:24.718"/>
+<msg timestamp="20220420 20:11:41.777" level="INFO">Clicking button '//*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/button[3]'.</msg>
+<status status="PASS" starttime="20220420 20:11:41.776" endtime="20220420 20:11:41.833"/>
 </kw>
-<status status="PASS" starttime="20220411 12:01:17.576" endtime="20220411 12:01:24.718"/>
+<status status="PASS" starttime="20220420 20:11:32.312" endtime="20220420 20:11:41.833"/>
 </kw>
-<test id="s1-t1" name="User Can Select Column Containing The Labels">
-<kw name="Given A Dataset With Existing Labels Has Been Selected" library="select_column_resources">
+<test id="s1-t1" name="User can confirm that there is an updated sequence to include a step to select column">
 <kw name="Login" library="mainResource">
 <kw name="Enter Account Information" library="mainResource">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//*[@id="app"]/div/main/div/div/div/div/div/div[1]/form/div[1]/div[2]/div[1]/div/input</arg>
 <arg>${e-mail}</arg>
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<msg timestamp="20220411 12:01:24.720" level="INFO">Typing text 'oskar.hagman@iths.se' into text field '//*[@id="app"]/div/main/div/div/div/div/div/div[1]/form/div[1]/div[2]/div[1]/div/input'.</msg>
-<status status="PASS" starttime="20220411 12:01:24.720" endtime="20220411 12:01:24.884"/>
+<msg timestamp="20220420 20:11:41.835" level="INFO">Typing text 'oskar.hagman@iths.se' into text field '//*[@id="app"]/div/main/div/div/div/div/div/div[1]/form/div[1]/div[2]/div[1]/div/input'.</msg>
+<status status="PASS" starttime="20220420 20:11:41.835" endtime="20220420 20:11:42.057"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//*[@id="password"]</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<msg timestamp="20220411 12:01:24.884" level="INFO">Typing text '123456789' into text field '//*[@id="password"]'.</msg>
-<status status="PASS" starttime="20220411 12:01:24.884" endtime="20220411 12:01:24.990"/>
+<msg timestamp="20220420 20:11:42.059" level="INFO">Typing text '123456789' into text field '//*[@id="password"]'.</msg>
+<status status="PASS" starttime="20220420 20:11:42.058" endtime="20220420 20:11:42.203"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Labelf</arg>
 <doc>Waits until ``text`` appears on current page.</doc>
-<status status="PASS" starttime="20220411 12:01:24.990" endtime="20220411 12:01:24.999"/>
+<status status="PASS" starttime="20220420 20:11:42.203" endtime="20220420 20:11:42.215"/>
 </kw>
-<status status="PASS" starttime="20220411 12:01:24.720" endtime="20220411 12:01:24.999"/>
+<status status="PASS" starttime="20220420 20:11:41.835" endtime="20220420 20:11:42.215"/>
 </kw>
 <kw name="Press Login Button" library="mainResource">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>//*[@id="app"]/div/main/div/div/div/div/div/div[2]/button[2]</arg>
 <doc>Click element identified by ``locator``.</doc>
-<msg timestamp="20220411 12:01:24.999" level="INFO">Clicking element '//*[@id="app"]/div/main/div/div/div/div/div/div[2]/button[2]'.</msg>
-<status status="PASS" starttime="20220411 12:01:24.999" endtime="20220411 12:01:25.040"/>
+<msg timestamp="20220420 20:11:42.216" level="INFO">Clicking element '//*[@id="app"]/div/main/div/div/div/div/div/div[2]/button[2]'.</msg>
+<status status="PASS" starttime="20220420 20:11:42.216" endtime="20220420 20:11:42.269"/>
 </kw>
-<status status="PASS" starttime="20220411 12:01:24.999" endtime="20220411 12:01:25.040"/>
+<status status="PASS" starttime="20220420 20:11:42.215" endtime="20220420 20:11:42.269"/>
 </kw>
 <kw name="Verify Login" library="mainResource">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Models</arg>
 <doc>Waits until ``text`` appears on current page.</doc>
-<status status="PASS" starttime="20220411 12:01:25.041" endtime="20220411 12:01:25.694"/>
+<status status="PASS" starttime="20220420 20:11:42.270" endtime="20220420 20:11:43.018"/>
 </kw>
-<status status="PASS" starttime="20220411 12:01:25.040" endtime="20220411 12:01:25.695"/>
+<status status="PASS" starttime="20220420 20:11:42.269" endtime="20220420 20:11:43.019"/>
 </kw>
-<status status="PASS" starttime="20220411 12:01:24.719" endtime="20220411 12:01:25.695"/>
+<status status="PASS" starttime="20220420 20:11:41.834" endtime="20220420 20:11:43.019"/>
 </kw>
+<kw name="Confirm Setup" library="confirmSetupResource">
+<kw name="Press Existing Model" library="confirmSetupResource">
 <kw name="Press Create New Model" library="createModelResource">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${newmodelbutton}</arg>
 <doc>Waits until element ``locator`` appears on current page.</doc>
-<status status="PASS" starttime="20220411 12:01:25.696" endtime="20220411 12:01:25.909"/>
+<status status="PASS" starttime="20220420 20:11:43.020" endtime="20220420 20:11:43.453"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${newmodelbutton}</arg>
 <doc>Click element identified by ``locator``.</doc>
-<msg timestamp="20220411 12:01:25.909" level="INFO">Clicking element '//*[@id="app"]/div[6]/div[1]/main/div/div/div[1]/nav/div[1]/a'.</msg>
-<status status="PASS" starttime="20220411 12:01:25.909" endtime="20220411 12:01:25.943"/>
+<msg timestamp="20220420 20:11:43.454" level="INFO">Clicking element '//*[@id="app"]/div[6]/div[1]/main/div/div/div[1]/nav/div[1]/a'.</msg>
+<status status="PASS" starttime="20220420 20:11:43.453" endtime="20220420 20:11:43.573"/>
 </kw>
-<status status="PASS" starttime="20220411 12:01:25.696" endtime="20220411 12:01:25.943"/>
+<status status="PASS" starttime="20220420 20:11:43.020" endtime="20220420 20:11:43.573"/>
 </kw>
 <kw name="Press Continue To Model Creation" library="createModelResource">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${continuebutton}</arg>
+<arg>${continueButton}</arg>
 <doc>Waits until element ``locator`` appears on current page.</doc>
-<status status="PASS" starttime="20220411 12:01:25.943" endtime="20220411 12:01:27.394"/>
+<status status="PASS" starttime="20220420 20:11:43.574" endtime="20220420 20:11:44.901"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${continuebutton}</arg>
+<arg>${continueButton}</arg>
 <doc>Click element identified by ``locator``.</doc>
-<msg timestamp="20220411 12:01:27.395" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[1]/div/div/div[2]'.</msg>
-<status status="PASS" starttime="20220411 12:01:27.394" endtime="20220411 12:01:27.461"/>
+<msg timestamp="20220420 20:11:44.902" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[1]/div/div/div[2]'.</msg>
+<status status="PASS" starttime="20220420 20:11:44.902" endtime="20220420 20:11:45.015"/>
 </kw>
-<status status="PASS" starttime="20220411 12:01:25.943" endtime="20220411 12:01:27.462"/>
+<status status="PASS" starttime="20220420 20:11:43.573" endtime="20220420 20:11:45.015"/>
 </kw>
 <kw name="Press Dataset Button" library="createModelResource">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${choosedatasetbutton}</arg>
 <doc>Waits until element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220411 12:01:27.462" endtime="20220411 12:01:28.313"/>
+<status status="PASS" starttime="20220420 20:11:45.016" endtime="20220420 20:11:45.534"/>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <arg>${choosedatasetbutton}</arg>
 <doc>Scrolls an element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20220411 12:01:28.314" endtime="20220411 12:01:28.584"/>
+<status status="PASS" starttime="20220420 20:11:45.535" endtime="20220420 20:11:45.803"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${choosedatasetbutton}</arg>
 <doc>Click element identified by ``locator``.</doc>
-<msg timestamp="20220411 12:01:28.584" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[2]/div/div[3]/div/div[2]/div/div/div[2]/button'.</msg>
-<status status="PASS" starttime="20220411 12:01:28.584" endtime="20220411 12:01:28.622"/>
+<msg timestamp="20220420 20:11:45.803" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[2]/div/div[3]/div/div[2]/div/div/div[2]/button'.</msg>
+<status status="PASS" starttime="20220420 20:11:45.803" endtime="20220420 20:11:45.850"/>
 </kw>
-<status status="PASS" starttime="20220411 12:01:27.462" endtime="20220411 12:01:28.622"/>
+<status status="PASS" starttime="20220420 20:11:45.015" endtime="20220420 20:11:45.851"/>
 </kw>
-<kw name="Then It Shall Be Possible To Select A Column Which Contains The Labels" library="select_column_resources">
-<kw name="Press Intent Checkbox" library="select_column_resources">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${uploadpagecontinue}</arg>
+<arg>${slide_button2}</arg>
 <doc>Waits until element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220411 12:01:28.622" endtime="20220411 12:01:29.487"/>
+<status status="PASS" starttime="20220420 20:11:45.851" endtime="20220420 20:11:46.506"/>
+</kw>
+<kw name="Click Element At Coordinates" library="SeleniumLibrary">
+<arg>${slide_button2}</arg>
+<arg>5</arg>
+<arg>0</arg>
+<doc>Click element ``locator`` at ``xoffset/yoffset``.</doc>
+<msg timestamp="20220420 20:11:46.509" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[3]/div/div/nav/div/div[3]/div[2]/div[1]/div' at coordinates x=5, y=0.</msg>
+<status status="PASS" starttime="20220420 20:11:46.508" endtime="20220420 20:11:47.074"/>
+</kw>
+<status status="PASS" starttime="20220420 20:11:43.020" endtime="20220420 20:11:47.074"/>
+</kw>
+<kw name="Verify Setup" library="confirmSetupResource">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>4</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:11:47.075" endtime="20220420 20:11:47.090"/>
+</kw>
+<status status="PASS" starttime="20220420 20:11:47.074" endtime="20220420 20:11:47.090"/>
+</kw>
+<status status="PASS" starttime="20220420 20:11:43.019" endtime="20220420 20:11:47.090"/>
+</kw>
+<doc>Confirm setup steps are updated to include a step to select column</doc>
+<tag>AG_18</tag>
+<status status="PASS" starttime="20220420 20:11:41.833" endtime="20220420 20:11:47.090"/>
+</test>
+<test id="s1-t2" name="User Can Confirm Change of Text For Step 3 When &quot;Train Directly[...]&quot; Is Disabled">
+<kw name="Confirm Text Has Changed When Function Disabled" library="confirmDisabledResource">
+<kw name="Train Directly[...] Function Active To Disabled" library="confirmDisabledResource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_slider_off}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:11:47.093" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[3]/div/div/nav/div/div[3]/div[2]/div[1]/div/div[1]'.</msg>
+<status status="PASS" starttime="20220420 20:11:47.093" endtime="20220420 20:11:47.150"/>
+</kw>
+<status status="PASS" starttime="20220420 20:11:47.093" endtime="20220420 20:11:47.150"/>
+</kw>
+<kw name="Verify Slide Button Is Disabled" library="confirmDisabledResource">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Name your model</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:11:47.151" endtime="20220420 20:11:47.162"/>
+</kw>
+<status status="PASS" starttime="20220420 20:11:47.151" endtime="20220420 20:11:47.162"/>
+</kw>
+<status status="PASS" starttime="20220420 20:11:47.092" endtime="20220420 20:11:47.162"/>
+</kw>
+<doc>When slider "Train directly on labels from an existing column” is disabled step 3 is changed to: Name your model</doc>
+<tag>AG_18</tag>
+<status status="PASS" starttime="20220420 20:11:47.092" endtime="20220420 20:11:47.162"/>
+</test>
+<test id="s1-t3" name="Overview of labels are displayed">
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20220420 20:11:47.164" endtime="20220420 20:11:47.176"/>
+</kw>
+<kw name="Press Create New Model" library="createModelResource">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${newmodelbutton}</arg>
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:11:47.177" endtime="20220420 20:11:48.064"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${uploadpagecontinue}</arg>
+<arg>${newmodelbutton}</arg>
 <doc>Click element identified by ``locator``.</doc>
-<msg timestamp="20220411 12:01:29.487" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[3]/div/div/div[2]/button'.</msg>
-<status status="PASS" starttime="20220411 12:01:29.487" endtime="20220411 12:01:29.534"/>
+<msg timestamp="20220420 20:11:48.064" level="INFO">Clicking element '//*[@id="app"]/div[6]/div[1]/main/div/div/div[1]/nav/div[1]/a'.</msg>
+<status status="PASS" starttime="20220420 20:11:48.064" endtime="20220420 20:11:48.118"/>
 </kw>
-<status status="PASS" starttime="20220411 12:01:28.622" endtime="20220411 12:01:29.534"/>
+<status status="PASS" starttime="20220420 20:11:47.177" endtime="20220420 20:11:48.118"/>
 </kw>
-<kw name="Insert Model Name" library="createModelResource">
+<kw name="Press Continue To Model Creation" library="createModelResource">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${inputnametextfield}</arg>
+<arg>${continueButton}</arg>
 <doc>Waits until element ``locator`` appears on current page.</doc>
-<status status="PASS" starttime="20220411 12:01:29.535" endtime="20220411 12:01:29.546"/>
+<status status="PASS" starttime="20220420 20:11:48.120" endtime="20220420 20:11:49.400"/>
 </kw>
-<kw name="Press Keys" library="SeleniumLibrary">
-<arg>${inputnametextfield}</arg>
-<arg>CTRL+a+BACKSPACE</arg>
-<doc>Simulates user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20220411 12:01:29.547" level="INFO">Sending key(s) ('CTRL+a+BACKSPACE',) to //*[@id="app"]/div[2]/div/div/div[2]/div/div[4]/div/form/div[1]/div/div/div[1]/div/div/div[1]/div/input element.</msg>
-<msg timestamp="20220411 12:01:29.551" level="INFO">Pressing special key CONTROL down.</msg>
-<msg timestamp="20220411 12:01:29.551" level="INFO">Sending key a</msg>
-<msg timestamp="20220411 12:01:29.551" level="INFO">Pressing special key BACKSPACE down.</msg>
-<msg timestamp="20220411 12:01:29.551" level="INFO">Releasing special key CONTROL.</msg>
-<msg timestamp="20220411 12:01:29.551" level="INFO">Releasing special key BACKSPACE.</msg>
-<status status="PASS" starttime="20220411 12:01:29.546" endtime="20220411 12:01:29.888"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${continueButton}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:11:49.400" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[1]/div/div/div[2]'.</msg>
+<status status="PASS" starttime="20220420 20:11:49.400" endtime="20220420 20:11:49.497"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${inputnametextfield}</arg>
-<arg>${modelname}</arg>
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<msg timestamp="20220411 12:01:29.889" level="INFO">Typing text 'TestModel' into text field '//*[@id="app"]/div[2]/div/div/div[2]/div/div[4]/div/form/div[1]/div/div/div[1]/div/div/div[1]/div/input'.</msg>
-<status status="PASS" starttime="20220411 12:01:29.888" endtime="20220411 12:01:30.002"/>
+<status status="PASS" starttime="20220420 20:11:48.119" endtime="20220420 20:11:49.497"/>
 </kw>
-<status status="PASS" starttime="20220411 12:01:29.534" endtime="20220411 12:01:30.002"/>
-</kw>
-<kw name="Press Create Model Button" library="createModelResource">
+<kw name="Press Dataset With Existing Labels Button" library="labelsShownResource">
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${createmodelbutton}</arg>
+<arg>${labelf_demo_dataset}</arg>
 <doc>Scrolls an element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20220411 12:01:30.003" endtime="20220411 12:01:30.285"/>
+<status status="PASS" starttime="20220420 20:11:49.498" endtime="20220420 20:11:49.778"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${chooseCustomerSupportDatasetButton}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220420 20:11:49.778" endtime="20220420 20:11:49.802"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${chooseCustomerSupportDatasetButton}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:11:49.803" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[2]/div/div[2]/div/div[1]/div/div/div[2]/button'.</msg>
+<status status="PASS" starttime="20220420 20:11:49.802" endtime="20220420 20:11:49.857"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Please click on the column containing the text you want to classify</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:11:49.858" endtime="20220420 20:11:49.869"/>
+</kw>
+<status status="PASS" starttime="20220420 20:11:49.498" endtime="20220420 20:11:49.869"/>
+</kw>
+<kw name="Verify Text Button Is Checked" library="labelsShownResource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${text_checkbox}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220420 20:11:49.870" endtime="20220420 20:11:50.159"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${variable_for_comparison}</var>
+<arg>${text_checkbox}</arg>
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:11:50.286" level="INFO">${variable_for_comparison} = check_box</msg>
+<status status="PASS" starttime="20220420 20:11:50.159" endtime="20220420 20:11:50.286"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${variable_for_comparison}</arg>
+<arg>${checked_checkbox}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220420 20:11:50.288" endtime="20220420 20:11:50.290"/>
+</kw>
+<status status="PASS" starttime="20220420 20:11:49.870" endtime="20220420 20:11:50.291"/>
+</kw>
+<kw name="Select Train Directly On Labels" library="labelsShownResource">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${train_directly_on_labels_fram_an_existing_column}</arg>
+<doc>Scrolls an element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220420 20:11:50.296" endtime="20220420 20:11:50.610"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${train_directly_on_labels_fram_an_existing_column}</arg>
+<doc>Waits until element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220420 20:11:50.610" endtime="20220420 20:11:50.651"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${train_directly_on_labels_fram_an_existing_column}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:11:50.651" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[3]/div/div/nav/div/div[3]/div[2]/div[1]/div'.</msg>
+<status status="PASS" starttime="20220420 20:11:50.651" endtime="20220420 20:11:50.717"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${continue_to_setup3}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:11:50.718" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[3]/div/div/div[2]/button'.</msg>
+<status status="PASS" starttime="20220420 20:11:50.717" endtime="20220420 20:11:50.826"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${continue_to_setup3}</arg>
+<doc>Scrolls an element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220420 20:11:50.826" endtime="20220420 20:11:51.110"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${continue_to_setup4}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:11:51.110" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[4]/div/div/div[3]/button'.</msg>
+<status status="PASS" starttime="20220420 20:11:51.110" endtime="20220420 20:11:51.221"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${final_create_model_button}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220420 20:11:51.221" endtime="20220420 20:11:51.465"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${final_create_model_button}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:11:51.466" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[4]/div/form/div[2]/button'.</msg>
+<status status="PASS" starttime="20220420 20:11:51.465" endtime="20220420 20:11:51.546"/>
+</kw>
+<status status="PASS" starttime="20220420 20:11:50.293" endtime="20220420 20:11:51.547"/>
+</kw>
+<kw name="Confirm Labels In Model View" library="labelsShownResource">
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220420 20:11:56.549" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220420 20:11:51.548" endtime="20220420 20:11:56.549"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>My Models</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:11:56.549" endtime="20220420 20:11:56.557"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Account</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:11:56.557" endtime="20220420 20:11:56.566"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Billing</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:11:56.566" endtime="20220420 20:11:56.576"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Delivery</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:11:56.577" endtime="20220420 20:11:56.585"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Order</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:11:56.585" endtime="20220420 20:11:56.593"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Refunds</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:11:56.593" endtime="20220420 20:11:56.601"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Tech</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:11:56.601" endtime="20220420 20:11:56.609"/>
+</kw>
+<status status="PASS" starttime="20220420 20:11:51.547" endtime="20220420 20:11:56.609"/>
+</kw>
+<kw name="Navigate To Model Overview" library="labelsShownResource">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>My Models</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:11:56.610" endtime="20220420 20:11:56.616"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${overview_button}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:11:56.616" level="INFO">Clicking element '//*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div/div/div/nav/div/div[1]/a'.</msg>
+<status status="PASS" starttime="20220420 20:11:56.616" endtime="20220420 20:11:56.659"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>3s</arg>
+<arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220411 12:01:33.286" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220411 12:01:30.285" endtime="20220411 12:01:33.286"/>
+<msg timestamp="20220420 20:12:01.661" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220420 20:11:56.660" endtime="20220420 20:12:01.661"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>training</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:12:01.662" endtime="20220420 20:12:01.703"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${createmodelbutton}</arg>
+<arg>${dismiss_training_model_button}</arg>
 <doc>Click element identified by ``locator``.</doc>
-<msg timestamp="20220411 12:01:33.286" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[4]/div/form/div[2]/button'.</msg>
-<status status="PASS" starttime="20220411 12:01:33.286" endtime="20220411 12:01:33.333"/>
+<msg timestamp="20220420 20:12:01.704" level="INFO">Clicking element '//*[@id="app"]/div[3]/div/div/button'.</msg>
+<status status="PASS" starttime="20220420 20:12:01.703" endtime="20220420 20:12:01.766"/>
 </kw>
-<status status="PASS" starttime="20220411 12:01:30.002" endtime="20220411 12:01:33.333"/>
-</kw>
-<kw name="Verify Model Creation Exit" library="select_column_resources">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>${modelname}</arg>
+<arg>Test your model</arg>
 <doc>Waits until ``text`` appears on current page.</doc>
-<status status="PASS" starttime="20220411 12:01:33.334" endtime="20220411 12:01:35.217"/>
+<status status="PASS" starttime="20220420 20:12:01.767" endtime="20220420 20:12:01.798"/>
 </kw>
-<status status="PASS" starttime="20220411 12:01:33.333" endtime="20220411 12:01:35.217"/>
+<status status="PASS" starttime="20220420 20:11:56.610" endtime="20220420 20:12:01.799"/>
 </kw>
-<status status="PASS" starttime="20220411 12:01:25.695" endtime="20220411 12:01:35.217"/>
+<kw name="Confirm Labels In Bar Chart" library="labelsShownResource">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${labels_bar_chart}</arg>
+<doc>Scrolls an element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220420 20:12:01.800" endtime="20220420 20:12:02.119"/>
 </kw>
-<doc>Test that verifies that a model is created.</doc>
-<tag>AG_16</tag>
-<status status="PASS" starttime="20220411 12:01:24.718" endtime="20220411 12:01:35.217"/>
-</test>
-<kw name="End WebTest" library="mainResource" type="TEARDOWN">
-<kw name="Close All Browsers" library="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220411 12:01:35.218" endtime="20220411 12:01:37.370"/>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Account</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:12:02.120" endtime="20220420 20:12:02.134"/>
 </kw>
-<status status="PASS" starttime="20220411 12:01:35.218" endtime="20220411 12:01:37.370"/>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Billing</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:12:02.134" endtime="20220420 20:12:02.147"/>
 </kw>
-<status status="PASS" starttime="20220411 12:01:17.403" endtime="20220411 12:01:37.370"/>
-</suite>
-<suite id="s1-s2" name="Delete Model" source="C:\Users\hagma\PycharmProjects\AgilePeacock\Tests\delete_model.robot">
-<kw name="Start WebTest" library="mainResource" type="SETUP">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>about:blank</arg>
-<arg>headlesschrome</arg>
-<doc>Opens a new browser instance to the given ``url``.</doc>
-<msg timestamp="20220411 12:01:37.380" level="INFO">Opening browser 'headlesschrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20220411 12:01:37.380" endtime="20220411 12:01:38.647"/>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Delivery</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:12:02.148" endtime="20220420 20:12:02.167"/>
 </kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>https://app.labelf.ai/login</arg>
-<doc>Navigates the active browser instance to the provided ``url``.</doc>
-<msg timestamp="20220411 12:01:38.648" level="INFO">Opening url 'https://app.labelf.ai/login'</msg>
-<status status="PASS" starttime="20220411 12:01:38.648" endtime="20220411 12:01:44.854"/>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Order</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:12:02.167" endtime="20220420 20:12:02.179"/>
 </kw>
-<kw name="Choose Dataset2" library="select_column_resources">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Refunds</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:12:02.180" endtime="20220420 20:12:02.194"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Tech</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:12:02.194" endtime="20220420 20:12:02.205"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:01.799" endtime="20220420 20:12:02.206"/>
+</kw>
+<kw name="Scroll Down To Pie Chart" library="labelsShownResource">
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220420 20:12:05.208" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220420 20:12:02.208" endtime="20220420 20:12:05.209"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,1700)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220420 20:12:05.211" level="INFO">Executing JavaScript:
+window.scrollTo(0,1700)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220420 20:12:05.209" endtime="20220420 20:12:05.268"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:02.207" endtime="20220420 20:12:05.268"/>
+</kw>
+<kw name="Confirm Labels In Pie Chart" library="labelsShownResource">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>//*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/div</arg>
+<arg>${labels_pie_chart}</arg>
 <doc>Waits until element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220411 12:01:44.854" endtime="20220411 12:01:44.870"/>
+<status status="PASS" starttime="20220420 20:12:05.269" endtime="20220420 20:12:05.287"/>
 </kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>//*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/button[3]</arg>
-<doc>Clicks button identified by ``locator``.</doc>
-<msg timestamp="20220411 12:01:44.870" level="INFO">Clicking button '//*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/button[3]'.</msg>
-<status status="PASS" starttime="20220411 12:01:44.870" endtime="20220411 12:01:44.915"/>
-</kw>
-<status status="PASS" starttime="20220411 12:01:37.380" endtime="20220411 12:01:44.915"/>
-</kw>
-<test id="s1-s2-t1" name="User Can Delete Model">
-<kw name="Login" library="mainResource">
-<kw name="Enter Account Information" library="mainResource">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>//*[@id="app"]/div/main/div/div/div/div/div/div[1]/form/div[1]/div[2]/div[1]/div/input</arg>
-<arg>${e-mail}</arg>
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<msg timestamp="20220411 12:01:44.917" level="INFO">Typing text 'oskar.hagman@iths.se' into text field '//*[@id="app"]/div/main/div/div/div/div/div/div[1]/form/div[1]/div[2]/div[1]/div/input'.</msg>
-<status status="PASS" starttime="20220411 12:01:44.917" endtime="20220411 12:01:45.080"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>//*[@id="password"]</arg>
-<arg>${password}</arg>
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<msg timestamp="20220411 12:01:45.080" level="INFO">Typing text '123456789' into text field '//*[@id="password"]'.</msg>
-<status status="PASS" starttime="20220411 12:01:45.080" endtime="20220411 12:01:45.183"/>
-</kw>
-<status status="PASS" starttime="20220413 13:55:20.516" endtime="20220413 13:55:20.844"/>
-</kw>
-<kw name="Verify Train Directly On Labels Is Enabled" library="select_column_resources">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>Labelf</arg>
+<arg>Account</arg>
 <doc>Waits until ``text`` appears on current page.</doc>
-<status status="PASS" starttime="20220411 12:01:45.183" endtime="20220411 12:01:45.192"/>
+<status status="PASS" starttime="20220420 20:12:05.287" endtime="20220420 20:12:05.293"/>
 </kw>
-<status status="PASS" starttime="20220411 12:01:44.917" endtime="20220411 12:01:45.192"/>
-</kw>
-<kw name="Press Login Button" library="mainResource">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//*[@id="app"]/div/main/div/div/div/div/div/div[2]/button[2]</arg>
-<doc>Click element identified by ``locator``.</doc>
-<msg timestamp="20220411 12:01:45.192" level="INFO">Clicking element '//*[@id="app"]/div/main/div/div/div/div/div/div[2]/button[2]'.</msg>
-<status status="PASS" starttime="20220411 12:01:45.192" endtime="20220411 12:01:45.260"/>
-</kw>
-<status status="PASS" starttime="20220411 12:01:45.192" endtime="20220411 12:01:45.260"/>
-</kw>
-<kw name="Verify Login" library="mainResource">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>Models</arg>
+<arg>Billing</arg>
 <doc>Waits until ``text`` appears on current page.</doc>
-<status status="PASS" starttime="20220411 12:01:45.261" endtime="20220411 12:01:46.087"/>
+<status status="PASS" starttime="20220420 20:12:05.294" endtime="20220420 20:12:05.300"/>
 </kw>
-<status status="PASS" starttime="20220411 12:01:45.261" endtime="20220411 12:01:46.087"/>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Delivery</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:12:05.300" endtime="20220420 20:12:05.306"/>
 </kw>
-<status status="PASS" starttime="20220411 12:01:44.916" endtime="20220411 12:01:46.088"/>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Order</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:12:05.306" endtime="20220420 20:12:05.312"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Refunds</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:12:05.312" endtime="20220420 20:12:05.318"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Tech</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:12:05.318" endtime="20220420 20:12:05.324"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:05.269" endtime="20220420 20:12:05.324"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20220420 20:12:05.325" endtime="20220420 20:12:05.348"/>
 </kw>
 <kw name="Delete Model" library="deleteModelResources">
 <kw name="Press Dropdown Menu" library="deleteModelResources">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Models</arg>
 <doc>Waits until ``text`` appears on current page.</doc>
-<status status="PASS" starttime="20220411 12:01:46.088" endtime="20220411 12:01:46.094"/>
+<status status="PASS" starttime="20220420 20:12:05.349" endtime="20220420 20:12:05.357"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${dropdown_menu}</arg>
 <doc>Waits until element ``locator`` appears on current page.</doc>
-<status status="PASS" starttime="20220411 12:01:46.094" endtime="20220411 12:01:46.715"/>
+<status status="PASS" starttime="20220420 20:12:05.358" endtime="20220420 20:12:05.646"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${dropdown_menu}</arg>
 <doc>Clicks button identified by ``locator``.</doc>
-<msg timestamp="20220411 12:01:46.716" level="INFO">Clicking button '//*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div/div/div/nav/div/div[3]/div/button'.</msg>
-<status status="PASS" starttime="20220411 12:01:46.716" endtime="20220411 12:01:46.759"/>
+<msg timestamp="20220420 20:12:05.647" level="INFO">Clicking button '//*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div/div/div/nav/div/div[3]/div/button'.</msg>
+<status status="PASS" starttime="20220420 20:12:05.646" endtime="20220420 20:12:05.718"/>
 </kw>
-<status status="PASS" starttime="20220411 12:01:46.088" endtime="20220411 12:01:46.760"/>
+<status status="PASS" starttime="20220420 20:12:05.349" endtime="20220420 20:12:05.719"/>
 </kw>
 <kw name="Press Delete In Dropdown Menu" library="deleteModelResources">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${delete_button}</arg>
 <doc>Waits until element ``locator`` appears on current page.</doc>
-<status status="PASS" starttime="20220411 12:01:46.760" endtime="20220411 12:01:46.774"/>
+<status status="PASS" starttime="20220420 20:12:05.720" endtime="20220420 20:12:05.747"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${delete_button}</arg>
 <doc>Click element identified by ``locator``.</doc>
-<msg timestamp="20220411 12:01:46.775" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/a'.</msg>
-<status status="PASS" starttime="20220411 12:01:46.774" endtime="20220411 12:01:46.812"/>
+<msg timestamp="20220420 20:12:05.747" level="INFO">Clicking element '//*[@id="app"]/div[3]/div/div/div[2]/a'.</msg>
+<status status="PASS" starttime="20220420 20:12:05.747" endtime="20220420 20:12:05.834"/>
 </kw>
-<status status="PASS" starttime="20220411 12:01:46.760" endtime="20220411 12:01:46.812"/>
+<status status="PASS" starttime="20220420 20:12:05.719" endtime="20220420 20:12:05.834"/>
 </kw>
 <kw name="Press Delete Confirmation Popup" library="deleteModelResources">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${confirm_delete}</arg>
 <doc>Waits until element ``locator`` appears on current page.</doc>
-<status status="PASS" starttime="20220411 12:01:46.812" endtime="20220411 12:01:46.824"/>
+<status status="PASS" starttime="20220420 20:12:05.835" endtime="20220420 20:12:05.850"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${confirm_delete}</arg>
 <doc>Clicks button identified by ``locator``.</doc>
-<msg timestamp="20220411 12:01:46.825" level="INFO">Clicking button '//*[@id="app"]/div[6]/div/div/div[3]/button'.</msg>
-<status status="PASS" starttime="20220411 12:01:46.825" endtime="20220411 12:01:46.865"/>
+<msg timestamp="20220420 20:12:05.851" level="INFO">Clicking button '//*[@id="app"]/div[3]/div/div/div[3]/button'.</msg>
+<status status="PASS" starttime="20220420 20:12:05.850" endtime="20220420 20:12:05.947"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>You can create a new model by clicking the "NEW MODEL" button in the top right corner</arg>
 <doc>Waits until ``text`` appears on current page.</doc>
-<status status="PASS" starttime="20220411 12:01:46.865" endtime="20220411 12:01:47.497"/>
+<status status="PASS" starttime="20220420 20:12:05.947" endtime="20220420 20:12:06.607"/>
 </kw>
-<status status="PASS" starttime="20220411 12:01:46.812" endtime="20220411 12:01:47.497"/>
+<status status="PASS" starttime="20220420 20:12:05.834" endtime="20220420 20:12:06.607"/>
 </kw>
 <kw name="Verify Model Is Deleted" library="deleteModelResources">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${my_models}</arg>
 <doc>Waits until element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220411 12:01:47.497" endtime="20220411 12:01:48.128"/>
+<status status="PASS" starttime="20220420 20:12:06.608" endtime="20220420 20:12:07.295"/>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${element_text}</var>
 <arg>${my_models}</arg>
 <doc>Returns the text value of element identified by ``locator``.</doc>
-<msg timestamp="20220411 12:01:48.139" level="INFO">${element_text} = My Models (0)</msg>
-<status status="PASS" starttime="20220411 12:01:48.128" endtime="20220411 12:01:48.139"/>
+<msg timestamp="20220420 20:12:07.351" level="INFO">${element_text} = My Models (0)</msg>
+<status status="PASS" starttime="20220420 20:12:07.295" endtime="20220420 20:12:07.351"/>
 </kw>
 <kw name="Convert Into Number" library="remove_text">
 <var>${actual_amount}</var>
 <arg>${element_text}</arg>
 <doc>Remove text from number, convert to int and return number</doc>
-<msg timestamp="20220411 12:01:48.139" level="INFO">${actual_amount} = 0</msg>
-<status status="PASS" starttime="20220411 12:01:48.139" endtime="20220411 12:01:48.139"/>
+<msg timestamp="20220420 20:12:07.352" level="INFO">${actual_amount} = 0</msg>
+<status status="PASS" starttime="20220420 20:12:07.351" endtime="20220420 20:12:07.352"/>
 </kw>
 <kw name="Should Be True" library="BuiltIn">
 <arg>${actual_amount} == 0</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" starttime="20220411 12:01:48.139" endtime="20220411 12:01:48.140"/>
+<status status="PASS" starttime="20220420 20:12:07.352" endtime="20220420 20:12:07.353"/>
 </kw>
-<status status="PASS" starttime="20220411 12:01:47.497" endtime="20220411 12:01:48.140"/>
+<status status="PASS" starttime="20220420 20:12:06.607" endtime="20220420 20:12:07.353"/>
 </kw>
-<status status="PASS" starttime="20220411 12:01:46.088" endtime="20220411 12:01:48.140"/>
+<status status="PASS" starttime="20220420 20:12:05.348" endtime="20220420 20:12:07.353"/>
 </kw>
-<doc>Test that verifies model is deleted.</doc>
-<tag>AG_16</tag>
-<status status="PASS" starttime="20220411 12:01:44.915" endtime="20220411 12:01:48.140"/>
+<doc>Test will verify that labels from chosen dataset is present after creating model</doc>
+<tag>AG_64</tag>
+<status status="PASS" starttime="20220420 20:11:47.164" endtime="20220420 20:12:07.354"/>
 </test>
-<kw name="End WebTest" library="mainResource" type="TEARDOWN">
-<kw name="Close All Browsers" library="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220411 12:01:48.141" endtime="20220411 12:01:50.262"/>
-</kw>
-<status status="PASS" starttime="20220411 12:01:48.141" endtime="20220411 12:01:50.262"/>
-</kw>
-<status status="PASS" starttime="20220411 12:01:37.372" endtime="20220411 12:01:50.262"/>
-</suite>
-<suite id="s1-s3" name="User Login" source="C:\Users\hagma\PycharmProjects\AgilePeacock\Tests\user_login.robot">
-<kw name="Start WebTest" library="mainResource" type="SETUP">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>about:blank</arg>
-<arg>headlesschrome</arg>
-<doc>Opens a new browser instance to the given ``url``.</doc>
-<msg timestamp="20220411 12:01:50.268" level="INFO">Opening browser 'headlesschrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20220411 12:01:50.268" endtime="20220411 12:01:51.432"/>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>https://app.labelf.ai/login</arg>
-<doc>Navigates the active browser instance to the provided ``url``.</doc>
-<msg timestamp="20220411 12:01:51.433" level="INFO">Opening url 'https://app.labelf.ai/login'</msg>
-<status status="PASS" starttime="20220411 12:01:51.432" endtime="20220411 12:01:57.516"/>
-</kw>
-<kw name="Choose Dataset4" library="select_column_resources">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>//*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/div</arg>
-<doc>Waits until element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220411 12:01:57.516" endtime="20220411 12:01:57.538"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>//*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/button[3]</arg>
-<doc>Clicks button identified by ``locator``.</doc>
-<msg timestamp="20220411 12:01:57.538" level="INFO">Clicking button '//*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/button[3]'.</msg>
-<status status="PASS" starttime="20220411 12:01:57.538" endtime="20220411 12:01:57.583"/>
-</kw>
-<status status="PASS" starttime="20220411 12:01:50.268" endtime="20220411 12:01:57.584"/>
-</kw>
-<test id="s1-s3-t1" name="User Log In">
-<kw name="Login" library="mainResource">
-<kw name="Enter Account Information" library="mainResource">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>//*[@id="app"]/div/main/div/div/div/div/div/div[1]/form/div[1]/div[2]/div[1]/div/input</arg>
-<arg>${e-mail}</arg>
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<msg timestamp="20220411 12:01:57.586" level="INFO">Typing text 'oskar.hagman@iths.se' into text field '//*[@id="app"]/div/main/div/div/div/div/div/div[1]/form/div[1]/div[2]/div[1]/div/input'.</msg>
-<status status="PASS" starttime="20220411 12:01:57.586" endtime="20220411 12:01:57.742"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>//*[@id="password"]</arg>
-<arg>${password}</arg>
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<msg timestamp="20220411 12:01:57.742" level="INFO">Typing text '123456789' into text field '//*[@id="password"]'.</msg>
-<status status="PASS" starttime="20220411 12:01:57.742" endtime="20220411 12:01:57.842"/>
+<test id="s1-t4" name="User Can Select Column Containing The Labels">
+<kw name="Given A Dataset With Existing Labels Has Been Selected" library="select_column_resources">
+<kw name="Press Create New Model" library="createModelResource">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${newmodelbutton}</arg>
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:12:07.357" endtime="20220420 20:12:07.368"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${label_switch}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220413 13:55:24.396" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[3]/div/div/nav/div/div[3]/div[2]/div[1]/div'.</msg>
-<status status="PASS" starttime="20220413 13:55:24.395" endtime="20220413 13:55:24.464"/>
+<arg>${newmodelbutton}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:12:07.368" level="INFO">Clicking element '//*[@id="app"]/div[6]/div[1]/main/div/div/div[1]/nav/div[1]/a'.</msg>
+<status status="PASS" starttime="20220420 20:12:07.368" endtime="20220420 20:12:07.406"/>
 </kw>
-<status status="PASS" starttime="20220413 13:55:24.146" endtime="20220413 13:55:24.464"/>
+<status status="PASS" starttime="20220420 20:12:07.357" endtime="20220420 20:12:07.406"/>
+</kw>
+<kw name="Press Continue To Model Creation" library="createModelResource">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${continueButton}</arg>
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:12:07.407" endtime="20220420 20:12:07.625"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${continueButton}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:12:07.626" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[1]/div/div/div[2]'.</msg>
+<status status="PASS" starttime="20220420 20:12:07.626" endtime="20220420 20:12:07.742"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:07.406" endtime="20220420 20:12:07.742"/>
+</kw>
+<kw name="Choose Dataset" library="select_column_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${choose_dataset_untrained_model}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220420 20:12:07.744" endtime="20220420 20:12:07.810"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${choosedatasetbutton}</arg>
+<doc>Scrolls an element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220420 20:12:07.810" endtime="20220420 20:12:08.082"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${choose_dataset_untrained_model}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:12:08.083" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[2]/div/div[2]/div/div[2]/div/div/div[2]/button'.</msg>
+<status status="PASS" starttime="20220420 20:12:08.083" endtime="20220420 20:12:08.125"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Please click on the column containing the text you want to classify</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:12:08.125" endtime="20220420 20:12:08.136"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:07.743" endtime="20220420 20:12:08.136"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:07.357" endtime="20220420 20:12:08.137"/>
+</kw>
+<kw name="And &quot;Train Directly On Labels From An Existing Column&quot; Has Been Enabled" library="select_column_resources">
+<kw name="Enable Train Directly On Labels" library="select_column_resources">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${label_switch}</arg>
+<doc>Waits until element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220420 20:12:08.138" endtime="20220420 20:12:08.397"/>
+</kw>
+<kw name="Click Element At Coordinates" library="SeleniumLibrary">
+<arg>${label_switch}</arg>
+<arg>5</arg>
+<arg>0</arg>
+<doc>Click element ``locator`` at ``xoffset/yoffset``.</doc>
+<msg timestamp="20220420 20:12:08.399" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[3]/div/div/nav/div/div[3]/div[2]/div[1]/div' at coordinates x=5, y=0.</msg>
+<status status="PASS" starttime="20220420 20:12:08.398" endtime="20220420 20:12:08.967"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:08.137" endtime="20220420 20:12:08.967"/>
 </kw>
 <kw name="Verify Train Directly On Labels Is Enabled" library="select_column_resources">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>Labelf</arg>
+<arg>Select the column which contains the labels</arg>
 <doc>Waits until ``text`` appears on current page.</doc>
-<status status="PASS" starttime="20220411 12:01:57.842" endtime="20220411 12:01:57.851"/>
+<status status="PASS" starttime="20220420 20:12:08.968" endtime="20220420 20:12:08.992"/>
 </kw>
-<status status="PASS" starttime="20220411 12:01:57.586" endtime="20220411 12:01:57.851"/>
+<status status="PASS" starttime="20220420 20:12:08.967" endtime="20220420 20:12:08.992"/>
 </kw>
-<kw name="Press Login Button" library="mainResource">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220420 20:12:10.995" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220420 20:12:08.993" endtime="20220420 20:12:10.995"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:08.137" endtime="20220420 20:12:10.996"/>
+</kw>
+<kw name="When The User Clicks Continue" library="select_column_resources">
+<kw name="Press Continue" library="select_column_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${continue_button2}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220420 20:12:11.000" endtime="20220420 20:12:11.027"/>
+</kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>//*[@id="app"]/div/main/div/div/div/div/div/div[2]/button[2]</arg>
+<arg>${continue_button2}</arg>
 <doc>Click element identified by ``locator``.</doc>
-<msg timestamp="20220411 12:01:57.852" level="INFO">Clicking element '//*[@id="app"]/div/main/div/div/div/div/div/div[2]/button[2]'.</msg>
-<status status="PASS" starttime="20220411 12:01:57.851" endtime="20220411 12:01:57.891"/>
+<msg timestamp="20220420 20:12:11.027" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[3]/div/div/div[2]/button'.</msg>
+<status status="PASS" starttime="20220420 20:12:11.027" endtime="20220420 20:12:11.095"/>
 </kw>
-<status status="PASS" starttime="20220411 12:01:57.851" endtime="20220411 12:01:57.891"/>
-</kw>
-<kw name="Verify Login" library="mainResource">
+<kw name="Verify Continue Is Pressed" library="select_column_resources">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>Models</arg>
+<arg>Please click on the column containing the labels</arg>
 <doc>Waits until ``text`` appears on current page.</doc>
-<status status="PASS" starttime="20220411 12:01:57.892" endtime="20220411 12:01:58.571"/>
+<status status="PASS" starttime="20220420 20:12:11.096" endtime="20220420 20:12:11.117"/>
 </kw>
-<status status="PASS" starttime="20220411 12:01:57.891" endtime="20220411 12:01:58.571"/>
+<status status="PASS" starttime="20220420 20:12:11.095" endtime="20220420 20:12:11.117"/>
 </kw>
-<status status="PASS" starttime="20220411 12:01:57.585" endtime="20220411 12:01:58.571"/>
+<status status="PASS" starttime="20220420 20:12:10.999" endtime="20220420 20:12:11.117"/>
 </kw>
-<doc>Test that will insert credentials, log in and go to the start page.</doc>
-<tag>AG_16</tag>
-<status status="PASS" starttime="20220411 12:01:57.584" endtime="20220411 12:01:58.572"/>
+<status status="PASS" starttime="20220420 20:12:10.998" endtime="20220420 20:12:11.117"/>
+</kw>
+<kw name="Then It Shall Be Possible To Select A Column Which Contains The Labels" library="select_column_resources">
+<kw name="Press Intent Checkbox" library="select_column_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${intent_checkbox}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220420 20:12:11.121" endtime="20220420 20:12:11.159"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${intent_checkbox}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:12:11.159" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[4]/div/div/div[1]/div/table/thead/tr[1]/th[2]'.</msg>
+<status status="PASS" starttime="20220420 20:12:11.159" endtime="20220420 20:12:11.237"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:11.120" endtime="20220420 20:12:11.237"/>
+</kw>
+<kw name="Verify Intent Button Is Checked" library="select_column_resources">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${check_box2}</var>
+<arg>${intent_checkbox}/i</arg>
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:12:11.269" level="INFO">${check_box2} = check_box</msg>
+<status status="PASS" starttime="20220420 20:12:11.239" endtime="20220420 20:12:11.269"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${check_box2}</arg>
+<arg>${checkbox_should_be}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220420 20:12:11.269" endtime="20220420 20:12:11.270"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:11.238" endtime="20220420 20:12:11.270"/>
+</kw>
+<kw name="Press Category Checkbox" library="select_column_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${category_checkbox}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220420 20:12:11.270" endtime="20220420 20:12:11.296"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${category_checkbox}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:12:11.297" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[4]/div/div/div[1]/div/table/thead/tr[1]/th[1]'.</msg>
+<status status="PASS" starttime="20220420 20:12:11.296" endtime="20220420 20:12:11.371"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:11.270" endtime="20220420 20:12:11.371"/>
+</kw>
+<kw name="Verify Category Button Is Checked" library="select_column_resources">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${check_box1}</var>
+<arg>${category_checkbox}/i</arg>
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:12:11.422" level="INFO">${check_box1} = check_box</msg>
+<status status="PASS" starttime="20220420 20:12:11.372" endtime="20220420 20:12:11.422"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${check_box1}</arg>
+<arg>${checkbox_should_be}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220420 20:12:11.422" endtime="20220420 20:12:11.422"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:11.371" endtime="20220420 20:12:11.422"/>
+</kw>
+<kw name="Exit Model Creation" library="select_column_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${exit_button}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:12:11.423" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/nav/div/a/div'.</msg>
+<status status="PASS" starttime="20220420 20:12:11.423" endtime="20220420 20:12:11.491"/>
+</kw>
+<kw name="Verify Model Creation Exit" library="select_column_resources">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Welcome to Labelf!</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:12:11.492" endtime="20220420 20:12:11.760"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:11.491" endtime="20220420 20:12:11.760"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:11.422" endtime="20220420 20:12:11.760"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:11.119" endtime="20220420 20:12:11.760"/>
+</kw>
+<doc>Verifies that a user can select a column containing labels</doc>
+<tag>AG_18</tag>
+<status status="PASS" starttime="20220420 20:12:07.356" endtime="20220420 20:12:11.761"/>
+</test>
+<test id="s1-t5" name="User Can Select Column Containing The Labels - Dataset 2">
+<kw name="Given A Dataset With Existing Labels Has Been Selected - Dataset 2" library="select_column_resources">
+<kw name="Press Create New Model" library="createModelResource">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${newmodelbutton}</arg>
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:12:11.763" endtime="20220420 20:12:11.769"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${newmodelbutton}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:12:11.769" level="INFO">Clicking element '//*[@id="app"]/div[6]/div[1]/main/div/div/div[1]/nav/div[1]/a'.</msg>
+<status status="PASS" starttime="20220420 20:12:11.769" endtime="20220420 20:12:11.817"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:11.763" endtime="20220420 20:12:11.817"/>
+</kw>
+<kw name="Press Continue To Model Creation" library="createModelResource">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${continueButton}</arg>
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:12:11.817" endtime="20220420 20:12:12.036"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${continueButton}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:12:12.037" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[1]/div/div/div[2]'.</msg>
+<status status="PASS" starttime="20220420 20:12:12.037" endtime="20220420 20:12:12.153"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:11.817" endtime="20220420 20:12:12.153"/>
+</kw>
+<kw name="Choose Dataset2" library="select_column_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${choose_dataset_cultural_centers}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220420 20:12:12.155" endtime="20220420 20:12:12.198"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${choosedatasetbutton}</arg>
+<doc>Scrolls an element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220420 20:12:12.198" endtime="20220420 20:12:12.468"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${choose_dataset_cultural_centers}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:12:12.469" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[2]/div/div[2]/div/div[3]/div/div/div[2]/button'.</msg>
+<status status="PASS" starttime="20220420 20:12:12.468" endtime="20220420 20:12:12.515"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Please click on the column containing the text you want to classify</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:12:12.516" endtime="20220420 20:12:12.523"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:12.154" endtime="20220420 20:12:12.523"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:11.763" endtime="20220420 20:12:12.523"/>
+</kw>
+<kw name="And &quot;Train Directly On Labels From An Existing Column&quot; Has Been Enabled" library="select_column_resources">
+<kw name="Enable Train Directly On Labels" library="select_column_resources">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${label_switch}</arg>
+<doc>Waits until element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220420 20:12:12.524" endtime="20220420 20:12:12.788"/>
+</kw>
+<kw name="Click Element At Coordinates" library="SeleniumLibrary">
+<arg>${label_switch}</arg>
+<arg>5</arg>
+<arg>0</arg>
+<doc>Click element ``locator`` at ``xoffset/yoffset``.</doc>
+<msg timestamp="20220420 20:12:12.789" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[3]/div/div/nav/div/div[3]/div[2]/div[1]/div' at coordinates x=5, y=0.</msg>
+<status status="PASS" starttime="20220420 20:12:12.788" endtime="20220420 20:12:13.430"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:12.524" endtime="20220420 20:12:13.430"/>
+</kw>
+<kw name="Verify Train Directly On Labels Is Enabled" library="select_column_resources">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Select the column which contains the labels</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:12:13.431" endtime="20220420 20:12:13.440"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:13.431" endtime="20220420 20:12:13.440"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220420 20:12:15.442" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220420 20:12:13.441" endtime="20220420 20:12:15.442"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:12.524" endtime="20220420 20:12:15.443"/>
+</kw>
+<kw name="When The User Clicks Continue" library="select_column_resources">
+<kw name="Press Continue" library="select_column_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${continue_button2}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220420 20:12:15.446" endtime="20220420 20:12:15.484"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${continue_button2}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:12:15.484" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[3]/div/div/div[2]/button'.</msg>
+<status status="PASS" starttime="20220420 20:12:15.484" endtime="20220420 20:12:15.546"/>
+</kw>
+<kw name="Verify Continue Is Pressed" library="select_column_resources">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Please click on the column containing the labels</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:12:15.546" endtime="20220420 20:12:15.557"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:15.546" endtime="20220420 20:12:15.557"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:15.445" endtime="20220420 20:12:15.557"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:15.444" endtime="20220420 20:12:15.558"/>
+</kw>
+<kw name="Then It Shall Be Possible To Select A Column Which Contains The Labels" library="select_column_resources">
+<kw name="Press Intent Checkbox" library="select_column_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${intent_checkbox}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220420 20:12:15.559" endtime="20220420 20:12:15.592"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${intent_checkbox}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:12:15.592" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[4]/div/div/div[1]/div/table/thead/tr[1]/th[2]'.</msg>
+<status status="PASS" starttime="20220420 20:12:15.592" endtime="20220420 20:12:15.670"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:15.558" endtime="20220420 20:12:15.670"/>
+</kw>
+<kw name="Verify Intent Button Is Checked" library="select_column_resources">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${check_box2}</var>
+<arg>${intent_checkbox}/i</arg>
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:12:15.707" level="INFO">${check_box2} = check_box</msg>
+<status status="PASS" starttime="20220420 20:12:15.672" endtime="20220420 20:12:15.707"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${check_box2}</arg>
+<arg>${checkbox_should_be}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220420 20:12:15.707" endtime="20220420 20:12:15.707"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:15.671" endtime="20220420 20:12:15.707"/>
+</kw>
+<kw name="Press Category Checkbox" library="select_column_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${category_checkbox}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220420 20:12:15.708" endtime="20220420 20:12:15.737"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${category_checkbox}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:12:15.738" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[4]/div/div/div[1]/div/table/thead/tr[1]/th[1]'.</msg>
+<status status="PASS" starttime="20220420 20:12:15.737" endtime="20220420 20:12:15.824"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:15.708" endtime="20220420 20:12:15.825"/>
+</kw>
+<kw name="Verify Category Button Is Checked" library="select_column_resources">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${check_box1}</var>
+<arg>${category_checkbox}/i</arg>
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:12:15.887" level="INFO">${check_box1} = check_box</msg>
+<status status="PASS" starttime="20220420 20:12:15.826" endtime="20220420 20:12:15.887"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${check_box1}</arg>
+<arg>${checkbox_should_be}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220420 20:12:15.887" endtime="20220420 20:12:15.887"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:15.825" endtime="20220420 20:12:15.888"/>
+</kw>
+<kw name="Exit Model Creation" library="select_column_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${exit_button}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:12:15.888" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/nav/div/a/div'.</msg>
+<status status="PASS" starttime="20220420 20:12:15.888" endtime="20220420 20:12:15.952"/>
+</kw>
+<kw name="Verify Model Creation Exit" library="select_column_resources">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Welcome to Labelf!</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:12:15.953" endtime="20220420 20:12:16.179"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:15.952" endtime="20220420 20:12:16.179"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:15.888" endtime="20220420 20:12:16.179"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:15.558" endtime="20220420 20:12:16.179"/>
+</kw>
+<doc>Verifies that a user can select a column containing labels</doc>
+<tag>AG_18</tag>
+<status status="PASS" starttime="20220420 20:12:11.762" endtime="20220420 20:12:16.179"/>
+</test>
+<test id="s1-t6" name="User Can Select Column Containing The Labels - Dataset 3">
+<kw name="Given A Dataset With Existing Labels Has Been Selected - Dataset 3" library="select_column_resources">
+<kw name="Press Create New Model" library="createModelResource">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${newmodelbutton}</arg>
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:12:16.181" endtime="20220420 20:12:16.187"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${newmodelbutton}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:12:16.187" level="INFO">Clicking element '//*[@id="app"]/div[6]/div[1]/main/div/div/div[1]/nav/div[1]/a'.</msg>
+<status status="PASS" starttime="20220420 20:12:16.187" endtime="20220420 20:12:16.241"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:16.181" endtime="20220420 20:12:16.241"/>
+</kw>
+<kw name="Press Continue To Model Creation" library="createModelResource">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${continueButton}</arg>
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:12:16.242" endtime="20220420 20:12:16.462"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${continueButton}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:12:16.462" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[1]/div/div/div[2]'.</msg>
+<status status="PASS" starttime="20220420 20:12:16.462" endtime="20220420 20:12:16.562"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:16.241" endtime="20220420 20:12:16.562"/>
+</kw>
+<kw name="Choose Dataset3" library="select_column_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${choose_dataset_customer_support}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220420 20:12:16.562" endtime="20220420 20:12:16.599"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${choosedatasetbutton}</arg>
+<doc>Scrolls an element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220420 20:12:16.599" endtime="20220420 20:12:16.866"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${choose_dataset_customer_support}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:12:16.866" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[2]/div/div[2]/div/div[1]/div/div/div[2]/button'.</msg>
+<status status="PASS" starttime="20220420 20:12:16.866" endtime="20220420 20:12:16.909"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Please click on the column containing the text you want to classify</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:12:16.909" endtime="20220420 20:12:16.928"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:16.562" endtime="20220420 20:12:16.928"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:16.181" endtime="20220420 20:12:16.928"/>
+</kw>
+<kw name="And &quot;Train Directly On Labels From An Existing Column&quot; Has Been Enabled" library="select_column_resources">
+<kw name="Enable Train Directly On Labels" library="select_column_resources">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${label_switch}</arg>
+<doc>Waits until element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220420 20:12:16.930" endtime="20220420 20:12:17.204"/>
+</kw>
+<kw name="Click Element At Coordinates" library="SeleniumLibrary">
+<arg>${label_switch}</arg>
+<arg>5</arg>
+<arg>0</arg>
+<doc>Click element ``locator`` at ``xoffset/yoffset``.</doc>
+<msg timestamp="20220420 20:12:17.205" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[3]/div/div/nav/div/div[3]/div[2]/div[1]/div' at coordinates x=5, y=0.</msg>
+<status status="PASS" starttime="20220420 20:12:17.205" endtime="20220420 20:12:17.759"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:16.930" endtime="20220420 20:12:17.759"/>
+</kw>
+<kw name="Verify Train Directly On Labels Is Enabled" library="select_column_resources">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Select the column which contains the labels</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:12:17.760" endtime="20220420 20:12:17.769"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:17.759" endtime="20220420 20:12:17.769"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220420 20:12:19.770" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220420 20:12:17.769" endtime="20220420 20:12:19.770"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:16.929" endtime="20220420 20:12:19.770"/>
+</kw>
+<kw name="When The User Clicks Continue" library="select_column_resources">
+<kw name="Press Continue" library="select_column_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${continue_button2}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220420 20:12:19.771" endtime="20220420 20:12:19.784"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${continue_button2}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:12:19.785" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[3]/div/div/div[2]/button'.</msg>
+<status status="PASS" starttime="20220420 20:12:19.785" endtime="20220420 20:12:19.844"/>
+</kw>
+<kw name="Verify Continue Is Pressed" library="select_column_resources">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Please click on the column containing the labels</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:12:19.845" endtime="20220420 20:12:19.857"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:19.844" endtime="20220420 20:12:19.857"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:19.771" endtime="20220420 20:12:19.857"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:19.771" endtime="20220420 20:12:19.858"/>
+</kw>
+<kw name="Then The Column That Contains The Labels Has Been Selected" library="select_column_resources">
+<kw name="Verify Category Button Is Checked No Choice" library="select_column_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${category_checkbox_one_choice}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220420 20:12:19.859" endtime="20220420 20:12:20.120"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${check_box3}</var>
+<arg>${category_checkbox_one_choice}</arg>
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:12:20.156" level="INFO">${check_box3} = check_box</msg>
+<status status="PASS" starttime="20220420 20:12:20.120" endtime="20220420 20:12:20.156"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${check_box3}</arg>
+<arg>${checkbox_should_be}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220420 20:12:20.157" endtime="20220420 20:12:20.157"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:19.859" endtime="20220420 20:12:20.158"/>
+</kw>
+<kw name="Exit Model Creation" library="select_column_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${exit_button}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:12:20.158" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/nav/div/a/div'.</msg>
+<status status="PASS" starttime="20220420 20:12:20.158" endtime="20220420 20:12:20.202"/>
+</kw>
+<kw name="Verify Model Creation Exit" library="select_column_resources">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Welcome to Labelf!</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:12:20.203" endtime="20220420 20:12:20.419"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:20.203" endtime="20220420 20:12:20.419"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:20.158" endtime="20220420 20:12:20.419"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:19.858" endtime="20220420 20:12:20.419"/>
+</kw>
+<doc>Verifies that a column is automatically selected when only one column exists</doc>
+<tag>AG_18</tag>
+<status status="PASS" starttime="20220420 20:12:16.180" endtime="20220420 20:12:20.420"/>
+</test>
+<test id="s1-t7" name="User Can Select Column Containing The Labels - Dataset 4">
+<kw name="Given A Dataset With Existing Labels Has Been Selected - Dataset 4" library="select_column_resources">
+<kw name="Press Create New Model" library="createModelResource">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${newmodelbutton}</arg>
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:12:20.424" endtime="20220420 20:12:20.432"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${newmodelbutton}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:12:20.433" level="INFO">Clicking element '//*[@id="app"]/div[6]/div[1]/main/div/div/div[1]/nav/div[1]/a'.</msg>
+<status status="PASS" starttime="20220420 20:12:20.432" endtime="20220420 20:12:20.480"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:20.424" endtime="20220420 20:12:20.480"/>
+</kw>
+<kw name="Press Continue To Model Creation" library="createModelResource">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${continueButton}</arg>
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:12:20.480" endtime="20220420 20:12:20.695"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${continueButton}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:12:20.695" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[1]/div/div/div[2]'.</msg>
+<status status="PASS" starttime="20220420 20:12:20.695" endtime="20220420 20:12:20.815"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:20.480" endtime="20220420 20:12:20.815"/>
+</kw>
+<kw name="Choose Dataset4" library="select_column_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${choose_dataset_no_labels}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220420 20:12:20.816" endtime="20220420 20:12:20.840"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${choosedatasetbutton}</arg>
+<doc>Scrolls an element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220420 20:12:20.840" endtime="20220420 20:12:21.111"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${choose_dataset_no_labels}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:12:21.111" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[2]/div/div[2]/div/div[4]/div/div/div[2]/button'.</msg>
+<status status="PASS" starttime="20220420 20:12:21.111" endtime="20220420 20:12:21.153"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Please click on the column containing the text you want to classify</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:12:21.153" endtime="20220420 20:12:21.159"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:20.815" endtime="20220420 20:12:21.159"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:20.424" endtime="20220420 20:12:21.159"/>
+</kw>
+<kw name="And &quot;Train Directly On Labels From An Existing Column&quot; Has Been Enabled" library="select_column_resources">
+<kw name="Enable Train Directly On Labels" library="select_column_resources">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${label_switch}</arg>
+<doc>Waits until element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20220420 20:12:21.160" endtime="20220420 20:12:21.419"/>
+</kw>
+<kw name="Click Element At Coordinates" library="SeleniumLibrary">
+<arg>${label_switch}</arg>
+<arg>5</arg>
+<arg>0</arg>
+<doc>Click element ``locator`` at ``xoffset/yoffset``.</doc>
+<msg timestamp="20220420 20:12:21.419" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[3]/div/div/nav/div/div[3]/div[2]/div[1]/div' at coordinates x=5, y=0.</msg>
+<status status="PASS" starttime="20220420 20:12:21.419" endtime="20220420 20:12:22.014"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:21.160" endtime="20220420 20:12:22.015"/>
+</kw>
+<kw name="Verify Train Directly On Labels Is Enabled" library="select_column_resources">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Select the column which contains the labels</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:12:22.015" endtime="20220420 20:12:22.026"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:22.015" endtime="20220420 20:12:22.026"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220420 20:12:24.028" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220420 20:12:22.026" endtime="20220420 20:12:24.028"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:21.160" endtime="20220420 20:12:24.028"/>
+</kw>
+<kw name="When The User Clicks Continue" library="select_column_resources">
+<kw name="Press Continue" library="select_column_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${continue_button2}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220420 20:12:24.029" endtime="20220420 20:12:24.046"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${continue_button2}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:12:24.046" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[3]/div/div/div[2]/button'.</msg>
+<status status="PASS" starttime="20220420 20:12:24.046" endtime="20220420 20:12:24.108"/>
+</kw>
+<kw name="Verify Continue Is Pressed" library="select_column_resources">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Please click on the column containing the labels</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:12:24.108" endtime="20220420 20:12:24.122"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:24.108" endtime="20220420 20:12:24.122"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:24.029" endtime="20220420 20:12:24.122"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:24.029" endtime="20220420 20:12:24.122"/>
+</kw>
+<kw name="Then The Column That Contains The Labels Has Been Selected" library="select_column_resources">
+<kw name="Verify Category Button Is Checked No Choice" library="select_column_resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${category_checkbox_one_choice}</arg>
+<doc>Waits until element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220420 20:12:24.123" endtime="20220420 20:12:24.390"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${check_box3}</var>
+<arg>${category_checkbox_one_choice}</arg>
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:12:24.424" level="INFO">${check_box3} = check_box</msg>
+<status status="PASS" starttime="20220420 20:12:24.391" endtime="20220420 20:12:24.424"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${check_box3}</arg>
+<arg>${checkbox_should_be}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220420 20:12:24.424" endtime="20220420 20:12:24.425"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:24.123" endtime="20220420 20:12:24.425"/>
+</kw>
+<kw name="Exit Model Creation" library="select_column_resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${exit_button}</arg>
+<doc>Click element identified by ``locator``.</doc>
+<msg timestamp="20220420 20:12:24.426" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/nav/div/a/div'.</msg>
+<status status="PASS" starttime="20220420 20:12:24.426" endtime="20220420 20:12:24.465"/>
+</kw>
+<kw name="Verify Model Creation Exit" library="select_column_resources">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Welcome to Labelf!</arg>
+<doc>Waits until ``text`` appears on current page.</doc>
+<status status="PASS" starttime="20220420 20:12:24.466" endtime="20220420 20:12:24.700"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:24.465" endtime="20220420 20:12:24.700"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:24.425" endtime="20220420 20:12:24.701"/>
+</kw>
+<status status="PASS" starttime="20220420 20:12:24.123" endtime="20220420 20:12:24.701"/>
+</kw>
+<doc>Verifies that a column is automatically selected when only one column exists</doc>
+<tag>AG_18</tag>
+<status status="PASS" starttime="20220420 20:12:20.423" endtime="20220420 20:12:24.701"/>
 </test>
 <kw name="End WebTest" library="mainResource" type="TEARDOWN">
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220411 12:01:58.573" endtime="20220411 12:02:00.709"/>
+<status status="PASS" starttime="20220420 20:12:24.704" endtime="20220420 20:12:26.915"/>
 </kw>
-<status status="PASS" starttime="20220411 12:01:58.573" endtime="20220411 12:02:00.709"/>
+<status status="PASS" starttime="20220420 20:12:24.704" endtime="20220420 20:12:26.915"/>
 </kw>
-<status status="PASS" starttime="20220411 12:01:50.264" endtime="20220411 12:02:00.710"/>
-</suite>
-<status status="PASS" starttime="20220411 12:01:17.382" endtime="20220411 12:02:00.717"/>
+<status status="PASS" starttime="20220420 20:11:32.096" endtime="20220420 20:12:26.915"/>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="0" skip="0">All Tests</stat>
+<stat pass="7" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="3" fail="0" skip="0">AG_16</stat>
+<stat pass="6" fail="0" skip="0">AG_18</stat>
+<stat pass="1" fail="0" skip="0">AG_64</stat>
 </tag>
 <suite>
-<stat pass="3" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Create Model">Tests.Create Model</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s2" name="Delete Model">Tests.Delete Model</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s3" name="User Login">Tests.User Login</stat>
+<stat pass="7" fail="0" skip="0" id="s1" name="AG-18">AG-18</stat>
 </suite>
 </statistics>
 <errors>

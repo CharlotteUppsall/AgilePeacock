@@ -12,14 +12,13 @@ Start New Model
     Wait Until Element Is Visible   ${button_slider}
 
 Train Directly[...] Function Active To Disabled
-   Click Element  ${button_slider}
-   Wait Until Page Contains   Select the column which contains the labels
+
    Click Element  ${button_slider_off}
 
 Verify Slide Button Is Disabled
    Wait Until Page Contains   Name your model
 
 Confirm Text Has Changed When Function Disabled
-   Start New Model
+
    Train Directly[...] Function Active To Disabled
    Verify Slide Button Is Disabled
