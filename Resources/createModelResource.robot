@@ -23,8 +23,8 @@ Press Dataset Button
     Scroll Element Into View  ${choosedatasetbutton}
     Click Element  ${choosedatasetbutton}
 Press Continue To Model Creation
-    Wait Until Page Contains Element  ${continuebutton}
-    Click Element  ${continuebutton}
+    Wait Until Page Contains Element  ${continueButton}
+    Click Element  ${continueButton}
 Press Create New Model
     Wait Until Page Contains Element  ${newmodelbutton}
     Click Element  ${newmodelbutton}
