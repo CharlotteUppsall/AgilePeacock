@@ -18,7 +18,7 @@ Overview of labels are displayed
     Press Dataset With Existing Labels Button
     Verify Text Button Is Checked
     Select Train Directly On Labels
-    Confirm Labels Are Shown Before Clicking On The Overview Button
+    Confirm Labels In Model View
     Navigate To Model Overview
     Confirm Labels In Bar Chart
     Scroll Down To Pie Chart

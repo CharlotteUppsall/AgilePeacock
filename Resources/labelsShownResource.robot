@@ -35,7 +35,8 @@ Select Train Directly On Labels
     Wait Until Element Is Visible  ${final_create_model_button}
     Click Element  ${final_create_model_button}
 
-Confirm Labels Are Shown Before Clicking On The Overview Button
+Confirm Labels In Model View
+#kortvyn över modellen som precis skapats, i kortet listas de egna labels
     Sleep  5s
     Wait Until Page Contains  My Models
     Wait Until Page Contains  Account
