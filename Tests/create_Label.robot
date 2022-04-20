@@ -1,10 +1,7 @@
 *** Settings ***
 Library  SeleniumLibrary
-Resource  ../Resources/confirmSetupResource.robot
-Resource  ../Resources/createModelResource.robot
-Resource  ../Resources/createLabelResource.robot
-Library  ../Scripts/remove_text.py
-Suite Setup  Start WebTest
+Resource  ../Resources/resourceGate.robot
+Suite Setup  Start AG-51
 Suite Teardown  End WebTest
 
 *** Test Cases ***
