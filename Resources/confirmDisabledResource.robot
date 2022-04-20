@@ -13,7 +13,7 @@ Start New Model
 
 Train Directly[...] Function Active To Disabled
 
-   Click Element  ${button_slider_off}
+   Click Element At Coordinates  ${button_slider_off}  5  0
 
 Verify Slide Button Is Disabled
    Wait Until Page Contains   Name your model
