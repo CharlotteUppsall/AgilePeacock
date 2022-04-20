@@ -38,7 +38,7 @@ Choose Dataset4
     Click Element  ${choose_dataset_no_labels}
     Wait Until Page Contains  Please click on the column containing the text you want to classify
 Enable Train Directly On Labels
-    Wait Until Element Is Enabled  ${label_switch}
+    Wait Until Element Is Visible  ${label_switch}
     Click Element At Coordinates  ${label_switch}  5  0
 Verify Train Directly On Labels Is Enabled
     Wait Until Page Contains  Select the column which contains the labels
