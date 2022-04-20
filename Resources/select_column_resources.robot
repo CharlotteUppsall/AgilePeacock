@@ -32,7 +32,7 @@ Choose Dataset3
     Click Element  ${choose_dataset_customer_support}
     Wait Until Page Contains  Please click on the column containing the text you want to classify
 Choose Dataset4
-    # Chooses the dataset named "rows with no labels".
+    # Chooses the dataset named "rows with no labels"
     Wait Until Element Is Visible  ${choose_dataset_no_labels}
     Scroll Element Into View  ${choosedatasetbutton}
     Click Element  ${choose_dataset_no_labels}
