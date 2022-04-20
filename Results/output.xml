@@ -29,7 +29,8 @@
 </kw>
 <status status="PASS" starttime="20220411 12:01:17.576" endtime="20220411 12:01:24.718"/>
 </kw>
-<test id="s1-s1-t1" name="User Can Create A Model">
+<test id="s1-t1" name="User Can Select Column Containing The Labels">
+<kw name="Given A Dataset With Existing Labels Has Been Selected" library="select_column_resources">
 <kw name="Login" library="mainResource">
 <kw name="Enter Account Information" library="mainResource">
 <kw name="Input Text" library="SeleniumLibrary">
@@ -72,7 +73,6 @@
 </kw>
 <status status="PASS" starttime="20220411 12:01:24.719" endtime="20220411 12:01:25.695"/>
 </kw>
-<kw name="Create Model" library="createModelResource">
 <kw name="Press Create New Model" library="createModelResource">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${newmodelbutton}</arg>
@@ -120,7 +120,8 @@
 </kw>
 <status status="PASS" starttime="20220411 12:01:27.462" endtime="20220411 12:01:28.622"/>
 </kw>
-<kw name="Press Continue On Text Classification Page" library="createModelResource">
+<kw name="Then It Shall Be Possible To Select A Column Which Contains The Labels" library="select_column_resources">
+<kw name="Press Intent Checkbox" library="select_column_resources">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${uploadpagecontinue}</arg>
 <doc>Waits until element ``locator`` is visible.</doc>
@@ -181,7 +182,7 @@
 </kw>
 <status status="PASS" starttime="20220411 12:01:30.002" endtime="20220411 12:01:33.333"/>
 </kw>
-<kw name="Verify Created Model" library="createModelResource">
+<kw name="Verify Model Creation Exit" library="select_column_resources">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>${modelname}</arg>
 <doc>Waits until ``text`` appears on current page.</doc>
@@ -219,6 +220,7 @@
 <msg timestamp="20220411 12:01:38.648" level="INFO">Opening url 'https://app.labelf.ai/login'</msg>
 <status status="PASS" starttime="20220411 12:01:38.648" endtime="20220411 12:01:44.854"/>
 </kw>
+<kw name="Choose Dataset2" library="select_column_resources">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>//*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/div</arg>
 <doc>Waits until element ``locator`` is visible.</doc>
@@ -249,6 +251,9 @@
 <msg timestamp="20220411 12:01:45.080" level="INFO">Typing text '123456789' into text field '//*[@id="password"]'.</msg>
 <status status="PASS" starttime="20220411 12:01:45.080" endtime="20220411 12:01:45.183"/>
 </kw>
+<status status="PASS" starttime="20220413 13:55:20.516" endtime="20220413 13:55:20.844"/>
+</kw>
+<kw name="Verify Train Directly On Labels Is Enabled" library="select_column_resources">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Labelf</arg>
 <doc>Waits until ``text`` appears on current page.</doc>
@@ -385,6 +390,7 @@
 <msg timestamp="20220411 12:01:51.433" level="INFO">Opening url 'https://app.labelf.ai/login'</msg>
 <status status="PASS" starttime="20220411 12:01:51.432" endtime="20220411 12:01:57.516"/>
 </kw>
+<kw name="Choose Dataset4" library="select_column_resources">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>//*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/div</arg>
 <doc>Waits until element ``locator`` is visible.</doc>
@@ -415,6 +421,15 @@
 <msg timestamp="20220411 12:01:57.742" level="INFO">Typing text '123456789' into text field '//*[@id="password"]'.</msg>
 <status status="PASS" starttime="20220411 12:01:57.742" endtime="20220411 12:01:57.842"/>
 </kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${label_switch}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220413 13:55:24.396" level="INFO">Clicking element '//*[@id="app"]/div[2]/div/div/div[2]/div/div[3]/div/div/nav/div/div[3]/div[2]/div[1]/div'.</msg>
+<status status="PASS" starttime="20220413 13:55:24.395" endtime="20220413 13:55:24.464"/>
+</kw>
+<status status="PASS" starttime="20220413 13:55:24.146" endtime="20220413 13:55:24.464"/>
+</kw>
+<kw name="Verify Train Directly On Labels Is Enabled" library="select_column_resources">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Labelf</arg>
 <doc>Waits until ``text`` appears on current page.</doc>
@@ -458,7 +473,7 @@
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0" skip="0">All Tests</stat>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 <stat pass="3" fail="0" skip="0">AG_16</stat>
