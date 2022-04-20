@@ -32,7 +32,7 @@ Choose Dataset3
     Click Element  ${choose_dataset_customer_support}
     Wait Until Page Contains  Please click on the column containing the text you want to classify
 Choose Dataset4
-    # Chooses the dataset named "rows with no labels"
+    # Chooses the dataset named "rows with no labels".
     Wait Until Element Is Visible  ${choose_dataset_no_labels}
     Scroll Element Into View  ${choosedatasetbutton}
     Click Element  ${choose_dataset_no_labels}
@@ -80,6 +80,8 @@ A Dataset With Existing Labels Has Been Selected
 "Train Directly On Labels From An Existing Column" Has Been Enabled
     Enable Train Directly On Labels
     Verify Train Directly On Labels Is Enabled
+    Click Element  //*[@id="app"]/div[2]/div/div/div[2]/div/div[3]/div/div/nav/div/div[3]/div[2]/div[1]/div/div[1]
+    Sleep  2s
 The User Clicks Continue
     Press Continue
 It Shall Be Possible To Select A Column Which Contains The Labels
