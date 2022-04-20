@@ -18,6 +18,7 @@ Press Dataset With Existing Labels Button
     #ovan: skrolla ner till andra rubriken för att en popup ruta annars skymmer knappen continue
     Wait Until Element Is Visible  ${chooseCustomerSupportDatasetButton}
     Click Element  ${chooseCustomerSupportDatasetButton}
+    Wait Until Page Contains  Please click on the column containing the text you want to classify
 
 Verify Text Button Is Checked
     Wait Until Element Is Visible  ${text_checkbox}

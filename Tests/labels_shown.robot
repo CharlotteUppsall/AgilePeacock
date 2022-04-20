@@ -16,7 +16,7 @@ Overview of labels are displayed
     Press Create New Model
     Press Continue To Model Creation
     Press Dataset With Existing Labels Button
-    Wait Until Page Contains  Please click on the column containing the text you want to classify
+    #Wait Until Page Contains  Please click on the column containing the text you want to classify
     Verify Text Button Is Checked
     Select Train Directly On Labels
     Confirm Labels Are Shown Before Clicking On The Overview Button
