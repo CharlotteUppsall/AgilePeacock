@@ -26,8 +26,8 @@ Verify Text Button Is Checked
     Should Be Equal As Strings  ${variable_for_comparison}  ${checked_checkbox}
 
 Select Train Directly On Labels
-    Wait Until Element Is Visible  ${slide_button2}
-    click element at coordinates  ${slide_button2}  0  0
+    Wait Until Element Is Visible  ${train_directly_on_labels_fram_an_existing_column}
+    Click Element  ${train_directly_on_labels_fram_an_existing_column}
     Scroll Element Into View  ${continue_to_setup3}
     Click Element  ${continue_to_setup3}
     Verify Continue Is Pressed
