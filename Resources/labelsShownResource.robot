@@ -27,7 +27,7 @@ Verify Text Button Is Checked
 
 Select Train Directly On Labels
     Wait Until Element Is Visible  ${slide_button2}
-    click element at coordinates  ${slide_button2}  5  0
+    click element at coordinates  ${slide_button2}  0  0
     Verify Train Directly On Labels Is Enabled
     Scroll Element Into View  ${continue_to_setup3}
     Click Element  ${continue_to_setup3}
