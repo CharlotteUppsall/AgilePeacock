@@ -17,7 +17,7 @@ Choose Dataset
     # Chooses the dataset named "Untrained Model"
     Wait Until Element Is Visible  ${choose_dataset_untrained_model}
     Scroll Element Into View  ${choosedatasetbutton}
-    Click Element  ${choose_dataset_untrained_model}
+    Click Element At Coordinates  ${choose_dataset_untrained_model}  10  0
     Wait Until Page Contains  Please click on the column containing the text you want to classify
 Choose Dataset2
     # Chooses the dataset named "Cultural Centers Survey"
@@ -38,7 +38,7 @@ Choose Dataset4
     Click Element  ${choose_dataset_no_labels}
     Wait Until Page Contains  Please click on the column containing the text you want to classify
 Enable Train Directly On Labels
-    Wait Until Element Is Enabled  ${label_switch}
+    Wait Until Element Is Visible  ${label_switch}
     Click Element  ${label_switch}
 Verify Train Directly On Labels Is Enabled
     Wait Until Page Contains  Select the column which contains the labels
@@ -73,14 +73,12 @@ Exit Model Creation
 Verify Model Creation Exit
     Wait Until Page Contains  Welcome to Labelf!
 A Dataset With Existing Labels Has Been Selected
-    Login
     Press Create New Model
     Press Continue To Model Creation
     Choose Dataset
 "Train Directly On Labels From An Existing Column" Has Been Enabled
     Enable Train Directly On Labels
     Verify Train Directly On Labels Is Enabled
-    Click Element  //*[@id="app"]/div[2]/div/div/div[2]/div/div[3]/div/div/nav/div/div[3]/div[2]/div[1]/div/div[1]
     Sleep  2s
 The User Clicks Continue
     Press Continue
