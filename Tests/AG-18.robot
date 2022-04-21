@@ -16,22 +16,21 @@ User Can Confirm Change of Text For Step 3 When "Train Directly[...]" Is Disable
      [Tags]   AG_18
      Confirm Text Has Changed When Function Disabled
      Go Back
-#Overview of labels are displayed
- #   [Documentation]  Test will verify that labels from chosen dataset is present after creating model
- #   [Tags]  AG_64
-
- #   Press Create New Model
- #   Press Continue To Model Creation
- #   Press Dataset With Existing Labels Button
- #   Verify Text Button Is Checked
- #   Select Train Directly On Labels
- #   Confirm Labels In Model View
- #   Navigate To Model Overview
- #   Confirm Labels In Bar Chart
- #   Scroll Down To Pie Chart
- #   Confirm Labels In Pie Chart
- #   Go Back
- #   Delete Model
+Overview of labels are displayed
+    [Documentation]  Test will verify that labels from chosen dataset is present after creating model
+    [Tags]  AG_64
+    Press Create New Model
+    Press Continue To Model Creation
+    Press Dataset With Existing Labels Button
+    Verify Text Button Is Checked
+    Select Train Directly On Labels
+    Confirm Labels In Model View
+    Navigate To Model Overview
+    Confirm Labels In Bar Chart
+    Scroll Down To Pie Chart
+    Confirm Labels In Pie Chart
+    Go Back
+    Delete Model
 User Can Select Column Containing The Labels
     [Documentation]  Verifies that a user can select a column containing labels
     [Tags]  AG_18
