@@ -27,7 +27,7 @@ Verify Text Button Is Checked
 
 Select Train Directly On Labels
     Wait Until Element Is Visible  ${train_directly_on_labels_fram_an_existing_column}
-    Click Element At Coordinates  ${train_directly_on_labels_fram_an_existing_column}  10  0
+    Click Element At Coordinates  ${train_directly_on_labels_fram_an_existing_column}  5  0
     Scroll Element Into View  ${continue_to_setup3}
     Click Element  ${continue_to_setup3}
     Verify Continue Is Pressed
