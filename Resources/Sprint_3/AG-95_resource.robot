@@ -31,9 +31,11 @@ Connect Additional Dataset
     Wait Until Page Contains  Please click on the column containing the text you want to classify
     Scroll Element Into View  ${connect_datasets}
     Click Element  ${connect_datasets}
+Return To Models Page
+    Wait Until Page Contains  Connected Datasets
     Go To  https://app.labelf.ai/main/375/models/view
     Wait Until Page Contains  Agile Peacock
-Verify Number of Datapoints Second Dataset
+Verify Number of Datapoints Second Dataset - Customer Support
     Wait Until Element Is Visible  ${datapoints_customer_support}
     ${datapoint_as_string_second_dataset}  Get Text  ${datapoints_customer_support}
     ${datapoint_second_dataset}  remove comma and convert  ${datapoint_as_string_second_dataset}
@@ -47,15 +49,18 @@ Verify Number Of Datapoints Increased
     Should Be True  ${datapoint_two_dataset} > ${datapoint_one_dataset}
     Should Be True  ${datapoint_two_dataset} > ${datapoint_second_dataset}
 
-The User Has a Trained Model
+The User Has A Trained Model
     Login
     Press Create New Model
     Select Demo Model
     Verify Current Number Of Datapoints
     Go To Connect Additional Datasets
 The User Connects An Additional Dataset
-    Verify Number of Datapoints Second Dataset
+    Verify Number of Datapoints Second Dataset - Customer Support
     Connect Additional Dataset
-The Number of Datapoints Displayed Under My Models Should Increase
+    Return To Models Page
+The User Connects An Additional Dataset - 2
+
+The Number of Datapoints Displayed Under "My Models" Should Increase
     Verify Number Of Datapoints Increased
     Delete Model
