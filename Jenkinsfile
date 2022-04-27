@@ -3,30 +3,34 @@ pipeline {
             stages{
                
    
-stage('Robot Framework Login Test') {
+stage('All Tests') {
             steps {
-                bat 'robot -d Results  Tests'
+                sh 'robot -d Results Tests/AG-16.robot'
+                sh 'robot -d Results Tests/AG-51.robot'
+                sh 'robot -d Results  Tests/AG-18.robot'
+                
 
-            }
-            post {
-                always {
-                    script {
-                          step(
-                                [
-                                  $class              : 'RobotPublisher',
-                                  outputPath          : 'results',
-                                  outputFileName      : '**/output.xml',
-                                  reportFileName      : '**/report.html',
-                                  logFileName         : '**/log.html',
-                                  disableArchiveOutput: false,
-                                  passThreshold       : 50,
-                                  unstableThreshold   : 40,
-                                  otherFiles          : "**/*.png,**/*.jpg",
-                                ]
-                          )
+                    }
+                    post {
+                        always {
+                            script {
+                                  step(
+                                        [
+                                          $class              : 'RobotPublisher',
+                                          outputPath          : 'Results',
+                                          outputFileName      : '**/output.xml',
+                                          reportFileName      : '**/report.html',
+                                          logFileName         : '**/log.html',
+                                          disableArchiveOutput: false,
+                                          passThreshold       : 50,
+                                          unstableThreshold   : 40,
+                                          otherFiles          : "**/*.png,**/*.jpg",
+                                        ]
+                                  )
+                            }
+                        }
                     }
                 }
-            }
-        }
+                
        }
     }
