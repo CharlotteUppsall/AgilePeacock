@@ -68,6 +68,7 @@ Verify Number Of Datapoints Increased - Cultural Centers Survey
     Should Be True  ${datapoint_two_dataset} <= ${datapoint_one_dataset}+${datapoint_third_dataset}
     Should Be True  ${datapoint_two_dataset} > ${datapoint_one_dataset}
     Should Be True  ${datapoint_two_dataset} > ${datapoint_third_dataset}
+
 The User Has A Trained Model
     Login
     Press Create New Model
