@@ -5,7 +5,7 @@ pipeline {
    
 stage('Robot Framework Login Test') {
             steps {
-                bat 'robot -d Results  Tests'
+                bat 'robot -d Results  Tests/AG-95.robot'
 
             }
             post {
