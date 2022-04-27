@@ -3,9 +3,9 @@ pipeline {
             stages{
                
    
-stage('Robot Framework Login Test') {
+stage('Robot Framework AG-95') {
             steps {
-                bat 'robot -d Results  Tests'
+                sh 'robot -d Results  Tests/AG-95.robot'
 
             }
             post {
@@ -14,7 +14,7 @@ stage('Robot Framework Login Test') {
                           step(
                                 [
                                   $class              : 'RobotPublisher',
-                                  outputPath          : 'results',
+                                  outputPath          : 'Results',
                                   outputFileName      : '**/output.xml',
                                   reportFileName      : '**/report.html',
                                   logFileName         : '**/log.html',
