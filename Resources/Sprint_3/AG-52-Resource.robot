@@ -1,10 +1,11 @@
 *** Settings ***
 Resource  ../resourceGate.robot
 *** Variables ***
-${fourth_leave_training_page}  //*[@id="app"]/div[6]/div/div[1]/div[1]/div/div/nav/div/a/div
+
 ${first_leave_training_page}  //*[@id="app"]/div[16]/div/div[1]/div[1]/div/div/nav/div/a/div
 ${second_leave_training_page}  //*[@id="app"]/div[5]/div/div[1]/div[1]/div/div/nav/div/a/div
 ${third_leave_training_page}  //*[@id="app"]/div[15]/div/div[1]/div[1]/div/div/nav/div/a/div
+${fourth_leave_training_page}  //*[@id="app"]/div[6]/div/div[1]/div[1]/div/div/nav/div/a/div
 ${model_id}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[2]/div/div/p[1]
 ${start_training_button}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[1]/div/div/div/div/nav/div/a[6]
 ${add_label_button}  //*[@id="app"]/div[6]/div/div[1]/div[3]/div/a
@@ -36,7 +37,7 @@ Check For Third Option Leave Training
 Check For Second Leave Button Training
     FOR  ${i}  IN RANGE  0  5  1
     ${status}=  Run Keyword And Return Status  Page Should Contain Element  ${second_leave_training_page}
-    Run Keyword If  '${status}'=='True'  Click Element  ${second_leave_training_page}
+    Run Keyword If  '${status}'=='True'  Click Element At Coordinates  ${second_leave_training_page}  2  0
     ...   ELSE IF  '${status}'=='False'  Reload Page
     Exit For Loop If  '${status}'=='True'
     END
