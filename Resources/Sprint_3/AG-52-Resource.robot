@@ -60,6 +60,7 @@ Loop Add Label
     Reload Page
     Press Add New Label
 Press Add New Label
+    Reload Page
     ${status}=  Run Keyword And Return Status  Page Should Contain Element  ${add_label_button}
     Run Keyword If  '${status}'=='True'  Press Main Add New Label
     ...   ELSE IF  '${status}'=='False'  Check For Other Add Button
