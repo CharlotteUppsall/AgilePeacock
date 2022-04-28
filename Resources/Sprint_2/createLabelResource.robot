@@ -28,7 +28,7 @@ Verify Added Label
     ${verify_categorization}  Get Text   ${category_account}
     Should Be Equal As Strings  ${verify_categorization}   Account
 Cleanup
-    Go Back
+    Go To  https://app.labelf.ai/main/375/models/view
     Verify Demo Model Is Created
     Delete Model
 
