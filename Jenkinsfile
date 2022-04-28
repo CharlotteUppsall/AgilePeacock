@@ -3,7 +3,7 @@ pipeline {
             stages{
                
    
-stage('AG-18 & AG-51') {
+stage('AG-52') {
             steps {
                 sh 'robot -d Results Tests/AG-52.robot'
                 
