@@ -27,8 +27,8 @@ Verify Added Label
     Wait Until Page Contains   95%
     ${verify_categorization}  Get Text   ${category_account}
     Should Be Equal As Strings  ${verify_categorization}   Account
-Ag-51 Cleanup
-    Go Back
+Cleanup
+    Go To  https://app.labelf.ai/main/375/models/view
     Verify Demo Model Is Created
     Delete Model
 
