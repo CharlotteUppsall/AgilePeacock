@@ -7,8 +7,8 @@ ${customer_support_continue}  //*[@id="app"]/div[4]/div/div/div/div[3]/div/div/d
 ${connect_datasets}  //*[@id="app"]/div[4]/div/div/div/div[5]/div/div/div[3]/button/div
 ${header_element}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[1]/nav/div[1]
 ${datapoints_customer_support}  //*[@id="app"]/div[4]/div/div/div/div[3]/div/div/div[1]/div[1]/div/div/nav/div/span
-${datapoints_cultural_centers_survey}  //*[@id="app"]/div[4]/div/div/div/div[3]/div/div/div[1]/div[3]/div/div/nav/div/span
-${cultural_centers_survey_continue}  //*[@id="app"]/div[4]/div/div/div/div[3]/div/div/div[1]/div[3]/div/div/div[2]/button
+${datapoints_cultural_centers_survey}  //*[@id="app"]/div[4]/div/div/div/div[3]/div/div/div[1]/div[2]/div/div/nav/div/span
+${cultural_centers_survey_continue}  //*[@id="app"]/div[4]/div/div/div/div[3]/div/div/div[1]/div[2]/div/div/div[2]/button
 *** Keywords ***
 Select Demo Model
     Scroll Element Into View  ${demo_model_button}
