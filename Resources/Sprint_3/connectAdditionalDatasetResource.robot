@@ -1,23 +1,35 @@
 *** Variables ***
 ${shutDownTheGreenLoggedInButton}  //*[@id="app"]/div[7]/div[2]/div/div/div/button/div
-${DatasetsViewButton}  //*[@id="app"]/div[6]/div[1]/nav/div/a[2]/div
+${DatasetsViewButton}  //*[@id="app"]/div[6]/div[1]/nav/div/a[2]
 ${ModelsViewButton}  //*[@id="app"]/div[9]/div[1]/nav/div/a[1]
 ${ModelOverviewButton}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div/div/div/div[2]/a
 ${connectAdditionalDatasetButton}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[3]/nav/div/span/button
 ${continueWithPickedDatasetButton}  //*[@id="app"]/div[4]/div/div/div/div[3]/div/div/div[1]/div[3]/div/div/div[2]/button
 ${connectButton}  //*[@id="app"]/div[4]/div/div/div/div[5]/div/div/div[3]/button
-
+${MenyButton1}  //*[@id="app"]/div[6]/div[1]/nav/div/div[3]/div/button
+${MenyButton2}  //*[@id="app"]/div[7]/div[1]/nav/div/div[3]/div/button
+${MenyDatasetButton1}  //*[@id="app"]/div[3]/div/div[1]/div[4]/a/div[1]/div
+${MenyDatasetButton2}  //*[@id="app"]/div[3]/div/div[1]/div[4]/a
+${MyDatasetsText}   //*[@id="app"]/div[9]/div[1]/main/div/div/nav[1]/div/div[1]
+#för att få bort meny-rullgardinen, ifall det behövs
 
 *** Keywords ***
 
 a dataset is uploaded
     Sleep  10s
-    Wait Until Page Contains  Datasets
+    Wait Until Page Contains Element  ${MenyButton2}
+    Click Element  ${MenyButton2}
+
+
+    #koden nedan ej fungerande pga dataset-knappen inte hittas...
+    #Wait Until Page Contains  Datasets
     #Click Element  ${shutDownTheGreenLoggedInButton}
-    Wait Until Element Is Visible  ${DatasetsViewButton}
-    Click Element  ${DatasetsViewButton}
-    Wait Until Page Contains  Dataset for testing
+    #Wait Until Element Is Visible  ${DatasetsViewButton}
+    #Click Element  ${DatasetsViewButton}
+    #Wait Until Page Contains  Dataset for testing
     # pga det dataset som skall vara uppladdat heter "Dataset for testing"
+
+
 
 the dataset isn't connected to the model
     Click Element  ${ModelsViewButton}
