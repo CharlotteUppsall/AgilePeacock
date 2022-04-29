@@ -16,7 +16,19 @@ ${submit_add_new_label}  //*[@id="app"]/div[2]/div/div/form/div[3]/button
 ${total_items_text}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[2]/div/div/p[2]
 ${total_labeled_items_text}  //*[@id="app"]/div[9]/div[1]/main/div/div/div[2]/div/div[1]/div/div[2]/div/div/p[3]
 *** Keywords ***
-
+Loop Thru Elements
+    FOR  ${i}  IN RANGE  0  5  1
+    ${status}=  Run Keyword And Return Status  Page Should Contain Element  ${add_label_button}
+    Run Keyword If  '${status}'=='True'  Click Element  ${add_label_button}
+    Exit For Loop If  '${status}'=='True'
+    ${status}=  Run Keyword And Return Status  Page Should Contain Element  ${other_add_label_button}
+    Run Keyword If  '${status}'=='True'  Click Element  ${other_add_label_button}
+    Exit For Loop If  '${status}'=='True'
+    ${status}=  Run Keyword And Return Status  Page Should Contain Element  ${third_option_add}
+    Run Keyword If  '${status}'=='True'  Click Element  ${third_option_add}
+    Exit For Loop If  '${status}'=='True'
+    Reload Page
+    END
 Check For Fourth Option Leave Training
     FOR  ${i}  IN RANGE  0  5  1
     ${status}=  Run Keyword And Return Status  Page Should Contain Element  ${fourth_leave_training_page}
@@ -44,11 +56,20 @@ Check For Second Leave Button Training
 Leave Training Page
     FOR  ${i}  IN RANGE  0  5  1
     ${status}=  Run Keyword And Return Status  Page Should Contain Element  ${first_leave_training_page}
-    Run Keyword If  '${status}'=='True'  Click Element At Coordinates  ${first_leave_training_page}  0  0
-    ...   ELSE IF  '${status}'=='False'  Reload Page
+    Run Keyword If  '${status}'=='True'  Click Element  ${first_leave_training_page}
     Exit For Loop If  '${status}'=='True'
+    ${status}=  Run Keyword And Return Status  Page Should Contain Element  ${second_leave_training_page}
+    Run Keyword If  '${status}'=='True'  Click Element  ${second_leave_training_page}
+    Exit For Loop If  '${status}'=='True'
+    ${status}=  Run Keyword And Return Status  Page Should Contain Element  ${third_leave_training_page}
+    Run Keyword If  '${status}'=='True'  Click Element  ${third_leave_training_page}
+    Exit For Loop If  '${status}'=='True'
+    ${status}=  Run Keyword And Return Status  Page Should Contain Element  ${fourth_leave_training_page}
+    Run Keyword If  '${status}'=='True'  Click Element  ${fourth_leave_training_page}
+    Exit For Loop If  '${status}'=='True'
+    Reload Page
     END
-    Run Keyword If  '${status}'=='False'  Check For Second Leave Button Training
+
 Submit New Label
     Wait Until Element Is Visible  ${submit_add_new_label}
     Click Element  ${submit_add_new_label}
@@ -127,7 +148,8 @@ Go To Start Training Page
 
 Add A Label To Model With Example
     [Arguments]  ${name}  ${example}
-    Press Add New Label
+    Loop Thru Elements
+    #Press Add New Label
     Verify Add New Label Is Pressed
     Input New Label Name  ${name}
     Input New Label Example  ${example}
@@ -135,30 +157,35 @@ Add A Label To Model With Example
 
 Add Multiple Labels To Model With Example
     [Arguments]  ${first_name}  ${second_name}   ${first_example}   ${second_example}
-    Press Add New Label
+    Loop Thru Elements
+    #Press Add New Label
     Verify Add New Label Is Pressed
     Input New Label Name  ${first_name}
     Input New Label Example  ${first_example}
     Submit New Label
-    Press Add New Label
+    Loop Thru Elements
+    #Press Add New Label
     Verify Add New Label Is Pressed
     Input New Label Name  ${second_name}
     Input New Label Example  ${second_example}
     Submit New Label
 Add A Label To Model Without Example
     [Arguments]  ${name}
-    Press Add New Label
+    Loop Thru Elements
+    #Press Add New Label
     Verify Add New Label Is Pressed
     Input New Label Name  ${name}
     Submit New Label
 
 Add Multiple Labels To Model Without Example
     [Arguments]  ${first_name}  ${second_name}
-    Press Add New Label
+    Loop Thru Elements
+    #Press Add New Label
     Verify Add New Label Is Pressed
     Input New Label Name  ${first_name}
     Submit New Label
-    Press Add New Label
+    Loop Thru Elements
+    #Press Add New Label
     Verify Add New Label Is Pressed
     Input New Label Name  ${second_name}
     Submit New Label
