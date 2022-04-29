@@ -12,6 +12,7 @@ Start WebTest
     Wait Until Element Is Visible  //*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/div
     Click Button  //*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/button[3]
 End WebTest
+    Run Keyword If Any Tests Failed  Cleanup
     Close All Browsers
 Enter Account Information
     Input Text  //*[@id="app"]/div/main/div/div/div/div/div/div[1]/form/div[1]/div[2]/div[1]/div/input   ${e-mail}
