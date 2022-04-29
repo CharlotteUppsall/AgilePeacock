@@ -1,7 +1,6 @@
 *** Settings ***
 Resource  ../resourceGate.robot
 *** Variables ***
-
 ${first_leave_training_page}  //*[@id="app"]/div[16]/div/div[1]/div[1]/div/div/nav/div/a/div
 ${second_leave_training_page}  //*[@id="app"]/div[5]/div/div[1]/div[1]/div/div/nav/div/a/div
 ${third_leave_training_page}  //*[@id="app"]/div[15]/div/div[1]/div[1]/div/div/nav/div/a/div
@@ -21,7 +20,7 @@ ${total_labeled_items_text}  //*[@id="app"]/div[9]/div[1]/main/div/div/div[2]/di
 Check For Fourth Option Leave Training
     FOR  ${i}  IN RANGE  0  5  1
     ${status}=  Run Keyword And Return Status  Page Should Contain Element  ${fourth_leave_training_page}
-    Run Keyword If  '${status}'=='True'  Click Element At Coordinates  ${fourth_leave_training_page}  2  0
+    Run Keyword If  '${status}'=='True'  Click Element At Coordinates  ${fourth_leave_training_page}  0  0
     ...   ELSE IF  '${status}'=='False'  Reload Page
     Exit For Loop If  '${status}'=='True'
     END
@@ -29,7 +28,7 @@ Check For Fourth Option Leave Training
 Check For Third Option Leave Training
     FOR  ${i}  IN RANGE  0  5  1
     ${status}=  Run Keyword And Return Status  Page Should Contain Element  ${third_leave_training_page}
-    Run Keyword If  '${status}'=='True'  Click Element At Coordinates  ${third_leave_training_page}  2  0
+    Run Keyword If  '${status}'=='True'  Click Element At Coordinates  ${third_leave_training_page}  0  0
     ...   ELSE IF  '${status}'=='False'  Reload Page
     Exit For Loop If  '${status}'=='True'
     END
@@ -37,7 +36,7 @@ Check For Third Option Leave Training
 Check For Second Leave Button Training
     FOR  ${i}  IN RANGE  0  5  1
     ${status}=  Run Keyword And Return Status  Page Should Contain Element  ${second_leave_training_page}
-    Run Keyword If  '${status}'=='True'  Click Element At Coordinates  ${second_leave_training_page}  2  0
+    Run Keyword If  '${status}'=='True'  Click Element At Coordinates  ${second_leave_training_page}  0  0
     ...   ELSE IF  '${status}'=='False'  Reload Page
     Exit For Loop If  '${status}'=='True'
     END
@@ -45,7 +44,7 @@ Check For Second Leave Button Training
 Leave Training Page
     FOR  ${i}  IN RANGE  0  5  1
     ${status}=  Run Keyword And Return Status  Page Should Contain Element  ${first_leave_training_page}
-    Run Keyword If  '${status}'=='True'  Click Element At Coordinates  ${first_leave_training_page}  2  0
+    Run Keyword If  '${status}'=='True'  Click Element At Coordinates  ${first_leave_training_page}  0  0
     ...   ELSE IF  '${status}'=='False'  Reload Page
     Exit For Loop If  '${status}'=='True'
     END
@@ -60,7 +59,7 @@ Input New Label Name
     [Arguments]  ${name}
     Input Text  ${new_label_name_text_field}  ${name}
 Test Failsafe Skip
-    Cleanup
+    Go To  https://app.labelf.ai/main/375/models/${model_id_as_int}/dashboard/dashboard
     Skip
 Press Main Add New Label
     Click Element  ${add_label_button}
@@ -105,7 +104,7 @@ Verify Total Number Of Items Before Adding Label
     ${total_items_as_string}  Get Text  ${total_items_text}
     ${total_items_as_int_before_increase}  remove_total_items_text  ${total_items_as_string}
     Set Global Variable  ${total_items_as_int_before_increase}
-    Should Be True  ${total_items_as_int_before_increase} == 1285
+    #Should Be True  ${total_items_as_int_before_increase} == 1285
 Verify Total Number Of Items After Adding Label
     Wait Until Element Is Visible  ${total_items_text}
     ${total_items_as_string}  Get Text  ${total_items_text}
@@ -127,39 +126,41 @@ Go To Start Training Page
     Press Start Training Button
 
 Add A Label To Model With Example
+    [Arguments]  ${name}  ${example}
     Press Add New Label
     Verify Add New Label Is Pressed
-    Input New Label Name  First
-    Input New Label Example  First
+    Input New Label Name  ${name}
+    Input New Label Example  ${example}
     Submit New Label
 
 Add Multiple Labels To Model With Example
+    [Arguments]  ${first_name}  ${second_name}   ${first_example}   ${second_example}
     Press Add New Label
     Verify Add New Label Is Pressed
-    Input New Label Name  First
-    Input New Label Example  First
+    Input New Label Name  ${first_name}
+    Input New Label Example  ${first_example}
     Submit New Label
-    Sleep  1s
     Press Add New Label
     Verify Add New Label Is Pressed
-    Input New Label Name  Second
-    Input New Label Example  Second
+    Input New Label Name  ${second_name}
+    Input New Label Example  ${second_example}
     Submit New Label
 Add A Label To Model Without Example
+    [Arguments]  ${name}
     Press Add New Label
     Verify Add New Label Is Pressed
-    Input New Label Name  First
+    Input New Label Name  ${name}
     Submit New Label
 
 Add Multiple Labels To Model Without Example
+    [Arguments]  ${first_name}  ${second_name}
     Press Add New Label
     Verify Add New Label Is Pressed
-    Input New Label Name  First
+    Input New Label Name  ${first_name}
     Submit New Label
-    Sleep  1s
     Press Add New Label
     Verify Add New Label Is Pressed
-    Input New Label Name  Second
+    Input New Label Name  ${second_name}
     Submit New Label
 
 Verify Items Increase
@@ -170,26 +171,32 @@ Verify Items Did Not Increase
     Leave Training Page
     Verify Total Number Of Items Before Adding Label
 
+####
+####
+The User Is Already On "Start Training" Page
+    Get Model Id
+    Verify Total Number Of Items Before Adding Label
+    Press Start Training Button
 A Support Ticket Model Is Created
-    Create Support Ticket Demo Model
+    Verify Demo Model Is Created
 The User Is On "Start Training" Page
     Go To Start Training Page
 The User Adds A Label Without Example
-    Add A Label To Model Without Example
+    Add A Label To Model Without Example  Dog
 
 The User Adds Multiple Labels Without Example
-    Add Multiple Labels To Model Without Example
+    Add Multiple Labels To Model Without Example  Cat  Bird
 The User Adds A Label With Example
-    Add A Label To Model With Example
+    Add A Label To Model With Example  Frog  Reptile
 
 The User Adds Multiple Labels With Example
-    Add Multiple Labels To Model With Example
+    Add Multiple Labels To Model With Example  Turtle  Comodo Dragon  Reptile   Reptile
 The Model Should Not Increase "Total Items" And/Or "Labeled Items"
     Verify Items Did Not Increase
-    Cleanup
+
 The Model Should Increase "Total Items" And "Labeled Items"
     Verify Items Increase
-    Cleanup
+
 
 
 
