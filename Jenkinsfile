@@ -1,16 +1,14 @@
 pipeline {
         agent any
+          triggers {
+          githubPush()
+         }
+
             stages{
                
-   
-
 stage('AG-52') {
             steps {
                 sh 'robot -d Results Tests/AG-52.robot'
-                
-
-
-                
 
                     }
                     post {
