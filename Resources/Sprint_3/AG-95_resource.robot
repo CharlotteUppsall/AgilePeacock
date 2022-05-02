@@ -14,9 +14,9 @@ Select Demo Model
     Scroll Element Into View  ${demo_model_button}
     Wait Until Element Is Visible  ${demo_model_button}
     Click Element  ${demo_model_button}
-    Wait Until Page Contains Element  ${header_element}
     Wait Until Page Contains  Agile Peacock
 Verify Current Number Of Datapoints
+    Sleep  5s
     Wait Until Element Is Visible  ${datapoints}
     ${datapoint_as_string}  Get Text  ${datapoints}
     ${datapoint_one_dataset}  remove comma and convert  ${datapoint_as_string}
