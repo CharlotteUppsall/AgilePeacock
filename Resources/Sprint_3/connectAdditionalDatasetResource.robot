@@ -14,7 +14,6 @@ ${MenyDatasetButton3}  //*[@id="app"]/div[4]/div/div[1]/div[4]/a
 ${MenyDatasetButton4}  //*[@id="app"]/div[4]/div/div[1]/div[4]/a/div[1]/div
 ${MenyDatasetButton5}  //*[@id="app"]/div[4]/div/div[1]/div[4]/a/div[1]
 ${MenyDatasetButton6}  //*[@id="app"]/div[4]/div/div[1]/div[4]/a/div[2]
-
 ${MyDatasetsText}   //*[@id="app"]/div[9]/div[1]/main/div/div/nav[1]/div/div[1]
 #för att få bort meny-rullgardinen, ifall det behövs
 
@@ -27,7 +26,7 @@ a dataset is uploaded
     Sleep  5s
     Click Element  ${MenyDatasetButton3}
     Wait Until Page Contains  My Datasets (4)
-    # pga det skall finnas fyra dataset
+# pga det skall finnas fyra dataset
 
 the dataset isn't connected to the model
     Click Element  ${ModelsViewButton}
