@@ -72,7 +72,6 @@ user is on the model overview page
     Reload Page
     Wait Until Page Contains  Name
 # Testet har redan navigerat till sidan
-# men kanske skriva om att den trycker på model overview och verifierar igen?
 
 user clicks on the "connect additional dataset"-button
     Scroll Element Into View  ${connectAdditionalDatasetButton}
