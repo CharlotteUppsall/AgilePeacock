@@ -1,41 +1,13 @@
 *** Variables ***
-${shutDownTheGreenLoggedInButton}  //*[@id="app"]/div[7]/div[2]/div/div/div/button/div
-${DatasetsViewButton}  //*[@id="app"]/div[6]/div[1]/nav/div/a[2]
+${MenyButton}  //*[@id="app"]/div[7]/div[1]/nav/div/div[3]/div/button
+${MenyDatasetButton}  //*[@id="app"]/div[4]/div/div[1]/div[4]/a/div[1]/div
 ${ModelsViewButton}  //*[@id="app"]/div[6]/div[1]/nav/div/a[1]/div
 ${ModelOverviewButton}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div/div/div/div[2]/a/div
 ${connectAdditionalDatasetButton}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[3]/nav/div/span/button/div
-${continueWithPickedDatasetButton}  //*[@id="app"]/div[4]/div/div/div/div[3]/div/div/div[1]/div[3]/div/div/div[2]/button
-${connectButton}  //*[@id="app"]/div[4]/div/div/div/div[5]/div/div/div[3]/button
-${MenyButton1}  //*[@id="app"]/div[6]/div[1]/nav/div/div[3]/div/button
-${MenyButton2}  //*[@id="app"]/div[7]/div[1]/nav/div/div[3]/div/button
-${MenyDatasetButton1}  //*[@id="app"]/div[4]/div/div[1]/div[4]/a/div[1]/div
-${MenyDatasetButton2}  //*[@id="app"]/div[3]/div/div[1]/div[4]/a
-${MenyDatasetButton3}  //*[@id="app"]/div[4]/div/div[1]/div[4]/a
-${MenyDatasetButton4}  //*[@id="app"]/div[4]/div/div[1]/div[4]/a/div[1]/div
-${MenyDatasetButton5}  //*[@id="app"]/div[4]/div/div[1]/div[4]/a/div[1]
-${MenyDatasetButton6}  //*[@id="app"]/div[4]/div/div[1]/div[4]/a/div[2]
-${MyDatasetsText}   //*[@id="app"]/div[9]/div[1]/main/div/div/nav[1]/div/div[1]
-${TestDatasetContinueBotton}  //*[@id="app"]/div[5]/div/div/div/div[3]/div/div/div[1]/div/div/div/div[2]/button
 ${TestDatasetThatShouldntBeHere}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[2]/div/div/div/div
-
-
-${password}  123456789
-# ${Main_Page} # se om den behövs
 ${workspace_menu}   //*[@id="app"]/div[6]/div[1]/nav/div/div[3]/div/button/div/i
-${workspace_menu2}   //*[@id="app"]/div[7]/div[1]/nav/div/div[3]/div/button/div/i
 ${workspace_hello}   //*[@id="app"]/div[3]/div/div[2]/div[5]/a/div[1]/div
-${workspace_hello2}   //*[@id="app"]/div[4]/div/div[2]/div[5]/a/div[1]/div
-${pre_existing_model_overview}   //*[@id="app"]/div[8]/div[1]/main/div/div/div[3]/div/div[1]/div/div/div/div[2]/a/div
-${existing_model_overview}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div/div/div/div[2]/a/div
-${model_overview_button}   //*[@id="app"]/div[7]/div[1]/main/div/div/div[1]/div/div/div/div/nav/div/a[3]/div
-${connect_additional_dataset}   //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[3]/nav/div/span/button/div
-${continue_select_dataset}   //*[@id="app"]/div[4]/div/div/div/div[3]/div/div/div[1]/div[1]/div/div/div[2]/button/div
-${continue_connect}   //*[@id="app"]/div[4]/div/div/div/div[3]/div/div/div[1]/div[1]/div/div/div[2]/button/div
-${button_connect}   //*[@id="app"]/div[4]/div/div/div/div[5]/div/div/div[3]/button/div
-${scroll_to_dataset}   //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[1]/h4
-${disconnect_dataset}   //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[2]/div/div/div/div/div/div[2]/span/button/div
-${popUp_confirm_disconnect}    //*[@id="app"]/div[4]/div/div/div[3]/button[2]/div
-${popUp_confirm_disconnect2}   //*[@id="app"]/div[3]/div/div/div[3]/button[2]/div
+${TestDatasetContinueBotton}  //*[@id="app"]/div[5]/div/div/div/div[3]/div/div/div[1]/div/div/div/div[2]/button
 
 *** Keywords ***
 
@@ -44,8 +16,8 @@ a dataset is uploaded
     Login
     Switch To Hello Workspace
     Sleep  2s
-    Wait Until Page Contains Element  ${MenyButton2}
-    Click Element  ${MenyDatasetButton1}
+    Wait Until Page Contains Element  ${MenyButton}
+    Click Element  ${MenyDatasetButton}
     Sleep  2s
     Wait Until Page Contains  My Datasets (1)
     Wait Until Page Contains  Dataset ID: 344
@@ -88,3 +60,6 @@ Switch To Hello Workspace
    Scroll Element Into View   ${workspace_hello}
    Click Element   ${workspace_hello}
    Wait Until Page Contains   Models | Hello1
+  # ------------------------------------------------------------------------------
+
+
