@@ -32,8 +32,6 @@ Go To Model Overview on Pre-existing Model
 Verify Button "Connect Additional Dataset"   # AG-88 Confirmation
    Scroll Element Into View   ${connect_additional_dataset}
    Wait Until Page Contains Element   ${connect_additional_dataset}
-
-Do Steps In Connect Additional Dataset
    Click Element   ${connect_additional_dataset}
    Wait Until Page Contains   Datasets available to connect
    Click Element   ${continue_select_dataset}

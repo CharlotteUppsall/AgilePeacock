@@ -8,3 +8,4 @@ Resource  createLabelResource.robot
 Resource  confirmDisabledResource.robot
 Resource  labelsShownResource.robot
 Resource  select_column_resources.robot
+Resource  additionalDatasetResource.robot
