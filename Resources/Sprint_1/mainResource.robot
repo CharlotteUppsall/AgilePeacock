@@ -4,7 +4,7 @@ ${password}  123456789
 
 *** Keywords ***
 Start WebTest
-    Open Browser  about:blank  headlesschrome
+    Open Browser  about:blank  chrome
     Set Selenium Speed  0.1s
     Set Window Size  1920  1080
     Go To  https://app.labelf.ai/login
@@ -21,6 +21,17 @@ Press Login Button
 Verify Login
     Wait Until Page Contains  Models
 Login
+    Enter Account Information
+    Press Login Button
+    Verify Login
+
+Begin Web Test
+    Open Browser  about:blank  headlesschrome
+    Set Selenium Speed  0.1s
+    Set Window Size  1920  1080
+    Go To  https://app.labelf.ai/login
+    Wait Until Element Is Visible  //*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/div
+    Click Button  //*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/button[3]
     Enter Account Information
     Press Login Button
     Verify Login
