@@ -19,7 +19,7 @@ ${popUp_confirm_disconnect2}   //*[@id="app"]/div[3]/div/div/div[3]/button[2]/di
 
 *** Keywords ***
 
- Switch To Hello Workspace
+Switch To Hello Workspace
    Click Element  ${workspace_menu}
    Scroll Element Into View   ${workspace_hello}
    Click Element   ${workspace_hello}
@@ -33,7 +33,7 @@ Verify Button "Connect Additional Dataset"   # AG-88 Confirmation
    Scroll Element Into View   ${connect_additional_dataset}
    Wait Until Page Contains Element   ${connect_additional_dataset}
 
-Steps In Connect Additional Dataset
+Do Steps In Connect Additional Dataset
    Click Element   ${connect_additional_dataset}
    Wait Until Page Contains   Datasets available to connect
    Click Element   ${continue_select_dataset}

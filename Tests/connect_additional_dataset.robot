@@ -32,7 +32,7 @@ Gherkin AG-88 And AG-91
    And Switch To Hello Workspace
    And Go To Model Overview on Pre-existing Model
    When Verify Button "Connect Additional Dataset"
-   And  Steps In Connect Additional Dataset
+   And  Do Steps In Connect Additional Dataset
    Then Verify Connected Dataset Is Listed Under Connected Datasets
 
 
