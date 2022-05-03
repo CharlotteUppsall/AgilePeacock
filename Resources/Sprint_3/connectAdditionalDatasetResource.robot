@@ -10,6 +10,11 @@ ${MenyButton1}  //*[@id="app"]/div[6]/div[1]/nav/div/div[3]/div/button
 ${MenyButton2}  //*[@id="app"]/div[7]/div[1]/nav/div/div[3]/div/button
 ${MenyDatasetButton1}  //*[@id="app"]/div[3]/div/div[1]/div[4]/a/div[1]/div
 ${MenyDatasetButton2}  //*[@id="app"]/div[3]/div/div[1]/div[4]/a
+//*[@id="app"]/div[4]/div/div[1]/div[4]/a
+//*[@id="app"]/div[4]/div/div[1]/div[4]/a/div[1]/div
+//*[@id="app"]/div[4]/div/div[1]/div[4]/a/div[1]
+//*[@id="app"]/div[4]/div/div[1]/div[4]/a/div[2]
+
 ${MyDatasetsText}   //*[@id="app"]/div[9]/div[1]/main/div/div/nav[1]/div/div[1]
 #för att få bort meny-rullgardinen, ifall det behövs
 
@@ -19,7 +24,10 @@ a dataset is uploaded
     Sleep  10s
     Wait Until Page Contains Element  ${MenyButton2}
     Click Element  ${MenyButton2}
-
+    Sleep  5s
+    Click Element  //*[@id="app"]/div[4]/div/div[1]/div[4]/a
+    Wait Until Page Contains  My Datasets (4)
+    # pga det skall finnas fyra dataset
 
     #koden nedan ej fungerande pga dataset-knappen inte hittas...
     #Wait Until Page Contains  Datasets
@@ -28,7 +36,6 @@ a dataset is uploaded
     #Click Element  ${DatasetsViewButton}
     #Wait Until Page Contains  Dataset for testing
     # pga det dataset som skall vara uppladdat heter "Dataset for testing"
-
 
 
 the dataset isn't connected to the model
@@ -42,7 +49,6 @@ the dataset isn't connected to the model
     Scroll Element Into View  ${connectAdditionalDatasetButton}
     Wait Until Page Contains  Connected Datasets
     Page Should Not Contain  Dataset for testing
-    #Current Frame Should Not Contain
 # pga det dataset som inte skall vara connected heter "Dataset for testing"
 
 user is on the model overview page
