@@ -22,6 +22,7 @@ Suite Teardown  End WebTest
 User Login
    [Documentation]   Login function
    [Tags]  AG_16
+   Login
 
 User Function Connect Addittonal Dataset
    [Documentation]   Child Issue AG-88 And AG-91
