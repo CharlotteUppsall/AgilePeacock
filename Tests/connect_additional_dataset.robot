@@ -32,7 +32,7 @@ Gherkin AG-88 And AG-91
    And Switch To Hello Workspace
    And Go To Model Overview on Pre-existing Model
    When Verify Button "Connect Additional Dataset"
-   Then Verify Connected Dataset Is Listed Under Connected datasets
+   Then Verify Connected Dataset Is Listed Under Connected Datasets
 
 
 #User Can Delete Connected Dataset
