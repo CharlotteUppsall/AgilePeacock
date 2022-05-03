@@ -16,27 +16,15 @@ User can confirm that there is an updated sequence to include a step to select c
 User Can Confirm Change of Text For Step 3 When "Train Directly[...]" Is Disabled
      [Documentation]  When slider "Train directly on labels from an existing column” is disabled step 3 is changed to: Name your model
      [Tags]   AG_18
-    #Given that “Train directly on labels from an existing column” has been selected
-    #When the slider is set to disabled
-    #Then the column select step shall be removed from the setup steps
-
-     Confirm Text Has Changed When Function Disabled
-     Go Back
+    Given that “Train directly on labels from an existing column” has been selected
+    When the slider is set to disabled
+    Then the column select step shall be removed from the setup steps
 Overview of labels are displayed
     [Documentation]  Test will verify that labels from chosen dataset is present after creating model
     [Tags]  AG_64
-    Press Create New Model
-    Press Continue To Model Creation
-    Press Dataset With Existing Labels Button
-    Verify Text Button Is Checked
-    Select Train Directly On Labels
-    Confirm Labels In Model View
-    Navigate To Model Overview
-    Confirm Labels In Bar Chart
-    Scroll Down To Pie Chart
-    Confirm Labels In Pie Chart
-    Go Back
-    Delete Model
+    Given that a label exists in the uploaded data set
+    When the model training has completed
+    Then all labels from the original dataset are shown in the model overview
 User Can Select Column Containing The Labels
     [Documentation]  Verifies that a user can select a column containing labels
     [Tags]  AG_18
@@ -44,7 +32,6 @@ User Can Select Column Containing The Labels
     And "Train Directly On Labels From An Existing Column" Has Been Enabled
     When The User Clicks Continue
     Then It Shall Be Possible To Select A Column Which Contains The Labels
-
 User Can Select Column Containing The Labels - Dataset 2
     [Documentation]  Verifies that a user can select a column containing labels
     [Tags]  AG_18

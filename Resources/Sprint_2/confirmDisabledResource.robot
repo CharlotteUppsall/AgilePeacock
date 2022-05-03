@@ -23,5 +23,12 @@ Confirm Text Has Changed When Function Disabled
    Train Directly[...] Function Active To Disabled
    Verify Slide Button Is Disabled
 
+that “Train directly on labels from an existing column” has been selected
+    Wait Until Page Contains  Select the column which contains the labels
+the slider is set to disabled
+    Train Directly[...] Function Active To Disabled
+the column select step shall be removed from the setup steps
+    Verify Slide Button Is Disabled
+    Go Back
 
 
