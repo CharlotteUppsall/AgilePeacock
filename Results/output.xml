@@ -1,193 +1,194 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220502 10:01:03.009" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220502 10:35:58.136" rpa="false" schemaversion="2">
 <suite id="s1" name="Connect Additional Dataset" source="C:\Users\User\PycharmProjects\AgilePeacockProject\Tests\connect_additional_dataset.robot">
 <kw name="Start WebTest" library="mainResource" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>about:blank</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220502 10:01:03.183" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20220502 10:01:03.183" endtime="20220502 10:01:04.831"/>
+<msg timestamp="20220502 10:35:58.337" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220502 10:35:58.337" endtime="20220502 10:36:00.125"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>0.1s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220502 10:01:04.831" endtime="20220502 10:01:04.832"/>
+<status status="PASS" starttime="20220502 10:36:00.125" endtime="20220502 10:36:00.126"/>
 </kw>
 <kw name="Set Window Size" library="SeleniumLibrary">
 <arg>1920</arg>
 <arg>1080</arg>
 <doc>Sets current windows size to given ``width`` and ``height``.</doc>
-<status status="PASS" starttime="20220502 10:01:04.832" endtime="20220502 10:01:05.055"/>
+<status status="PASS" starttime="20220502 10:36:00.127" endtime="20220502 10:36:00.349"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>https://app.labelf.ai/login</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220502 10:01:05.056" level="INFO">Opening url 'https://app.labelf.ai/login'</msg>
-<status status="PASS" starttime="20220502 10:01:05.056" endtime="20220502 10:01:14.280"/>
+<msg timestamp="20220502 10:36:00.350" level="INFO">Opening url 'https://app.labelf.ai/login'</msg>
+<msg timestamp="20220502 10:36:01.655" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-144.png"&gt;&lt;img src="selenium-screenshot-144.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220502 10:36:01.737" level="FAIL">WebDriverException: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00AA7413+2389011]
+	Ordinal0 [0x00A39F61+1941345]
+	Ordinal0 [0x0092C658+837208]
+	Ordinal0 [0x00928F28+823080]
+	Ordinal0 [0x0091E27D+778877]
+	Ordinal0 [0x0091EE3D+781885]
+	Ordinal0 [0x0091E48A+779402]
+	Ordinal0 [0x0091DA86+776838]
+	Ordinal0 [0x0091C995+772501]
+	Ordinal0 [0x0091CE6D+773741]
+	Ordinal0 [0x0092DE5A+843354]
+	Ordinal0 [0x009849BD+1198525]
+	Ordinal0 [0x0097414C+1130828]
+	Ordinal0 [0x00984302+1196802]
+	Ordinal0 [0x00973F66+1130342]
+	Ordinal0 [0x0094E546+976198]
+	Ordinal0 [0x0094F456+980054]
+	GetHandleVerifier [0x00C59632+1727522]
+	GetHandleVerifier [0x00D0BA4D+2457661]
+	GetHandleVerifier [0x00B3EB81+569713]
+	GetHandleVerifier [0x00B3DD76+566118]
+	Ordinal0 [0x00A40B2B+1968939]
+	Ordinal0 [0x00A45988+1989000]
+	Ordinal0 [0x00A45A75+1989237]
+	Ordinal0 [0x00A4ECB1+2026673]
+	BaseThreadInitThunk [0x76066739+25]
+	RtlGetFullPathName_UEx [0x77868E7F+1215]
+	RtlGetFullPathName_UEx [0x77868E4D+1165]
+</msg>
+<status status="FAIL" starttime="20220502 10:36:00.350" endtime="20220502 10:36:01.737"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>//*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/div</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220502 10:01:14.281" endtime="20220502 10:01:14.531"/>
+<status status="NOT RUN" starttime="20220502 10:36:01.737" endtime="20220502 10:36:01.737"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>//*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/button[3]</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220502 10:01:14.531" level="INFO">Clicking button '//*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/button[3]'.</msg>
-<status status="PASS" starttime="20220502 10:01:14.531" endtime="20220502 10:01:15.178"/>
+<status status="NOT RUN" starttime="20220502 10:36:01.737" endtime="20220502 10:36:01.737"/>
 </kw>
-<status status="PASS" starttime="20220502 10:01:03.183" endtime="20220502 10:01:15.178"/>
+<status status="FAIL" starttime="20220502 10:35:58.337" endtime="20220502 10:36:01.737"/>
 </kw>
 <test id="s1-t1" name="User Can Confirm Button &quot;Connect Additional Dataset&quot; Visible On Model Overview">
-<kw name="Login" library="mainResource">
-<kw name="Enter Account Information" library="mainResource">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>//*[@id="app"]/div/main/div/div/div/div/div/div[1]/form/div[1]/div[2]/div[1]/div/input</arg>
-<arg>${e-mail}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220502 10:01:15.182" level="INFO">Typing text 'oskar.hagman@iths.se' into text field '//*[@id="app"]/div/main/div/div/div/div/div/div[1]/form/div[1]/div[2]/div[1]/div/input'.</msg>
-<status status="PASS" starttime="20220502 10:01:15.182" endtime="20220502 10:01:15.690"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>//*[@id="password"]</arg>
-<arg>${password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220502 10:01:15.691" level="INFO">Typing text '123456789' into text field '//*[@id="password"]'.</msg>
-<status status="PASS" starttime="20220502 10:01:15.690" endtime="20220502 10:01:16.138"/>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>Labelf</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220502 10:01:16.138" endtime="20220502 10:01:16.261"/>
-</kw>
-<status status="PASS" starttime="20220502 10:01:15.181" endtime="20220502 10:01:16.261"/>
-</kw>
-<kw name="Press Login Button" library="mainResource">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>//*[@id="app"]/div/main/div/div/div/div/div/div[2]/button[2]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220502 10:01:16.262" level="INFO">Clicking element '//*[@id="app"]/div/main/div/div/div/div/div/div[2]/button[2]'.</msg>
-<status status="PASS" starttime="20220502 10:01:16.261" endtime="20220502 10:01:16.537"/>
-</kw>
-<status status="PASS" starttime="20220502 10:01:16.261" endtime="20220502 10:01:16.538"/>
-</kw>
-<kw name="Verify Login" library="mainResource">
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>Models</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220502 10:01:16.538" endtime="20220502 10:01:17.640"/>
-</kw>
-<status status="PASS" starttime="20220502 10:01:16.538" endtime="20220502 10:01:17.640"/>
-</kw>
-<status status="PASS" starttime="20220502 10:01:15.180" endtime="20220502 10:01:17.641"/>
-</kw>
-<kw name="User Can Confirm Button &quot;Connect Additional Dataset&quot; Is Shown In Model Overview Page" library="additionalDatasetResource">
-<kw name=" Switch To Hello Workspace" library="additionalDatasetResource">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${workspace_menu}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220502 10:01:17.644" level="INFO">Clicking element '//*[@id="app"]/div[6]/div[1]/nav/div/div[3]/div/button/div/i'.</msg>
-<msg timestamp="20220502 10:01:18.061" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-142.png"&gt;&lt;img src="selenium-screenshot-142.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20220502 10:01:18.077" level="FAIL">Element with locator '//*[@id="app"]/div[6]/div[1]/nav/div/div[3]/div/button/div/i' not found.</msg>
-<status status="FAIL" starttime="20220502 10:01:17.643" endtime="20220502 10:01:18.077"/>
-</kw>
-<kw name="Scroll Element Into View" library="SeleniumLibrary">
-<arg>${workspace_hello}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="NOT RUN" starttime="20220502 10:01:18.078" endtime="20220502 10:01:18.078"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${workspace_hello}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220502 10:01:18.078" endtime="20220502 10:01:18.078"/>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>Models | Hello1</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="NOT RUN" starttime="20220502 10:01:18.078" endtime="20220502 10:01:18.078"/>
-</kw>
-<status status="FAIL" starttime="20220502 10:01:17.643" endtime="20220502 10:01:18.079"/>
-</kw>
-<kw name="Go To Model Overview on Pre-existing Model" library="additionalDatasetResource">
-<status status="NOT RUN" starttime="20220502 10:01:18.079" endtime="20220502 10:01:18.079"/>
-</kw>
-<kw name="Verify Button &quot;Connect Additional Dataset&quot;" library="additionalDatasetResource">
-<status status="NOT RUN" starttime="20220502 10:01:18.079" endtime="20220502 10:01:18.079"/>
-</kw>
-<status status="FAIL" starttime="20220502 10:01:17.642" endtime="20220502 10:01:18.080"/>
-</kw>
 <doc>Given that a model has been created, When the model overview page is opened, Then connect additional datasets button shall be shown</doc>
 <tag>AG_56</tag>
-<status status="FAIL" starttime="20220502 10:01:15.178" endtime="20220502 10:01:18.081">Element with locator '//*[@id="app"]/div[6]/div[1]/nav/div/div[3]/div/button/div/i' not found.</status>
+<status status="FAIL" starttime="20220502 10:36:01.737" endtime="20220502 10:36:01.738">Parent suite setup failed:
+WebDriverException: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00AA7413+2389011]
+	Ordinal0 [0x00A39F61+1941345]
+	Ordinal0 [0x0092C658+837208]
+	Ordinal0 [0x00928F28+823080]
+	Ordinal0 [0x0091E27D+778877]
+	Ordinal0 [0x0091EE3D+781885]
+	Ordinal0 [0x0091E48A+779402]
+	Ordinal0 [0x0091DA86+776838]
+	Ordinal0 [0x0091C995+772501]
+	Ordinal0 [0x0091CE6D+773741]
+	Ordinal0 [0x0092DE5A+843354]
+	Ordinal0 [0x009849BD+1198525]
+	Ordinal0 [0x0097414C+1130828]
+	Ordinal0 [0x00984302+1196802]
+	Ordinal0 [0x00973F66+1130342]
+	Ordinal0 [0x0094E546+976198]
+	Ordinal0 [0x0094F456+980054]
+	GetHandleVerifier [0x00C59632+1727522]
+	GetHandleVerifier [0x00D0BA4D+2457661]
+	GetHandleVerifier [0x00B3EB81+569713]
+	GetHandleVerifier [0x00B3DD76+566118]
+	Ordinal0 [0x00A40B2B+1968939]
+	Ordinal0 [0x00A45988+1989000]
+	Ordinal0 [0x00A45A75+1989237]
+	Ordinal0 [0x00A4ECB1+2026673]
+	BaseThreadInitThunk [0x76066739+25]
+	RtlGetFullPathName_UEx [0x77868E7F+1215]
+	RtlGetFullPathName_UEx [0x77868E4D+1165]
+</status>
 </test>
 <test id="s1-t2" name="User Can Confirm Connected Dataset Listed As Connected Datset On Model Overview">
-<kw name="User Can Confirm Connected Dataset Listed As Connected Datset On Model Overview Page" library="additionalDatasetResource">
-<kw name="Verify Connected Dataset Is Listed Under Connected datasets" library="additionalDatasetResource">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${connect_additional_dataset}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220502 10:01:18.085" level="INFO">Clicking element '//*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[3]/nav/div/span/button/div'.</msg>
-<msg timestamp="20220502 10:01:18.446" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-143.png"&gt;&lt;img src="selenium-screenshot-143.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20220502 10:01:18.448" level="FAIL">Element with locator '//*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[3]/nav/div/span/button/div' not found.</msg>
-<status status="FAIL" starttime="20220502 10:01:18.085" endtime="20220502 10:01:18.449"/>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>Datasets available to connect</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="NOT RUN" starttime="20220502 10:01:18.449" endtime="20220502 10:01:18.450"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${continue_select_dataset}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220502 10:01:18.450" endtime="20220502 10:01:18.450"/>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>Please click on the column containing the text you want to classify</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="NOT RUN" starttime="20220502 10:01:18.450" endtime="20220502 10:01:18.450"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${button_connect}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" starttime="20220502 10:01:18.450" endtime="20220502 10:01:18.450"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${button_connect}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220502 10:01:18.451" endtime="20220502 10:01:18.451"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20220502 10:01:18.451" endtime="20220502 10:01:18.451"/>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>Connected Datasets</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="NOT RUN" starttime="20220502 10:01:18.451" endtime="20220502 10:01:18.451"/>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>Dataset ID: 344</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="NOT RUN" starttime="20220502 10:01:18.451" endtime="20220502 10:01:18.452"/>
-</kw>
-<status status="FAIL" starttime="20220502 10:01:18.084" endtime="20220502 10:01:18.453"/>
-</kw>
-<status status="FAIL" starttime="20220502 10:01:18.084" endtime="20220502 10:01:18.453"/>
-</kw>
 <doc>Given that the user is on the “Datasets available to connect” page, When Continue button for a dataset is clicked, Then the dataset is listed under Connected datasets on the model overview</doc>
 <tag>AG_56</tag>
-<status status="FAIL" starttime="20220502 10:01:18.083" endtime="20220502 10:01:18.454">Element with locator '//*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[3]/nav/div/span/button/div' not found.</status>
+<status status="FAIL" starttime="20220502 10:36:01.742" endtime="20220502 10:36:01.743">Parent suite setup failed:
+WebDriverException: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00AA7413+2389011]
+	Ordinal0 [0x00A39F61+1941345]
+	Ordinal0 [0x0092C658+837208]
+	Ordinal0 [0x00928F28+823080]
+	Ordinal0 [0x0091E27D+778877]
+	Ordinal0 [0x0091EE3D+781885]
+	Ordinal0 [0x0091E48A+779402]
+	Ordinal0 [0x0091DA86+776838]
+	Ordinal0 [0x0091C995+772501]
+	Ordinal0 [0x0091CE6D+773741]
+	Ordinal0 [0x0092DE5A+843354]
+	Ordinal0 [0x009849BD+1198525]
+	Ordinal0 [0x0097414C+1130828]
+	Ordinal0 [0x00984302+1196802]
+	Ordinal0 [0x00973F66+1130342]
+	Ordinal0 [0x0094E546+976198]
+	Ordinal0 [0x0094F456+980054]
+	GetHandleVerifier [0x00C59632+1727522]
+	GetHandleVerifier [0x00D0BA4D+2457661]
+	GetHandleVerifier [0x00B3EB81+569713]
+	GetHandleVerifier [0x00B3DD76+566118]
+	Ordinal0 [0x00A40B2B+1968939]
+	Ordinal0 [0x00A45988+1989000]
+	Ordinal0 [0x00A45A75+1989237]
+	Ordinal0 [0x00A4ECB1+2026673]
+	BaseThreadInitThunk [0x76066739+25]
+	RtlGetFullPathName_UEx [0x77868E7F+1215]
+	RtlGetFullPathName_UEx [0x77868E4D+1165]
+</status>
 </test>
 <kw name="End WebTest" library="mainResource" type="TEARDOWN">
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220502 10:01:18.457" endtime="20220502 10:01:20.697"/>
+<status status="PASS" starttime="20220502 10:36:01.748" endtime="20220502 10:36:03.942"/>
 </kw>
-<status status="PASS" starttime="20220502 10:01:18.457" endtime="20220502 10:01:20.698"/>
+<status status="PASS" starttime="20220502 10:36:01.748" endtime="20220502 10:36:03.942"/>
 </kw>
-<status status="FAIL" starttime="20220502 10:01:03.010" endtime="20220502 10:01:20.698"/>
+<status status="FAIL" starttime="20220502 10:35:58.138" endtime="20220502 10:36:03.942">Suite setup failed:
+WebDriverException: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00AA7413+2389011]
+	Ordinal0 [0x00A39F61+1941345]
+	Ordinal0 [0x0092C658+837208]
+	Ordinal0 [0x00928F28+823080]
+	Ordinal0 [0x0091E27D+778877]
+	Ordinal0 [0x0091EE3D+781885]
+	Ordinal0 [0x0091E48A+779402]
+	Ordinal0 [0x0091DA86+776838]
+	Ordinal0 [0x0091C995+772501]
+	Ordinal0 [0x0091CE6D+773741]
+	Ordinal0 [0x0092DE5A+843354]
+	Ordinal0 [0x009849BD+1198525]
+	Ordinal0 [0x0097414C+1130828]
+	Ordinal0 [0x00984302+1196802]
+	Ordinal0 [0x00973F66+1130342]
+	Ordinal0 [0x0094E546+976198]
+	Ordinal0 [0x0094F456+980054]
+	GetHandleVerifier [0x00C59632+1727522]
+	GetHandleVerifier [0x00D0BA4D+2457661]
+	GetHandleVerifier [0x00B3EB81+569713]
+	GetHandleVerifier [0x00B3DD76+566118]
+	Ordinal0 [0x00A40B2B+1968939]
+	Ordinal0 [0x00A45988+1989000]
+	Ordinal0 [0x00A45A75+1989237]
+	Ordinal0 [0x00A4ECB1+2026673]
+	BaseThreadInitThunk [0x76066739+25]
+	RtlGetFullPathName_UEx [0x77868E7F+1215]
+	RtlGetFullPathName_UEx [0x77868E4D+1165]
+</status>
 </suite>
 <statistics>
 <total>
