@@ -31,4 +31,12 @@ Ag-51 Cleanup
     Go Back
     Verify Demo Model Is Created
     Delete Model
+that a model is trained with support ticket data
+    Login
+    Create Support Ticket Demo Model
+a representative example from the dataset is input to the test your model
+    Input New Label To Trained Model
+the categorization matches the label of the original dataset
+    Verify Added Label
+    Ag-51 Cleanup
 
