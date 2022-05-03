@@ -10,13 +10,19 @@ Press Existing Model
     Press Continue To Model Creation
     Press Dataset Button  #Det är housing question dataset continue-knappen
     Wait Until Element Is Visible  ${slide_button2}
-    click element at coordinates  ${slide_button2}  5  0
 
+Press Slide Button
+    click element at coordinates  ${slide_button2}  5  0
 Verify Setup
     Wait Until Page Contains   4
     #Både den texten som kom fram efter man tryckt slide-knappen och verifiering att det blir ett till steg som nr4
 
 Confirm Setup
     Press Existing Model
+    Verify Setup
+
+User clicks “Train directly on labels from an existing column”
+    Press Slide Button
+The setup steps are updated to include a step to select column
     Verify Setup
 

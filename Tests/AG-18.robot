@@ -9,11 +9,17 @@ User can confirm that there is an updated sequence to include a step to select c
     [Documentation]  Confirm setup steps are updated to include a step to select column
     [Tags]  AG_18
     Login
-    Confirm Setup
+    Given A dataset with existing labels has been selected
+    When User clicks “Train directly on labels from an existing column”
+    Then the setup steps are updated to include a step to select column
 
 User Can Confirm Change of Text For Step 3 When "Train Directly[...]" Is Disabled
      [Documentation]  When slider "Train directly on labels from an existing column” is disabled step 3 is changed to: Name your model
      [Tags]   AG_18
+    #Given that “Train directly on labels from an existing column” has been selected
+    #When the slider is set to disabled
+    #Then the column select step shall be removed from the setup steps
+
      Confirm Text Has Changed When Function Disabled
      Go Back
 Overview of labels are displayed
@@ -45,7 +51,7 @@ User Can Select Column Containing The Labels - Dataset 2
     Given A Dataset With Existing Labels Has Been Selected - Dataset 2
     And "Train Directly On Labels From An Existing Column" Has Been Enabled
     When The User Clicks Continue
-    Then It Shall Be Possible To Select A Column Which Contains The Labels
+    Then The Column That Contains The Labels Has Been Selected
 User Can Select Column Containing The Labels - Dataset 3
     [Documentation]  Verifies that a column is automatically selected when only one column exists
     [Tags]  AG_18
