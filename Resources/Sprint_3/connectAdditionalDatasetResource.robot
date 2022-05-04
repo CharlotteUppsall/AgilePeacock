@@ -9,6 +9,8 @@ ${MenyDatasetButton}  //*[@id="app"]/div[4]/div/div[1]/div[4]/a/div[1]/div
 ${ModelsViewButton}  //*[@id="app"]/div[6]/div[1]/nav/div/a[1]/div
 ${ModelOverviewButton}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div/div/div/div[2]/a/div
 ${connectAdditionalDatasetButton}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[3]/nav/div/span/button/div
+${connectAdditionalDatasetButton2}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[3]/nav/div/span/button/div
+
 
 #${TestDatasetThatShouldntBeHere}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[2]/div/div/div/div
 #${workspace_menu}   //*[@id="app"]/div[6]/div[1]/nav/div/div[3]/div/button/div/i
@@ -108,6 +110,7 @@ user is on the model overview page
 # Testet har redan navigerat till sidan
 
 user clicks on the "connect additional dataset"-button
+    Execute Javascript  window.scrollTo(0,1500)
     Scroll Element Into View  ${connectAdditionalDatasetButton}
     Click Element  ${connectAdditionalDatasetButton}
     Wait Until Page Contains  Datasets available to connect
@@ -115,7 +118,7 @@ user clicks on the "connect additional dataset"-button
 the dataset is displayed in the "My Datasets"-list  #Confirm AG_89
     Wait Until Page Contains  My Datasets
     Wait Until Page Contains  Dataset ID: 438
-    Element Should Be Visible  ${TestDatasetContinueBotton}
+
 
 # ------------------------------------------------------------------------------
 
@@ -178,10 +181,12 @@ Verify Current Number Of Datapoints
 Go To Connect Additional Datasets
     Click Element  ${ModelOverviewButton}
     Wait Until Page Contains  Test your model
-    user clicks on the "connect additional dataset"-button
-    #Scroll Element Into View  ${connect_additional_datasets_button}
-    #Click Element  ${connect_additional_datasets_button}
-    #Wait Until Page Contains  Pick a dataset to connect
+    #user clicks on the "connect additional dataset"-button
+    Execute Javascript  window.scrollTo(0,1400)
+    Scroll Element Into View  ${connectAdditionalDatasetButton2}
+    Click Element  ${connectAdditionalDatasetButton2}
+    Wait Until Page Contains  Datasets available to connect
+
 
 Connect Additional Dataset
     User clicks on the connect button
