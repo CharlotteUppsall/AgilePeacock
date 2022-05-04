@@ -19,9 +19,9 @@ ${popUp_confirm_disconnect2}   //*[@id="app"]/div[3]/div/div/div[3]/button[2]/di
 *** Keywords ***
 Switch To Hello Workspace
    Click Element  ${workspace_menu}
-   Scroll Element Into View   ${workspace_hello}
-   Click Element   ${workspace_hello}
-   Wait Until Page Contains   Models | Hello1
+   Scroll Element Into View   //*[@id="app"]/div[4]/div/div[2]/div[4]/a/div[1]/div  #${workspace_hello}
+   Click Element   //*[@id="app"]/div[4]/div/div[2]/div[4]/a/div[1]/div  #${workspace_hello}
+   Wait Until Page Contains   Models | My second workspace
 Go To Model Overview on Pre-existing Model
    Click Element   ${existing_model_overview}
    Wait Until Page Contains Element    ${model_overview_button}
