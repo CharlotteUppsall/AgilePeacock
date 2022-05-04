@@ -74,8 +74,6 @@ Verify Number Of Datapoints Increased
     Should Be True  ${datapoint_two_dataset} > ${datapoint_one_dataset}
     Should Be True  ${datapoint_two_dataset} > ${datapoint_second_dataset}
 
-
-The User Has a Trained Model
 Verify Number Of Datapoints Increased - Cultural Centers Survey
     Wait Until Element Is Visible  ${datapoints}
     ${datapoint_as_string_two_datasets}  Get Text  ${datapoints}
@@ -85,7 +83,6 @@ Verify Number Of Datapoints Increased - Cultural Centers Survey
     Should Be True  ${datapoint_two_dataset} > ${datapoint_third_dataset}
 
 The User Has A Trained Model
-
     Login
     Press Create New Model
     Select Demo Model
