@@ -86,8 +86,7 @@ The User Has A Trained Model
     Verify Current Number Of Datapoints
     Go To Connect Additional Datasets
 The User Has A Trained Model - 2
-    Press Create New Model
-    Select Demo Model
+    Create Support Ticket Demo Model
     Verify Current Number Of Datapoints
     Go To Connect Additional Datasets
 The User Connects An Additional Dataset
