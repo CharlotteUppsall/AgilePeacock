@@ -5,7 +5,6 @@ ${overview_button}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div
 ${connect_additional_datasets_button}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[3]/nav/div/span/button
 ${customer_support_continue}  //*[@id="app"]/div[4]/div/div/div/div[3]/div/div/div[1]/div[1]/div/div/div[2]/button
 ${connect_datasets}  //*[@id="app"]/div[4]/div/div/div/div[5]/div/div/div[3]/button/div
-${header_element}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[1]/nav/div[1]
 ${datapoints_customer_support}  //*[@id="app"]/div[4]/div/div/div/div[3]/div/div/div[1]/div[1]/div/div/nav/div/span
 
 
