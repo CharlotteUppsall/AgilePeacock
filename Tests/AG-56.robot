@@ -7,9 +7,9 @@ Suite Teardown  End WebTest
 
 *** Test Cases ***
 
-Confirm Button "Connect Additional Dataset" Visible On Model Overview
+Verify "Connect Additional Dataset" Button On Model Overview
     [Documentation]  Test verifies that the "Connect Additional Dataset"-button is present in the model overview page
-    [Tags]  AG-88
+    [Tags]  AG_56   AG-88
     Given A model has been created
     When The model overview page is opened
     Then Connect additional datasets button shall be shown
@@ -17,9 +17,9 @@ Confirm Button "Connect Additional Dataset" Visible On Model Overview
 
 #--------------------------------------------------------------------------
 
-Datasets available to connect are displayed for the user
+Datasets Available To Connect Are Displayed For The User
     [Documentation]  Test verifies uploaded datasets are present in the "My Datsets" list
-    [Tags]  AG_89
+    [Tags]  AG_56  AG_89
     Given a dataset is uploaded
     And the dataset isn't connected to the model
     And user is on the model overview page
@@ -29,9 +29,9 @@ Datasets available to connect are displayed for the user
 
 #--------------------------------------------------------------------------
 
-Connected datasets are displayed in a list for the user
+Connected Datasets Are Displayed In A List For The User
     [Documentation]
-    [Tags]  AG_91
+    [Tags]  AG_56  AG_91
     Given The user is on the “Datasets available to connect” page
     And The Continue button for a dataset is clicked
     When User clicks on the connect button
@@ -49,12 +49,12 @@ Verify Number Of Data Points Increased After Adding Additional Dataset
     Then The Number of Datapoints Displayed Under "My Models" Should Increase
 
 
-Verify Number Of Data Points Increased After Adding Additional Dataset - 2
-    [Documentation]  Verifies that the number of datapoints has increased after adding another dataset - dif 2nd dataset
-    [Tags]  AG_56  AG_95
-    Given The User Has A Trained Model - 2
-    When The User Connects An Additional Dataset - 2
-    Then The Number of Datapoints Displayed Under "My Models" Should Increase - 2
+#Verify Number Of Data Points Increased After Adding Additional Dataset - 2
+#    [Documentation]  Verifies that the number of datapoints has increased after adding another dataset - dif 2nd dataset
+#    [Tags]  AG_56  AG_95
+#    Given The User Has A Trained Model - 2
+#    When The User Connects An Additional Dataset - 2
+#    Then The Number of Datapoints Displayed Under "My Models" Should Increase - 2
 
 
 #--------------------------------------------------------------------------
