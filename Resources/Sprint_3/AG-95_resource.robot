@@ -88,13 +88,8 @@ The User Has A Trained Model
     Select Demo Model
     Verify Current Number Of Datapoints
     Go To Connect Additional Datasets
-
-The User Connects An Additional Dataset
-    Verify Number of Datapoints Second Dataset
-    Connect Additional Dataset
 The Number of Datapoints Displayed Under My Models Should Increase
     Verify Number Of Datapoints Increased
-
 The User Has A Trained Model - 2
     Press Create New Model
     Select Demo Model
