@@ -39,7 +39,6 @@ Connect Additional Dataset
     Click Element  ${connect_datasets}
     Go To  https://app.labelf.ai/main/375/models/view
     Wait Until Page Contains  Agile Peacock
-Verify Number of Datapoints Second Dataset
 
 Connect Cultural Centers Survey Dataset
     Click Element  ${cultural_centers_survey_continue}
@@ -83,8 +82,7 @@ Verify Number Of Datapoints Increased - Cultural Centers Survey
 
 The User Has A Trained Model
     Login
-    Press Create New Model
-    Select Demo Model
+    Create Support Ticket Demo Model 
     Verify Current Number Of Datapoints
     Go To Connect Additional Datasets
 The User Has A Trained Model - 2
