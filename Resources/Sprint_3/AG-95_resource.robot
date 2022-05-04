@@ -7,16 +7,25 @@ ${customer_support_continue}  //*[@id="app"]/div[4]/div/div/div/div[3]/div/div/d
 ${connect_datasets}  //*[@id="app"]/div[4]/div/div/div/div[5]/div/div/div[3]/button/div
 ${header_element}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[1]/nav/div[1]
 ${datapoints_customer_support}  //*[@id="app"]/div[4]/div/div/div/div[3]/div/div/div[1]/div[1]/div/div/nav/div/span
+
+
 ${datapoints_cultural_centers_survey}  //*[@id="app"]/div[4]/div/div/div/div[3]/div/div/div[1]/div[2]/div/div/nav/div/span
 ${cultural_centers_survey_continue}  //*[@id="app"]/div[4]/div/div/div/div[3]/div/div/div[1]/div[2]/div/div/div[2]/button
+
 *** Keywords ***
 Select Demo Model
     Scroll Element Into View  ${demo_model_button}
     Wait Until Element Is Visible  ${demo_model_button}
     Click Element  ${demo_model_button}
+
+    Wait Until Page Contains Element  ${header_element}
+    Wait Until Page Contains  Agile Peacock
+Verify Current Number Of Datapoints
+
     Wait Until Page Contains  Agile Peacock
 Verify Current Number Of Datapoints
     Sleep  5s
+
     Wait Until Element Is Visible  ${datapoints}
     ${datapoint_as_string}  Get Text  ${datapoints}
     ${datapoint_one_dataset}  remove comma and convert  ${datapoint_as_string}
@@ -33,6 +42,11 @@ Connect Additional Dataset
     Wait Until Page Contains  Please click on the column containing the text you want to classify
     Scroll Element Into View  ${connect_datasets}
     Click Element  ${connect_datasets}
+
+    Go To  https://app.labelf.ai/main/375/models/view
+    Wait Until Page Contains  Agile Peacock
+Verify Number of Datapoints Second Dataset
+
 Connect Cultural Centers Survey Dataset
     Click Element  ${cultural_centers_survey_continue}
     Wait Until Page Contains  Please click on the column containing the text you want to classify
@@ -48,12 +62,15 @@ Verify Number of Datapoints Second Dataset - Customer Support
     ${datapoint_second_dataset}  remove comma and convert  ${datapoint_as_string_second_dataset}
     Set Global Variable  ${datapoint_second_dataset}
     Should Be True  ${datapoint_second_dataset} == 1302
+
+
 Verify Number of Datapoints Second Dataset - Cultural Centers Survey
     Wait Until Element Is Visible  ${datapoints_cultural_centers_survey}
     ${datapoint_as_string_third_dataset}  Get Text  ${datapoints_cultural_centers_survey}
     ${datapoint_third_dataset}  Convert To Integer  ${datapoint_as_string_third_dataset}
     Set Global Variable  ${datapoint_third_dataset}
     Should Be True  ${datapoint_third_dataset} == 637
+
 Verify Number Of Datapoints Increased
     Wait Until Element Is Visible  ${datapoints}
     ${datapoint_as_string_two_datasets}  Get Text  ${datapoints}
@@ -61,6 +78,9 @@ Verify Number Of Datapoints Increased
     Should Be True  ${datapoint_two_dataset} <= ${datapoint_one_dataset}+${datapoint_second_dataset}
     Should Be True  ${datapoint_two_dataset} > ${datapoint_one_dataset}
     Should Be True  ${datapoint_two_dataset} > ${datapoint_second_dataset}
+
+
+The User Has a Trained Model
 Verify Number Of Datapoints Increased - Cultural Centers Survey
     Wait Until Element Is Visible  ${datapoints}
     ${datapoint_as_string_two_datasets}  Get Text  ${datapoints}
@@ -70,11 +90,19 @@ Verify Number Of Datapoints Increased - Cultural Centers Survey
     Should Be True  ${datapoint_two_dataset} > ${datapoint_third_dataset}
 
 The User Has A Trained Model
+
     Login
     Press Create New Model
     Select Demo Model
     Verify Current Number Of Datapoints
     Go To Connect Additional Datasets
+
+The User Connects An Additional Dataset
+    Verify Number of Datapoints Second Dataset
+    Connect Additional Dataset
+The Number of Datapoints Displayed Under My Models Should Increase
+    Verify Number Of Datapoints Increased
+
 The User Has A Trained Model - 2
     Press Create New Model
     Select Demo Model
@@ -93,4 +121,5 @@ The Number of Datapoints Displayed Under "My Models" Should Increase
     Delete Model
 The Number of Datapoints Displayed Under "My Models" Should Increase - 2
     Verify Number Of Datapoints Increased - Cultural Centers Survey
+
     Delete Model
