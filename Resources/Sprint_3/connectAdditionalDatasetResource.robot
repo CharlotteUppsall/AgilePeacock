@@ -9,6 +9,7 @@ ${MenyDatasetButton}  //*[@id="app"]/div[4]/div/div[1]/div[4]/a/div[1]/div
 ${ModelsViewButton}  //*[@id="app"]/div[6]/div[1]/nav/div/a[1]/div
 ${ModelOverviewButton}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div/div/div/div[2]/a/div
 ${connectAdditionalDatasetButton}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[3]/nav/div/span/button/div
+
 #${TestDatasetThatShouldntBeHere}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[2]/div/div/div/div
 #${workspace_menu}   //*[@id="app"]/div[6]/div[1]/nav/div/div[3]/div/button/div/i
 ${workspace_menu}   //*[@id="app"]/div[7]/div[1]/nav/div/div[3]/div/button/div/i
@@ -29,9 +30,11 @@ ${overview_button}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div
 ${connect_additional_datasets_button}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[3]/nav/div/span/button
 ${customer_support_continue}  //*[@id="app"]/div[4]/div/div/div/div[3]/div/div/div[1]/div[1]/div/div/div[2]/button
 ${connect_datasets}  //*[@id="app"]/div[4]/div/div/div/div[5]/div/div/div[3]/button/div
-${datapoints_customer_support}  //*[@id="app"]/div[4]/div/div/div/div[3]/div/div/div[1]/div[1]/div/div/nav/div/span
+${datapoints_test}  //*[@id="app"]/div[4]/div/div/div/div[3]/div/div/div[1]/div[1]/div/div/nav/div/span
 ${datapoints_cultural_centers_survey}  //*[@id="app"]/div[4]/div/div/div/div[3]/div/div/div[1]/div[2]/div/div/nav/div/span
 ${cultural_centers_survey_continue}  //*[@id="app"]/div[4]/div/div/div/div[3]/div/div/div[1]/div[2]/div/div/div[2]/button
+
+${datapoints_increased}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div/div/div/nav/div/span[2]
 
 # ------------------------------------------------------------------------------
 
@@ -56,6 +59,7 @@ Connect additional datasets button shall be shown
     Verify Button "Connect Additional Dataset"
 
 Verify Button "Connect Additional Dataset"   # AG-88 Confirmation
+   Execute Javascript  window.scrollTo(0,1500)
    Scroll Element Into View   ${connectAdditionalDatasetButton}
    Wait Until Page Contains Element   ${connectAdditionalDatasetButton}
 
@@ -71,10 +75,11 @@ Switch To My Second Workspace
 a dataset is uploaded
 # kollar att det finns ett dataset uppladdat under fliken "Datasets"
     Reload Page
-    Wait Until Page Contains Element  ${workspace_menu}
-    Click Element  ${workspace_menu}
-    Wait Until Page Contains Element  ${MenyDatasetButton}
-    Click Element  ${MenyDatasetButton}
+    #Wait Until Page Contains Element  //*[@id="app"]/div[7]/div[1]/nav/div/div[3]/div/button/div/i  #${workspace_menu}
+    #Click Element  //*[@id="app"]/div[7]/div[1]/nav/div/div[3]/div/button/div/i  #${workspace_menu}
+    #Wait Until Page Contains Element  ${MenyDatasetButton}
+    #Click Element  ${MenyDatasetButton}
+    Go To  https://app.labelf.ai/main/378/datasets/view
     Sleep  2s
     Wait Until Page Contains  My Datasets (1)   #kanske överflödig
     Wait Until Page Contains  Dataset ID: 438
@@ -145,7 +150,8 @@ The User Has A Trained Model
     Go To Connect Additional Datasets
 
 The User Connects An Additional Dataset
-    Verify Number of Datapoints Second Dataset - Customer Support
+    Verify Number of Datapoints Second Dataset - Dataset ID: 438   #datasettet heter test men ID är tydligare
+    # osäker på var verfieringen av datapoints sker... testa...
     Connect Additional Dataset
     Return To Models Page
 
@@ -162,6 +168,7 @@ The Number of Datapoints Displayed Under "My Models" Should Increase
 
 Verify Current Number Of Datapoints
     Sleep  5s
+    Go To  https://app.labelf.ai/main/378/models/view
     Wait Until Element Is Visible  ${datapoints}
     ${datapoint_as_string}  Get Text  ${datapoints}
     ${datapoint_one_dataset}  remove comma and convert  ${datapoint_as_string}
@@ -169,17 +176,19 @@ Verify Current Number Of Datapoints
     Should Be True  ${datapoint_one_dataset} == 1285
 
 Go To Connect Additional Datasets
-    Click Element  ${overview_button}
+    Click Element  ${ModelOverviewButton}
     Wait Until Page Contains  Test your model
-    Scroll Element Into View  ${connect_additional_datasets_button}
-    Click Element  ${connect_additional_datasets_button}
-    Wait Until Page Contains  Pick a dataset to connect
+    user clicks on the "connect additional dataset"-button
+    #Scroll Element Into View  ${connect_additional_datasets_button}
+    #Click Element  ${connect_additional_datasets_button}
+    #Wait Until Page Contains  Pick a dataset to connect
 
 Connect Additional Dataset
-    Click Element  ${customer_support_continue}
-    Wait Until Page Contains  Please click on the column containing the text you want to classify
-    Scroll Element Into View  ${connect_datasets}
-    Click Element  ${connect_datasets}
+    User clicks on the connect button
+    #Click Element  ${customer_support_continue}
+    #Wait Until Page Contains  Please click on the column containing the text you want to classify
+    #Scroll Element Into View  ${connect_datasets}
+    #Click Element  ${connect_datasets}
 
 Connect Cultural Centers Survey Dataset
     Click Element  ${cultural_centers_survey_continue}
@@ -189,15 +198,15 @@ Connect Cultural Centers Survey Dataset
 
 Return To Models Page
     Wait Until Page Contains  Connected Datasets
-    Go To  https://app.labelf.ai/main/375/models/view
-    Wait Until Page Contains  Agile Peacock
+    Go To  https://app.labelf.ai/main/378/models/view
+    Wait Until Page Contains  My Second Workspace
 
-Verify Number of Datapoints Second Dataset - Customer Support
-    Wait Until Element Is Visible  ${datapoints_customer_support}
-    ${datapoint_as_string_second_dataset}  Get Text  ${datapoints_customer_support}
+Verify Number of Datapoints Second Dataset - Dataset ID: 438
+    Wait Until Element Is Visible  ${datapoints_test}
+    ${datapoint_as_string_second_dataset}  Get Text  ${datapoints_test}
     ${datapoint_second_dataset}  remove comma and convert  ${datapoint_as_string_second_dataset}
     Set Global Variable  ${datapoint_second_dataset}
-    Should Be True  ${datapoint_second_dataset} == 1302
+    Should Be True  ${datapoint_second_dataset} == 1500
 
 Verify Number of Datapoints Second Dataset - Cultural Centers Survey
     Wait Until Element Is Visible  ${datapoints_cultural_centers_survey}
@@ -207,8 +216,8 @@ Verify Number of Datapoints Second Dataset - Cultural Centers Survey
     Should Be True  ${datapoint_third_dataset} == 637
 
 Verify Number Of Datapoints Increased
-    Wait Until Element Is Visible  ${datapoints}
-    ${datapoint_as_string_two_datasets}  Get Text  ${datapoints}
+    Wait Until Element Is Visible  ${datapoints_increased}  #${datapoints}
+    ${datapoint_as_string_two_datasets}  Get Text  ${datapoints_increased}  #${datapoints}
     ${datapoint_two_dataset}  remove comma and convert  ${datapoint_as_string_two_datasets}
     Should Be True  ${datapoint_two_dataset} <= ${datapoint_one_dataset}+${datapoint_second_dataset}
     Should Be True  ${datapoint_two_dataset} > ${datapoint_one_dataset}
