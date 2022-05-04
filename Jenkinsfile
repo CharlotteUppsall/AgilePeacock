@@ -1,11 +1,14 @@
 pipeline {
         agent any
-         }
             stages{
-stage('All Tests') {
+               
+   
+stage('AG-52') {
             steps {
                 sh 'robot -d Results Tests/AG-52.robot'
                 
+                
+
                     }
                     post {
                         always {
