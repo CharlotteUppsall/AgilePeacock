@@ -173,7 +173,7 @@ Verify Current Number Of Datapoints
     ${datapoint_as_string}  Get Text  ${datapoints}
     ${datapoint_one_dataset}  remove comma and convert  ${datapoint_as_string}
     Set Global Variable  ${datapoint_one_dataset}
-    Should Be True  ${datapoint_one_dataset} == 1285
+    Should Be True  ${datapoint_one_dataset} == 2784  #vi har redan connectat ett dataset därför bör det vara
 
 Go To Connect Additional Datasets
     Click Element  ${ModelOverviewButton}

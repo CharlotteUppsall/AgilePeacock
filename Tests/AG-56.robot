@@ -1,7 +1,8 @@
 *** Settings ***
 Library  SeleniumLibrary
 Resource  ../Resources/resourceGate.robot
-Library  ../Scripts/remove_text.py
+#Library  ../Scripts/remove_text.py
+#Library  ../Scripts/remove_comma.py
 Suite Setup  Start WebTest
 Suite Teardown  End WebTest
 

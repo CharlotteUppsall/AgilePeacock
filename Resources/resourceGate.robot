@@ -9,6 +9,7 @@ Resource  ./Sprint_2/labelsShownResource.robot
 Resource  ./Sprint_2/select_column_resources.robot
 Resource  ./Sprint_3/connectAdditionalDatasetResource.robot
 Library  ../Scripts/remove_text.py
+Library  ../Scripts/remove_comma.py
 
 
 
