@@ -39,4 +39,4 @@ User Can Add Multiple Labels To A Trained Customer Support Model With Example An
     And The User Is Already On "Start Training" Page
     When The User Adds Multiple Labels With Example
     Then The Model Should Increase "Total Items" And "Labeled Items"
-    Cleanup
+
