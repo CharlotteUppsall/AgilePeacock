@@ -21,11 +21,7 @@ Select Demo Model
     Wait Until Page Contains Element  ${header_element}
     Wait Until Page Contains  Agile Peacock
 Verify Current Number Of Datapoints
-
-    Wait Until Page Contains  Agile Peacock
-Verify Current Number Of Datapoints
     Sleep  5s
-
     Wait Until Element Is Visible  ${datapoints}
     ${datapoint_as_string}  Get Text  ${datapoints}
     ${datapoint_one_dataset}  remove comma and convert  ${datapoint_as_string}
@@ -42,7 +38,6 @@ Connect Additional Dataset
     Wait Until Page Contains  Please click on the column containing the text you want to classify
     Scroll Element Into View  ${connect_datasets}
     Click Element  ${connect_datasets}
-
     Go To  https://app.labelf.ai/main/375/models/view
     Wait Until Page Contains  Agile Peacock
 Verify Number of Datapoints Second Dataset
