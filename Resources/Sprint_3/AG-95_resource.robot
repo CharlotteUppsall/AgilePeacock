@@ -38,8 +38,7 @@ Connect Additional Dataset
     Wait Until Element Is Visible  ${connect_datasets}  
     Scroll Element Into View  ${connect_datasets}
     Click Element  ${connect_datasets}
-    Go To  https://app.labelf.ai/main/375/models/view
-    Wait Until Page Contains  Agile Peacock
+
 
 Connect Cultural Centers Survey Dataset
     Click Element  ${cultural_centers_survey_continue}
