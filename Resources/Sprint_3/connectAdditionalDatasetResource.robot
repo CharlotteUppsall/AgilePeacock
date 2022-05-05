@@ -7,7 +7,7 @@ ${connectAdditionalDatasetButton}  //*[@id="app"]/div[7]/div[1]/main/div/div/div
 ${connectAdditionalDatasetButton2}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[3]/nav/div/span/button/div
 #${workspace_menu}   //*[@id="app"]/div[7]/div[1]/nav/div/div[3]/div/button/div/i
 ${workspace_menu}    //*[@id="app"]/div[6]/div[1]/nav/div/div[3]/div/button/div/i
-${workspace_mySecondWorkspace}  //*[@id="app"]/div[4]/div/div[2]/div[4]/a/div[1]/div
+${workspace_mySecondWorkspace}  //*[@id="app"]/div[3]/div/div[2]/div[4]/a/div[1]/div
 ${TestDatasetContinueBotton}  //*[@id="app"]/div[5]/div/div/div/div[3]/div/div/div[1]/div/div/div/div[2]/button/div
 ${button_connect}   //*[@id="app"]/div[5]/div/div/div/div[5]/div/div/div[3]/button/div
 ${existing_model_overview}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div/div/div/div[2]/a/div
@@ -38,10 +38,12 @@ Verify Button "Connect Additional Dataset"   # AG-88 Confirmation
    Wait Until Page Contains Element   ${connectAdditionalDatasetButton}
 
 Switch To My Second Workspace
-   Click Element  ${workspace_menu}
-   Scroll Element Into View   ${workspace_mySecondWorkspace}
-   Click Element   ${workspace_mySecondWorkspace}
+   Go To  https://app.labelf.ai/main/378/models/view
    Wait Until Page Contains   Models | My second workspace
+   #Click Element  ${workspace_menu}
+   #Scroll Element Into View   ${workspace_mySecondWorkspace}
+   #Click Element   ${workspace_mySecondWorkspace}
+
 
 A Dataset Is Uploaded
 # kollar att det finns ett dataset uppladdat under fliken "Datasets"
