@@ -16,7 +16,7 @@ Press Delete In Dropdown Menu
 Press Delete Confirmation Popup
     Wait Until Page Contains Element  ${confirm_delete}
     Click Button  ${confirm_delete}
-    Wait Until Page Contains  You can create a new model by clicking the "NEW MODEL" button in the top right corner
+    
 Verify Model Is Deleted
     Wait Until Element Is Visible  ${my_models}
     ${element_text}  Get Text  ${my_models}
