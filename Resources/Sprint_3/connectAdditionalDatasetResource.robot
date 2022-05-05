@@ -13,7 +13,6 @@ ${existing_model_overview}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div
 ${model_overview_button}   //*[@id="app"]/div[7]/div[1]/main/div/div/div[1]/div/div/div/div/nav/div/a[3]/div
 ${continue_select_dataset}   //*[@id="app"]/div[4]/div/div/div/div[3]/div/div/div[1]/div[1]/div/div/div[2]/button/div
 
-
 *** Keywords ***
 
 A Model Has Been Created
@@ -24,7 +23,6 @@ The Model Overview Page Is Opened
    Reload Page
    Wait Until Page Contains Element  ${ModelOverviewButton}
    Click Element   ${ModelOverviewButton}
-   #Wait Until Page Contains Element    ${model_overview_button}
    Wait Until Page Contains  Name
 
 Connect Additional Datasets Button Shall Be Shown
