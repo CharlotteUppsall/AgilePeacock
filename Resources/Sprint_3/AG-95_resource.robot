@@ -37,16 +37,16 @@ Connect Additional Dataset
     Wait Until Page Contains  Please click on the column containing the text you want to classify
     Wait Until Element Is Visible  ${connect_datasets}  
     Scroll Element Into View  ${connect_datasets}
-    Click Element  ${connect_datasets}
-    Go To  https://app.labelf.ai/main/375/models/view
-    Wait Until Page Contains  Agile Peacock
+    Click Button  ${connect_datasets}
+    Sleep  2s
 
 Connect Cultural Centers Survey Dataset
     Click Element  ${cultural_centers_survey_continue}
     Wait Until Page Contains  Please click on the column containing the text you want to classify
     Wait Until Element Is Visible  ${connect_datasets}  
     Scroll Element Into View  ${connect_datasets}
-    Click Element  ${connect_datasets}
+    Click Button  ${connect_datasets}
+    Sleep  2s
 Return To Models Page
     Wait Until Page Contains  Connected Datasets
     Go To  https://app.labelf.ai/main/375/models/view
