@@ -5,7 +5,6 @@ ${ModelsViewButton}  //*[@id="app"]/div[6]/div[1]/nav/div/a[1]/div
 ${ModelOverviewButton}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div/div/div/div[2]/a/div
 ${connectAdditionalDatasetButton}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[3]/nav/div/span/button/div
 ${connectAdditionalDatasetButton2}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[3]/nav/div/span/button/div
-#${workspace_menu}   //*[@id="app"]/div[7]/div[1]/nav/div/div[3]/div/button/div/i
 ${workspace_menu}    //*[@id="app"]/div[6]/div[1]/nav/div/div[3]/div/button/div/i
 ${workspace_mySecondWorkspace}  //*[@id="app"]/div[3]/div/div[2]/div[4]/a/div[1]/div
 ${TestDatasetContinueBotton}  //*[@id="app"]/div[5]/div/div/div/div[3]/div/div/div[1]/div/div/div/div[2]/button/div
@@ -39,9 +38,7 @@ Verify Button "Connect Additional Dataset"   # AG-88 Confirmation
 Switch To My Second Workspace
    Go To  https://app.labelf.ai/main/378/models/view
    Wait Until Page Contains   Models | My second workspace
-   #Click Element  ${workspace_menu}
-   #Scroll Element Into View   ${workspace_mySecondWorkspace}
-   #Click Element   ${workspace_mySecondWorkspace}
+
 
 
 A Dataset Is Uploaded
@@ -82,9 +79,6 @@ The Dataset Is Displayed In The "My Datasets"-List  #Confirm AG_89
     Wait Until Page Contains  Dataset ID: 438
 
 The User Is On The “Datasets Available To Connect” Page
-    #Reload Page
-    #Scroll Element Into View  ${connectAdditionalDatasetButton}
-    #Click Element  ${connectAdditionalDatasetButton}
     Wait Until Page Contains   Datasets available to connect  #redan navigerad till sidan
 
 The Continue Button For A Dataset Is Clicked
