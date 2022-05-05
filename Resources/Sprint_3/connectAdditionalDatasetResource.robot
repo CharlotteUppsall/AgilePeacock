@@ -20,13 +20,12 @@ ${continue_select_dataset}   //*[@id="app"]/div[4]/div/div/div/div[3]/div/div/di
 A Model Has Been Created
     Login
     Switch To My Second Workspace
-    Wait Until Page Contains  support ticket routing model (1)
 
 The Model Overview Page Is Opened
    Reload Page
    Wait Until Page Contains Element  ${ModelOverviewButton}
    Click Element   ${ModelOverviewButton}
-   Wait Until Page Contains Element    ${model_overview_button}
+   #Wait Until Page Contains Element    ${model_overview_button}
    Wait Until Page Contains  Name
 
 Connect Additional Datasets Button Shall Be Shown
