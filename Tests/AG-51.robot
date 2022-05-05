@@ -12,4 +12,4 @@ User can add a label to a trained customer suppport model and verify that it wor
     Create Support Ticket Demo Model
     Input New Label To Trained Model
     Verify Added Label
-    Ag-51 Cleanup
+    Cleanup
