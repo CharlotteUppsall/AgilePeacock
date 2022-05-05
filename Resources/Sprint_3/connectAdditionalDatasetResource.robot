@@ -1,5 +1,4 @@
 *** Variables ***
-
 ${MenyDatasetButton}  //*[@id="app"]/div[4]/div/div[1]/div[4]/a/div[1]/div
 ${ModelsViewButton}  //*[@id="app"]/div[6]/div[1]/nav/div/a[1]/div
 ${ModelOverviewButton}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div/div/div/div[2]/a/div
@@ -14,7 +13,6 @@ ${model_overview_button}   //*[@id="app"]/div[7]/div[1]/main/div/div/div[1]/div/
 ${continue_select_dataset}   //*[@id="app"]/div[4]/div/div/div/div[3]/div/div/div[1]/div[1]/div/div/div[2]/button/div
 
 *** Keywords ***
-
 A Model Has Been Created
     Login
     Switch To My Second Workspace
