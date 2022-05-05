@@ -37,7 +37,7 @@ Connect Additional Dataset
     Wait Until Page Contains  Please click on the column containing the text you want to classify
     Wait Until Element Is Visible  ${connect_datasets}  
     Scroll Element Into View  ${connect_datasets}
-    Click Button  ${connect_datasets}
+    Click Element  ${connect_datasets}
     Sleep  2s
 
 Connect Cultural Centers Survey Dataset
@@ -45,7 +45,7 @@ Connect Cultural Centers Survey Dataset
     Wait Until Page Contains  Please click on the column containing the text you want to classify
     Wait Until Element Is Visible  ${connect_datasets}  
     Scroll Element Into View  ${connect_datasets}
-    Click Button  ${connect_datasets}
+    Click Element  ${connect_datasets}
     Sleep  2s
 Return To Models Page
     Wait Until Page Contains  support ticket routing model (1)
