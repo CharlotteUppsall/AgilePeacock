@@ -98,8 +98,12 @@ The User Connects An Additional Dataset - 2
     Connect Cultural Centers Survey Dataset
     Return To Models Page
 The Number of Datapoints Displayed Under "My Models" Should Increase
+    Sleep  2s
+    Reload Page
     Verify Number Of Datapoints Increased
     Delete Model
 The Number of Datapoints Displayed Under "My Models" Should Increase - 2
+    Sleep  2s
+    Reload Page
     Verify Number Of Datapoints Increased - Cultural Centers Survey
     Delete Model
