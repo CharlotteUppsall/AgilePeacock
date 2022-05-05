@@ -3,13 +3,13 @@ pipeline {
             stages{
                
    
-stage('AG-52') {
-            steps {
-                
 
+stage('AG-52 & AG_56') {
+            steps {      
+                sh 'robot -d Results Tests/AG-56.robot'
                 sh 'robot -d Results Tests/AG-95.robot'
                 sh 'robot -d Results Tests/AG-52.robot'
-
+                
                     }
                     post {
                         always {

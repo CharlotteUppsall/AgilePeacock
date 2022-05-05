@@ -4,10 +4,11 @@ ${password}  123456789
 
 *** Keywords ***
 Start WebTest
+
     Open Browser  about:blank  headlesschrome
 
     Register Keyword To Run On Failure  NONE
-    Set Selenium Speed  0.1s
+    Set Selenium Speed  0.2s
 
     Set Window Size  1920  1080
     Go To  https://app.labelf.ai/login
@@ -24,7 +25,7 @@ Enter Account Information
 Press Login Button
     Click Element  //*[@id="app"]/div/main/div/div/div/div/div/div[2]/button[2]
 Verify Login
-    Wait Until Page Contains  Models
+    Wait Until Page Contains  Models | Agile Peacock
 Verify Workspace Is Empty
     FOR  ${i}  IN RANGE  0  5  1
     ${status}=  Run Keyword And Return Status  Page Should Contain Element  ${my_models}
@@ -37,6 +38,7 @@ Login
     Enter Account Information
     Press Login Button
     Verify Login
+    
     Verify Workspace Is Empty
 
 

@@ -35,6 +35,7 @@ Loop Thru Add Label Elements
     END
 
 Leave Training Page
+    Sleep  2s
     Wait Until Page Contains  Labeled:
     FOR  ${i}  IN RANGE  0  5  1
     ${status}=  Run Keyword And Return Status  Page Should Contain Element  ${first_leave_training_page}
@@ -61,6 +62,7 @@ Input New Label Example
     Input Text  ${new_label_example_text_field}  ${example}
 Input New Label Name
     [Arguments]  ${name}
+    Sleep  1s
     Input Text  ${new_label_name_text_field}  ${name}
 Test Failsafe Skip
     Go To  https://app.labelf.ai/main/375/models/${model_id_as_int}/dashboard/dashboard
