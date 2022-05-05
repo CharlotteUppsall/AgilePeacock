@@ -61,6 +61,7 @@ Input New Label Example
     Input Text  ${new_label_example_text_field}  ${example}
 Input New Label Name
     [Arguments]  ${name}
+    Sleep  1s
     Input Text  ${new_label_name_text_field}  ${name}
 Test Failsafe Skip
     Go To  https://app.labelf.ai/main/375/models/${model_id_as_int}/dashboard/dashboard
