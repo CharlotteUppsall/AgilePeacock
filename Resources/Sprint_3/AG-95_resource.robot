@@ -47,8 +47,8 @@ Connect Cultural Centers Survey Dataset
     Scroll Element Into View  ${connect_datasets}
     Click Element  ${connect_datasets}
 Return To Models Page
-    Reload Page
     Wait Until Page Contains  support ticket routing model (1)
+    Reload Page
     Go To  https://app.labelf.ai/main/375/models/view
     Wait Until Page Contains  Agile Peacock
 Verify Number of Datapoints Second Dataset - Customer Support
