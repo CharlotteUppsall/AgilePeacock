@@ -7,7 +7,7 @@ Start WebTest
     Open Browser  about:blank  headlesschrome
 
     Register Keyword To Run On Failure  NONE
-    Set Selenium Speed  0.2s
+    Set Selenium Speed  0.1s
 
     Set Window Size  1920  1080
     Go To  https://app.labelf.ai/login
