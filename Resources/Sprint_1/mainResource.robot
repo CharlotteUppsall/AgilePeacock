@@ -4,6 +4,7 @@ ${password}  123456789
 
 *** Keywords ***
 Start WebTest
+
     Open Browser  about:blank  headlesschrome
 
     Register Keyword To Run On Failure  NONE
@@ -37,6 +38,7 @@ Login
     Enter Account Information
     Press Login Button
     Verify Login
+
     Verify Workspace Is Empty
 
 
