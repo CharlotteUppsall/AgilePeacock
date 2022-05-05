@@ -1,8 +1,6 @@
 *** Settings ***
 Library  SeleniumLibrary
 Resource  ../Resources/resourceGate.robot
-#Library  ../Scripts/remove_text.py
-#Library  ../Scripts/remove_comma.py
 Suite Setup  Start WebTest
 Suite Teardown  End WebTest
 
@@ -15,9 +13,6 @@ Verify "Connect Additional Dataset" Button On Model Overview
     When The model overview page is opened
     Then Connect additional datasets button shall be shown
 
-
-#--------------------------------------------------------------------------
-
 Datasets Available To Connect Are Displayed For The User
     [Documentation]  Test verifies uploaded datasets are present in the "My Datsets" list
     [Tags]  AG_56  AG_89
@@ -27,35 +22,10 @@ Datasets Available To Connect Are Displayed For The User
     When user clicks on the "connect additional dataset"-button
     Then the dataset is displayed in the "My Datasets"-list
 
-
-#--------------------------------------------------------------------------
-
 Connected Datasets Are Displayed In A List For The User
-    [Documentation]
+    [Documentation]  The connected dataset should be listed under Connected datasets on the model overview
     [Tags]  AG_56  AG_91
     Given The user is on the “Datasets available to connect” page
     And The Continue button for a dataset is clicked
     When User clicks on the connect button
     Then The dataset is listed under Connected datasets on the model overview
-
-
-#--------------------------------------------------------------------------
-
-
-Verify Number Of Data Points Increased After Adding Additional Dataset
-    [Documentation]  Verifies that the number of datapoints has increased after adding another dataset
-    [Tags]  AG_56  AG_95
-    Given The User Has A Trained Model
-    When The User Connects An Additional Dataset
-    Then The Number of Datapoints Displayed Under "My Models" Should Increase
-
-
-#Verify Number Of Data Points Increased After Adding Additional Dataset - 2
-#    [Documentation]  Verifies that the number of datapoints has increased after adding another dataset - dif 2nd dataset
-#    [Tags]  AG_56  AG_95
-#    Given The User Has A Trained Model - 2
-#    When The User Connects An Additional Dataset - 2
-#    Then The Number of Datapoints Displayed Under "My Models" Should Increase - 2
-
-
-#--------------------------------------------------------------------------
