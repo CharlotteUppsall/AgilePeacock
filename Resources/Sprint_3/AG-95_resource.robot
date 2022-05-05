@@ -35,6 +35,7 @@ Go To Connect Additional Datasets
 Connect Additional Dataset
     Click Element  ${customer_support_continue}
     Wait Until Page Contains  Please click on the column containing the text you want to classify
+    Wait Until Element Is Visible  ${connect_datasets}  
     Scroll Element Into View  ${connect_datasets}
     Click Element  ${connect_datasets}
     Go To  https://app.labelf.ai/main/375/models/view
@@ -43,6 +44,7 @@ Connect Additional Dataset
 Connect Cultural Centers Survey Dataset
     Click Element  ${cultural_centers_survey_continue}
     Wait Until Page Contains  Please click on the column containing the text you want to classify
+    Wait Until Element Is Visible  ${connect_datasets}  
     Scroll Element Into View  ${connect_datasets}
     Click Element  ${connect_datasets}
 Return To Models Page
