@@ -50,6 +50,7 @@ Leave Training Page
     Exit For Loop If  '${status}'=='True'
     Reload Page
     END
+    Run Keyword If  '${status}'=='False'  Go To  https://app.labelf.ai/main/375/models/${model_id_as_int}/dashboard/dashboard
 
 Submit New Label
     Wait Until Element Is Visible  ${submit_add_new_label}
