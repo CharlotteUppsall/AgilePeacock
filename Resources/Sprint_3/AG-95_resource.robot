@@ -38,7 +38,7 @@ Connect Additional Dataset
     Wait Until Element Is Visible  ${connect_datasets}  
     Scroll Element Into View  ${connect_datasets}
     Click Element  ${connect_datasets}
-
+    Sleep  2s
 
 Connect Cultural Centers Survey Dataset
     Click Element  ${cultural_centers_survey_continue}
@@ -46,6 +46,7 @@ Connect Cultural Centers Survey Dataset
     Wait Until Element Is Visible  ${connect_datasets}  
     Scroll Element Into View  ${connect_datasets}
     Click Element  ${connect_datasets}
+    Sleep  2s
 Return To Models Page
     Wait Until Page Contains  support ticket routing model (1)
     Reload Page
