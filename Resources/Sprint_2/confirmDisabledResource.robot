@@ -24,7 +24,7 @@ Confirm Text Has Changed When Function Disabled
    Verify Slide Button Is Disabled
 
 that “Train directly on labels from an existing column” has been selected
-    Wait Until Page Contains  Select the column which contains the labels
+    Wait Until Page Contains  Please click on the column containing the text you want to classify
 the slider is set to disabled
     Train Directly[...] Function Active To Disabled
 the column select step shall be removed from the setup steps

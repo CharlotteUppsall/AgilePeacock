@@ -19,12 +19,12 @@ User Can Confirm Change of Text For Step 3 When "Train Directly[...]" Is Disable
     Given that “Train directly on labels from an existing column” has been selected
     When the slider is set to disabled
     Then the column select step shall be removed from the setup steps
-Overview of labels are displayed
-    [Documentation]  Test will verify that labels from chosen dataset is present after creating model
-    [Tags]  AG_64
-    Given that a label exists in the uploaded data set
-    When the model training has completed
-    Then all labels from the original dataset are shown in the model overview
+#Overview of labels are displayed
+#    [Documentation]  Test will verify that labels from chosen dataset is present after creating model
+#    [Tags]  AG_64
+#    Given that a label exists in the uploaded data set
+#    When the model training has completed
+#    Then all labels from the original dataset are shown in the model overview
 User Can Select Column Containing The Labels
     [Documentation]  Verifies that a user can select a column containing labels
     [Tags]  AG_18
