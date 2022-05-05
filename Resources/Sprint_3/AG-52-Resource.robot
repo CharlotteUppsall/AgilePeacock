@@ -48,7 +48,6 @@ Leave Training Page
     ${status}=  Run Keyword And Return Status  Page Should Contain Element  ${fourth_leave_training_page}
     Run Keyword If  '${status}'=='True'  Click Element  ${fourth_leave_training_page}
     Exit For Loop If  '${status}'=='True'
-
     Reload Page
     END
 
