@@ -5,9 +5,8 @@ pipeline {
    
 stage('All Tests') {
             steps {
-                sh 'robot -d Results Tests/AG-16.robot'
-                sh 'robot -d Results Tests/AG-51.robot'
-                sh 'robot -d Results  Tests/AG-18.robot'
+                sh 'robot -d Results Tests/AG-18.robot'
+                
                 
 
                     }
