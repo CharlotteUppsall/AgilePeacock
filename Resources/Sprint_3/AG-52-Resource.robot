@@ -35,6 +35,7 @@ Loop Thru Add Label Elements
     END
 
 Leave Training Page
+    Wait Until Page Contains  Labeled:
     FOR  ${i}  IN RANGE  0  5  1
     ${status}=  Run Keyword And Return Status  Page Should Contain Element  ${first_leave_training_page}
     Run Keyword If  '${status}'=='True'  Click Element  ${first_leave_training_page}
