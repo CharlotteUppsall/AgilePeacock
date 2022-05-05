@@ -48,9 +48,9 @@ Leave Training Page
     ${status}=  Run Keyword And Return Status  Page Should Contain Element  ${fourth_leave_training_page}
     Run Keyword If  '${status}'=='True'  Click Element  ${fourth_leave_training_page}
     Exit For Loop If  '${status}'=='True'
-    Run Keyword If  '${status}'=='False'  Go To  https://app.labelf.ai/main/375/models/${model_id_as_int}/dashboard/dashboard
     Reload Page
     END
+    Run Keyword If  '${status}'=='False'  Go To  https://app.labelf.ai/main/375/models/${model_id_as_int}/dashboard/dashboard
 
 Submit New Label
     Wait Until Element Is Visible  ${submit_add_new_label}
