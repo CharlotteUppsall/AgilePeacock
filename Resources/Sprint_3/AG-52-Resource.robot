@@ -57,6 +57,7 @@ Leave Training Page
 Submit New Label
     Wait Until Element Is Visible  ${submit_add_new_label}
     Click Element  ${submit_add_new_label}
+    Wait Until Page Contains  Label successfully created  timeout=15
 Input New Label Example
     [Arguments]  ${example}
     Input Text  ${new_label_example_text_field}  ${example}
