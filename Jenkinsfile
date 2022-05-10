@@ -34,6 +34,7 @@ stage('AG_56') {
                     
 stage('AG-95') {
             steps {      
+
                     catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE'){
                 sh 'robot -d Results Tests/AG-95.robot'
                     }
@@ -63,6 +64,7 @@ stage('AG-95') {
 stage('AG-52') {
             steps {      
                     catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE'){
+
                 sh 'robot -d Results Tests/AG-52.robot'
                    }
                 

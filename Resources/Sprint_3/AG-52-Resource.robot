@@ -18,18 +18,19 @@ ${total_items_text}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]
 ${total_labeled_items_text}  //*[@id="app"]/div[9]/div[1]/main/div/div/div[2]/div/div[1]/div/div[2]/div/div/p[3]
 *** Keywords ***
 Loop Thru Add Label Elements
+    Reload Page
     FOR  ${i}  IN RANGE  0  5  1
     ${status}=  Run Keyword And Return Status  Page Should Contain Element  ${first_add_label_button}
-    Run Keyword If  '${status}'=='True'  Click Element  ${first_add_label_button}
+    Run Keyword If  '${status}'=='True'  Wait Until Keyword Succeeds  20s  1s  Click Element  ${first_add_label_button}
     Exit For Loop If  '${status}'=='True'
     ${status}=  Run Keyword And Return Status  Page Should Contain Element  ${second_add_label_button}
-    Run Keyword If  '${status}'=='True'  Click Element  ${second_add_label_button}
+    Run Keyword If  '${status}'=='True'  Wait Until Keyword Succeeds  20s  1s  Click Element  ${second_add_label_button}
     Exit For Loop If  '${status}'=='True'
     ${status}=  Run Keyword And Return Status  Page Should Contain Element  ${third_add_label_button}
-    Run Keyword If  '${status}'=='True'  Click Element  ${third_add_label_button}
+    Run Keyword If  '${status}'=='True'  Wait Until Keyword Succeeds  20s  1s  Click Element  ${third_add_label_button}
     Exit For Loop If  '${status}'=='True'
     ${status}=  Run Keyword And Return Status  Page Should Contain Element  ${fourth_add_label_button}
-    Run Keyword If  '${status}'=='True'  Click Element  ${fourth_add_label_button}
+    Run Keyword If  '${status}'=='True'  Wait Until Keyword Succeeds  20s  1s  Click Element  ${fourth_add_label_button}
     Exit For Loop If  '${status}'=='True'
     Reload Page
     END
@@ -39,16 +40,16 @@ Leave Training Page
     Wait Until Page Contains  Labeled:
     FOR  ${i}  IN RANGE  0  5  1
     ${status}=  Run Keyword And Return Status  Page Should Contain Element  ${first_leave_training_page}
-    Run Keyword If  '${status}'=='True'  Click Element  ${first_leave_training_page}
+    Run Keyword If  '${status}'=='True'  Wait Until Keyword Succeeds  20s  1s  Click Element  ${first_leave_training_page}
     Exit For Loop If  '${status}'=='True'
     ${status}=  Run Keyword And Return Status  Page Should Contain Element  ${second_leave_training_page}
-    Run Keyword If  '${status}'=='True'  Click Element  ${second_leave_training_page}
+    Run Keyword If  '${status}'=='True'  Wait Until Keyword Succeeds  20s  1s  Click Element  ${second_leave_training_page}
     Exit For Loop If  '${status}'=='True'
     ${status}=  Run Keyword And Return Status  Page Should Contain Element  ${third_leave_training_page}
-    Run Keyword If  '${status}'=='True'  Click Element  ${third_leave_training_page}
+    Run Keyword If  '${status}'=='True'  Wait Until Keyword Succeeds  20s  1s  Click Element  ${third_leave_training_page}
     Exit For Loop If  '${status}'=='True'
     ${status}=  Run Keyword And Return Status  Page Should Contain Element  ${fourth_leave_training_page}
-    Run Keyword If  '${status}'=='True'  Click Element  ${fourth_leave_training_page}
+    Run Keyword If  '${status}'=='True'  Wait Until Keyword Succeeds  20s  1s  Click Element  ${fourth_leave_training_page}
     Exit For Loop If  '${status}'=='True'
     Reload Page
     END
@@ -57,6 +58,7 @@ Leave Training Page
 Submit New Label
     Wait Until Element Is Visible  ${submit_add_new_label}
     Click Element  ${submit_add_new_label}
+    Wait Until Page Contains  Label successfully created  timeout=15
 Input New Label Example
     [Arguments]  ${example}
     Input Text  ${new_label_example_text_field}  ${example}
@@ -90,6 +92,7 @@ Verify Total Number Of Items After Adding Label
     ${total_items_as_int}  remove_total_items_text  ${total_items_as_string}
     Set Global Variable  ${total_items_as_int}
     Should Be True  ${total_items_as_int_before_increase} < ${total_items_as_int}
+
 Go To Model Overview
     Wait Until Page Contains Element  ${click_pre-existing_model}
     Click Element   ${click_pre-existing_model}
@@ -97,6 +100,7 @@ Go To Model Overview
 Press Start Training Button
     Wait Until Element Is Visible  ${start_training_button}
     Click Element  ${start_training_button}
+    Wait Until Page Contains  Labeled:
 
 Go To Start Training Page
     Go To Model Overview
@@ -108,39 +112,62 @@ Add A Label To Model With Example
     [Arguments]  ${name}  ${example}
     Loop Thru Add Label Elements
     Verify Add New Label Is Pressed
+    FOR  ${i}  IN RANGE  0  5  1
     Input New Label Name  ${name}
     Input New Label Example  ${example}
-    Submit New Label
-
+    ${status}=  Run Keyword And Return Status  Submit New Label
+    Run Keyword If  '${status}'=='False'  Reload Page
+    Exit For Loop If  '${status}'=='True'
+    END
 Add Multiple Labels To Model With Example
     [Arguments]  ${first_name}  ${second_name}   ${first_example}   ${second_example}
     Loop Thru Add Label Elements
     Verify Add New Label Is Pressed
+    FOR  ${i}  IN RANGE  0  5  1
     Input New Label Name  ${first_name}
     Input New Label Example  ${first_example}
-    Submit New Label
+    ${status}=  Run Keyword And Return Status  Submit New Label
+    Run Keyword If  '${status}'=='False'  Reload Page
+    Exit For Loop If  '${status}'=='True'
+    END
+    FOR  ${i}  IN RANGE  0  5  1
     Loop Thru Add Label Elements
     Verify Add New Label Is Pressed
     Input New Label Name  ${second_name}
     Input New Label Example  ${second_example}
-    Submit New Label
+    ${status}=  Run Keyword And Return Status  Submit New Label
+    Run Keyword If  '${status}'=='False'  Reload Page
+    Exit For Loop If  '${status}'=='True'
+    END
 Add A Label To Model Without Example
     [Arguments]  ${name}
+    FOR  ${i}  IN RANGE  0  5  1
     Loop Thru Add Label Elements
     Verify Add New Label Is Pressed
     Input New Label Name  ${name}
-    Submit New Label
+    ${status}=  Run Keyword And Return Status  Submit New Label
+    Run Keyword If  '${status}'=='False'  Reload Page
+    Exit For Loop If  '${status}'=='True'
+    END
 
 Add Multiple Labels To Model Without Example
     [Arguments]  ${first_name}  ${second_name}
+    FOR  ${i}  IN RANGE  0  5  1
     Loop Thru Add Label Elements
     Verify Add New Label Is Pressed
     Input New Label Name  ${first_name}
-    Submit New Label
+    ${status}=  Run Keyword And Return Status  Submit New Label
+    Run Keyword If  '${status}'=='False'  Reload Page
+    Exit For Loop If  '${status}'=='True'
+    END
+    FOR  ${i}  IN RANGE  0  5  1
     Loop Thru Add Label Elements
     Verify Add New Label Is Pressed
     Input New Label Name  ${second_name}
-    Submit New Label
+    ${status}=  Run Keyword And Return Status  Submit New Label
+    Run Keyword If  '${status}'=='False'  Reload Page
+    Exit For Loop If  '${status}'=='True'
+    END
 
 Verify Items Increase
     Leave Training Page
@@ -171,10 +198,10 @@ The User Adds Multiple Labels With Example
     Add Multiple Labels To Model With Example  Turtle  Comodo Dragon  Reptile   Reptile
 The Model Should Not Increase "Total Items" And/Or "Labeled Items"
     Verify Items Did Not Increase
-
+    Verify Total Number Of Items Before Adding Label
 The Model Should Increase "Total Items" And "Labeled Items"
     Verify Items Increase
-
+    Verify Total Number Of Items Before Adding Label
 
 
 
