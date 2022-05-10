@@ -28,7 +28,7 @@ Verify Current Number Of Datapoints
     Should Be True  ${datapoint_one_dataset} == 1285
 Go To Connect Additional Datasets
     Click Element  ${overview_button}
-    Wait Until Page Contains  Test your model
+    Wait Until Page Contains  Model is online
     Scroll Element Into View  ${connect_additional_datasets_button}
     Click Element  ${connect_additional_datasets_button}
     Wait Until Page Contains  Pick a dataset to connect
