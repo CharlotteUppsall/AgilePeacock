@@ -1,7 +1,7 @@
 *** Variables ***
 ${datapoints}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div/div/div/nav/div/span[2]
 ${demo_model_button}  //*[@id="app"]/div[2]/div/div/div[2]/div/div[2]/div/div[2]/div/div/div/div[2]/button
-${overview_button}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div/div/div/nav/div
+${overview_button}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div/div/div/nav/div/div[1]
 ${connect_additional_datasets_button}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[3]/nav/div/span/button
 ${customer_support_continue}  //*[@id="app"]/div[4]/div/div/div/div[3]/div/div/div[1]/div[1]/div/div/div[2]/button
 ${connect_datasets}  //*[@id="app"]/div[4]/div/div/div/div[5]/div/div/div[3]/button/div
@@ -27,6 +27,7 @@ Verify Current Number Of Datapoints
     Set Global Variable  ${datapoint_one_dataset}
     Should Be True  ${datapoint_one_dataset} == 1285
 Go To Connect Additional Datasets
+    Wait Until Page Contains Element  ${overview_button}
     Click Element  ${overview_button}
     Wait Until Page Contains  Model is online
     Scroll Element Into View  ${connect_additional_datasets_button}
