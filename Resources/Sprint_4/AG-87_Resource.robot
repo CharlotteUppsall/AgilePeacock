@@ -40,6 +40,7 @@ Connect Another Additional Dataset
     Scroll Element Into View  ${connect_additional_datasets_2}
     Click Element  ${connect_additional_datasets_2}
     Wait Until Page Contains  Pick a dataset to connect
+    Wait Until Element Is Visible  ${choose_dataset_continue}  
     Click Element  ${choose_dataset_continue}
     Wait Until Page Contains  Please click on the column containing the text you want to classify
     Wait Until Element Is Visible  ${connect_additional_dataset}
