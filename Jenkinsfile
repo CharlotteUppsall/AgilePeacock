@@ -4,11 +4,10 @@ pipeline {
                
    
 
-stage('AG_87') {
-        steps {   
-                catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE')  { 
-                sh 'robot -d Results Tests/AG-87.robot' }
-              
+stage('AG-87') {
+            steps {      
+                sh 'robot -d Results Tests/AG-87.robot'
+
                 
                     }
                     post {
@@ -31,5 +30,6 @@ stage('AG_87') {
                         }
                     }
                 }
-                    
-            }
+                
+       }
+    }
