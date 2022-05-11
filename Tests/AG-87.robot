@@ -5,12 +5,9 @@ Suite Setup  Start WebTest
 Suite Teardown  mainResource.End WebTest
 
 *** Test Cases ***
-
-User Can Remove Dataset After Connecting An Additional Dataset
+Percentage Of Labeled Items Decreases After Adding Another Dataset To Model
     [Documentation]  Confirming that after disconnecting the additionally added dataset it is removed.
-    [Tags]  AG_87  AG_111
-#Given that user had added another dataset with existing labels
-    Login
-    Create Support Ticket Demo Model
-#When the user disconnects the dataset from “Connected Datasets”
-#Then it should’ve been removed from the “connected dataset”
+    [Tags]  AG_87  AG_112
+    Given User Has Added A Dataset With Existing Labels
+    When The User Connects Additional Dataset
+    Then The Percentage “Of Model Is Labeled” Should Be Lower Than 90%
