@@ -46,7 +46,6 @@ Connect Another Additional Dataset
     Wait Until Element Is Visible  ${connect_additional_dataset}
     Scroll Element Into View  ${connect_additional_dataset}
     Click Element  ${connect_additional_dataset}
-    Sleep  2s
 #Gherkin Keywords AG-112
 User Has Added A Dataset With Existing Labels
     Login
