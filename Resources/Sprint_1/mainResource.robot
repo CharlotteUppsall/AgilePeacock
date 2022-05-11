@@ -5,7 +5,7 @@ ${password}  123456789
 *** Keywords ***
 Start WebTest
 
-    Open Browser  about:blank  headlesschrome
+    Open Browser  about:blank  chrome
 
     Register Keyword To Run On Failure  NONE
     Set Selenium Speed  0.2s
