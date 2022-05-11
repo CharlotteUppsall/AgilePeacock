@@ -1,11 +1,13 @@
 *** Variables ***
 ${e-mail}  oskar.hagman@iths.se
 ${password}  123456789
+${jennifer_e-mail}  jennifer.toivanen@iths.se
+${jennifer_password}  1616Jenny
 
 *** Keywords ***
 Start WebTest
 
-    Open Browser  about:blank  headlesschrome
+    Open Browser  about:blank  chrome
 
     Register Keyword To Run On Failure  NONE
     Set Selenium Speed  0.2s
@@ -41,4 +43,12 @@ Login
     
     Verify Workspace Is Empty
 
+Login Jennifer
+    Enter Account Information For Jennifer
+    Press Login Button
+    Verify Login
 
+Enter Account Information For Jennifer
+    Input Text  //*[@id="app"]/div/main/div/div/div/div/div/div[1]/form/div[1]/div[2]/div[1]/div/input   ${jennifer_e-mail}
+    Input Text  //*[@id="password"]  ${jennifer_password}
+    Wait Until Page Contains  Labelf
