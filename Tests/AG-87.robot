@@ -14,4 +14,3 @@ Total items and labeled items are updated
     When the user connects the new dataset from the model overview
     Then the total items and labled items are updated
 
-tjoooo
