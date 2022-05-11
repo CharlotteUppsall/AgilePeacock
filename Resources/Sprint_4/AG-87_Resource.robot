@@ -31,9 +31,9 @@ Wait Until Possible To Add Additional Dataset
     FOR  ${i}  IN RANGE  0  5  1
     Reload Page
     Wait Until Page Contains  support ticket routing model (1)
-    Sleep  10s
     ${status}=  Run Keyword And Return Status  Page Should Not Contain Element  //*[@id="app"]/div[9]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[3]/nav/div/span
     Run Keyword If  '${status}'=='True'  Connect Another Additional Dataset
+    Sleep  10s
     Exit For Loop If  '${status}'=='True'
     END
 Connect Another Additional Dataset
