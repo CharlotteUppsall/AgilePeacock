@@ -1,6 +1,10 @@
 *** Variables ***
 ${model_labeled_percentage}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[4]/div/div/div/div/div/h2
+${model_labeled_percentage_2}  //*[@id="app"]/div[9]/div[1]/main/div/div/div[2]/div/div[1]/div/div[4]/div/div/div/div/div/h2
+${model_labeled_percentage_3}  //*[@id="app"]/div[10]/div[1]/main/div/div/div[2]/div/div[1]/div/div[4]/div/div/div/div/div/h2
 ${connect_additional_datasets_2}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[3]/nav/div/span/button
+${choose_dataset_continue}  //*[@id="app"]/div[5]/div/div/div/div[3]/div/div/div[1]/div[3]/div/div/div[2]/button
+${connect_additional_dataset}  //*[@id="app"]/div[5]/div/div/div/div[5]/div/div/div[3]/button
 *** Keywords ***
 Verify Percentage Of Model That Is Labeled
     Page Should Contain Element  ${model_labeled_percentage}
@@ -11,16 +15,16 @@ Verify Percentage Of Model That Is Labeled
 Verify Percentage Of Model That Is Labeled Has Decreased
     Reload Page
     Wait Until Page Contains  support ticket routing model (1)
-    Scroll Element Into View  //*[@id="app"]/div[9]/div[1]/main/div/div/div[2]/div/div[1]/div/div[4]/div/div/div/div/div/h2
-    ${model_labeled_percentage_string_2}  Get Text  //*[@id="app"]/div[9]/div[1]/main/div/div/div[2]/div/div[1]/div/div[4]/div/div/div/div/div/h2
+    Scroll Element Into View  ${model_labeled_percentage_2}
+    ${model_labeled_percentage_string_2}  Get Text  ${model_labeled_percentage_2}
     ${model_labeled_percentage_int_2}  remove_total_items_text  ${model_labeled_percentage_string_2}
     Set Global Variable  ${model_labeled_percentage_int_2}
     Should Be True  ${model_labeled_percentage_int} > ${model_labeled_percentage_int_2}
 Verify Percentage Of Model That Is Labeled Has Decreased More
     Reload Page
     Wait Until Page Contains  support ticket routing model (1)
-    Scroll Element Into View  //*[@id="app"]/div[10]/div[1]/main/div/div/div[2]/div/div[1]/div/div[4]/div/div/div/div/div/h2
-    ${model_labeled_percentage_string_3}  Get Text  //*[@id="app"]/div[10]/div[1]/main/div/div/div[2]/div/div[1]/div/div[4]/div/div/div/div/div/h2
+    Scroll Element Into View  ${model_labeled_percentage_3}
+    ${model_labeled_percentage_string_3}  Get Text  ${model_labeled_percentage_3}
     ${model_labeled_percentage_int_3}  remove_total_items_text  ${model_labeled_percentage_string_3}
     Should Be True  ${model_labeled_percentage_int_2} > ${model_labeled_percentage_int_3}
 Wait Until Possible To Add Additional Dataset
@@ -36,11 +40,11 @@ Connect Another Additional Dataset
     Scroll Element Into View  ${connect_additional_datasets_2}
     Click Element  ${connect_additional_datasets_2}
     Wait Until Page Contains  Pick a dataset to connect
-    Click Element  //*[@id="app"]/div[5]/div/div/div/div[3]/div/div/div[1]/div[3]/div/div/div[2]/button
+    Click Element  ${choose_dataset_continue}
     Wait Until Page Contains  Please click on the column containing the text you want to classify
-    Wait Until Element Is Visible  //*[@id="app"]/div[5]/div/div/div/div[5]/div/div/div[3]/button
-    Scroll Element Into View  //*[@id="app"]/div[5]/div/div/div/div[5]/div/div/div[3]/button
-    Click Element  //*[@id="app"]/div[5]/div/div/div/div[5]/div/div/div[3]/button
+    Wait Until Element Is Visible  ${connect_additional_dataset}
+    Scroll Element Into View  ${connect_additional_dataset}
+    Click Element  ${connect_additional_dataset}
     Sleep  2s
 #Gherkin Keywords AG-112
 User Has Added A Dataset With Existing Labels
