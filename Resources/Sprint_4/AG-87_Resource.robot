@@ -23,6 +23,7 @@ Verify Percentage Of Model That Is Labeled Has Decreased
 Verify Percentage Of Model That Is Labeled Has Decreased More
     Reload Page
     Wait Until Page Contains  support ticket routing model (1)
+    Wait Until Page Contains Element  ${model_labeled_percentage_3}
     Scroll Element Into View  ${model_labeled_percentage_3}
     ${model_labeled_percentage_string_3}  Get Text  ${model_labeled_percentage_3}
     ${model_labeled_percentage_int_3}  remove_total_items_text  ${model_labeled_percentage_string_3}
