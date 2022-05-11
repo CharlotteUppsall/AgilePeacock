@@ -49,14 +49,11 @@ The Percentage “Of Model Is Labeled” Should Be Lower Than 90%
     Verify Percentage Of Model That Is Labeled Has Decreased
 #Gherkin Keywords AG-113
 User Has Added Another Dataset With Lower Percentage Of Existing Labels
-    User Has Added A Dataset With Existing Labels
-    The User Connects Additional Dataset
-    The Percentage “Of Model Is Labeled” Should Be Lower Than 90%
+    Should Be True  ${model_labeled_percentage_int} > ${model_labeled_percentage_int_2}
 The User Connects Another Additional Dataset
     Wait Until Possible To Add Additional Dataset
-
-The Percentage “Of Model Is Labeled” Should Be Lower Than Previous Percentage
     Connect Another Additional Dataset
+The Percentage “Of Model Is Labeled” Should Be Lower Than Previous Percentage
     Verify Percentage Of Model That Is Labeled Has Decreased More
 
 
