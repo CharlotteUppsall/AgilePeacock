@@ -55,7 +55,7 @@ User Has Added A Dataset With Existing Labels
     Create Support Ticket Demo Model
     Go To Connect Additional Datasets
 The User Connects Additional Dataset
-    Connect Additional DatIaset
+    Connect Additional Dataset
     Wait Until Page Contains  support ticket routing model (1)
     Verify Percentage Of Model That Is Labeled
 The Percentage “Of Model Is Labeled” Should Be Lower Than 90%
