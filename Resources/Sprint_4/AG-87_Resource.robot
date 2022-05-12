@@ -30,15 +30,16 @@ Verify Percentage Of Model That Is Labeled Has Decreased More
     ${model_labeled_percentage_int_3}  remove_total_items_text  ${model_labeled_percentage_string_3}
     Should Be True  ${model_labeled_percentage_int_2} > ${model_labeled_percentage_int_3}
 Wait Until Possible To Add Additional Dataset
-    FOR  ${i}  IN RANGE  0  5  1
+    FOR  ${i}  IN RANGE  0  7  1
     Reload Page
     Wait Until Page Contains  support ticket routing model (1)
     ${status}=  Run Keyword And Return Status  Page Should Not Contain Element  ${connect_additional_dataset_greyed_out}
     Run Keyword If  '${status}'=='True'  Connect Another Additional Dataset
-    Sleep  10s
     Exit For Loop If  '${status}'=='True'
+    Sleep  10s
     END
 Connect Another Additional Dataset
+    Wait Until Page Contains Element  ${connect_additional_datasets_2}
     Scroll Element Into View  ${connect_additional_datasets_2}
     Click Element  ${connect_additional_datasets_2}
     Wait Until Page Contains  Pick a dataset to connect
@@ -54,7 +55,7 @@ User Has Added A Dataset With Existing Labels
     Create Support Ticket Demo Model
     Go To Connect Additional Datasets
 The User Connects Additional Dataset
-    Connect Additional Dataset
+    Connect Additional DatIaset
     Wait Until Page Contains  support ticket routing model (1)
     Verify Percentage Of Model That Is Labeled
 The Percentage “Of Model Is Labeled” Should Be Lower Than 90%
