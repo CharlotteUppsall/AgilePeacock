@@ -3,7 +3,7 @@ pipeline {
             stages{
                   
                     stage('Remove Screenshots') {
-                               # path: /usr/bin/chromedriver.rb
+                               # path: /usr/bin/chromedriver
 
                         require 'selenium/webdriver'
                         require 'capybara-screenshot/rspec'
