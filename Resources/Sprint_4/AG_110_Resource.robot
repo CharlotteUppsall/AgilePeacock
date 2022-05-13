@@ -5,8 +5,10 @@ ${labeledItems:149}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]
 ${DatasetID445Continue}  //*[@id="app"]/div[5]/div/div/div/div[3]/div/div/div[1]/div/div/div/div[2]/button/div
 ${455_connect}  //*[@id="app"]/div[5]/div/div/div/div[5]/div/div/div[3]/button/div
 ${connectAdditionalDatasetButtonJennifer}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[3]/nav/div/span/button/div
-*** Keywords ***
+${totalItems:300}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[2]/div/div/p[2]
 
+
+*** Keywords ***
 
 #gherkin:
 
@@ -27,11 +29,24 @@ the user connects the new dataset from the model overview
     #store the number of items in a variable and compare
 
 the total items and labled items are updated
+    Reload Page
+    Wait Until Page Contains  Total items:
+    Verify Updated Number Of Total Items After An Additional Dataset Has Been Connected
+
+#-----------------------------------------------------------------------------------------
+
+Verify Updated Number Of Total Items After An Additional Dataset Has Been Connected
+   Reload Page
+   Sleep  10s
+   Wait Until Page Contains  Total items:
+   ${element_text2}  Get Text  ${totalItems:300}
+   ${actual_number2}  transfigure into number  ${element_text2}
+   Should not be true  ${actual_number2}  == 149
 
 Verify Current Number Of Total Items
-    Reload Page
-    Sleep  10s
-    Wait Until Page Contains  Total items: 149
+   Reload Page
+   Sleep  10s
+   Wait Until Page Contains  Total items:
    ${element_text}  Get Text  //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[2]/div/div/p[2]
    ${actual_number}  transfigure into number  ${element_text}
    Should be true  ${actual_number}  == 149
@@ -58,4 +73,5 @@ User Clicks On The Connect Button For Dataset With ID 455
     Click Element  ${455_connect}
     #Wait Until Page Contains  Dataset ID: 455
     Wait Until Page Contains  Connected Datasets
+
 

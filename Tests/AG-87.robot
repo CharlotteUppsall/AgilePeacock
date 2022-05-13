@@ -13,5 +13,5 @@ Total items and labeled items are updated
     [Tags]  AG-87  AG_110
     Given a single label dataset with the same labels as in the model is not yet connected
     When the user connects the new dataset from the model overview
-    #Then the total items and labled items are updated
+    Then the total items and labled items are updated
 
