@@ -32,3 +32,11 @@ Cleanup
     Verify Demo Model Is Created
     Delete Model
 
+That A Model Is Trained With Support Ticket Data
+    Login
+    Create Support Ticket Demo Model
+A Representative Example From The Dataset Is Input To The Test Your Model
+    Input New Label To Trained Model
+The Categorization Matches The Label Of The Original Dataset
+    Verify Added Label
+    Cleanup

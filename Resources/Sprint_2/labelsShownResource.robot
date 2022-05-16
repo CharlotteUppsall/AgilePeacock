@@ -48,12 +48,12 @@ Confirm Labels In Model View
     Wait Until Page Contains  Tech
 
 Navigate To Model Overview
-    Wait Until Page Contains  My Models
+    Wait Until Page Contains  Customer Support model
     Click Element  ${overview_button}
     Sleep  5s
     Wait Until Page Contains  training
     Click Element  ${dismiss_training_model_button}
-    Wait Until Page Contains  Test your model
+    Wait Until Page Contains  Customer Support model
 
 Confirm Labels In Bar Chart
     Scroll Element Into View  ${labels_bar_chart}
@@ -78,3 +78,18 @@ Confirm Labels In Pie Chart
     Wait Until Page Contains  Tech
     #Men hur veta att det är just texten i cirkeldiagrammet den kollar på (osäker pga samma keys som bar chart)
 
+That A Label Exists In The Uploaded Data Set
+    Press Create New Model
+    Press Continue To Model Creation
+    Press Dataset With Existing Labels Button
+    Verify Text Button Is Checked
+    Select Train Directly On Labels
+    Confirm Labels In Model View
+The Model Training Has Completed
+    Navigate To Model Overview
+All Labels From The Original Dataset Are Shown In The Model Overview
+    Confirm Labels In Bar Chart
+    Scroll Down To Pie Chart
+    Confirm Labels In Pie Chart
+    Go Back
+    Delete Model
