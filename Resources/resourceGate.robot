@@ -10,7 +10,7 @@ Resource  ./Sprint_2/select_column_resources.robot
 Resource  ./Sprint_3/connectAdditionalDatasetResource.robot
 Resource  ./Sprint_3/AG-95_resource.robot
 Resource  ./Sprint_3/AG-52-Resource.robot
-Resource  ./Sprint_4/AG_110_Resource.robot
+Resource  ./Sprint_4/AG_87_Resource.robot
 Resource  ./Sprint_4/AG_108_Resource.robot
 
 Library  ../Scripts/remove_text.py
