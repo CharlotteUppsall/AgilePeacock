@@ -71,7 +71,7 @@ Exit Model Creation
     Click Element  ${exit_button}
     Verify Model Creation Exit
 Verify Model Creation Exit
-    Wait Until Page Contains  Welcome to Labelf!
+    Wait Until Page Contains  Agile Peacock
 A Dataset With Existing Labels Has Been Selected
     Press Create New Model
     Press Continue To Model Creation

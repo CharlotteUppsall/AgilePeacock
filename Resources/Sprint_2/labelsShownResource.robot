@@ -48,12 +48,12 @@ Confirm Labels In Model View
     Wait Until Page Contains  Tech
 
 Navigate To Model Overview
-    Wait Until Page Contains  My Models
+    Wait Until Page Contains  Customer Support model
     Click Element  ${overview_button}
     Sleep  5s
     Wait Until Page Contains  training
     Click Element  ${dismiss_training_model_button}
-    Wait Until Page Contains  Test your model
+    Wait Until Page Contains  Customer Support model
 
 Confirm Labels In Bar Chart
     Scroll Element Into View  ${labels_bar_chart}

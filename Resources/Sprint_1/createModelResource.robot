@@ -1,5 +1,5 @@
 *** Variables ***
-${newModelButton}  //*[@id="app"]/div[6]/div[1]/main/div/div/div[1]/nav/div[1]/a
+${newModelButton}  //*[@id="new-model-button"]
 ${continueButton}  //*[@id="app"]/div[2]/div/div/div[2]/div/div[1]/div/div/div[2]
 ${chooseDataSetButton}  //*[@id="app"]/div[2]/div/div/div[2]/div/div[2]/div/div[3]/div/div[2]/div/div/div[2]/button
 ${uploadPageContinue}  //*[@id="app"]/div[2]/div/div/div[2]/div/div[3]/div/div/div[2]/button
