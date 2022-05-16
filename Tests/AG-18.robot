@@ -9,8 +9,9 @@ User can confirm that there is an updated sequence to include a step to select c
     [Documentation]  Confirm setup steps are updated to include a step to select column
     [Tags]  AG_18
     Login
-    Confirm Setup
-
+    Given A dataset with existing labels has been selected
+    When User Clicks “Train directly on labels From An Existing Column”
+    Then The Setup Steps Are Updated To Include A Step To Select Column
 User Can Confirm Change of Text For Step 3 When "Train Directly[...]" Is Disabled
      [Documentation]  When slider "Train directly on labels from an existing column” is disabled step 3 is changed to: Name your model
      [Tags]   AG_18

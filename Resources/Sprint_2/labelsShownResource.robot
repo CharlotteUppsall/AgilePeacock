@@ -87,7 +87,7 @@ That A Label Exists In The Uploaded Data Set
     Confirm Labels In Model View
 The Model Training Has Completed
     Navigate To Model Overview
-That A Label Exists In The Uploaded Data Set
+All Labels From The Original Dataset Are Shown In The Model Overview
     Confirm Labels In Bar Chart
     Scroll Down To Pie Chart
     Confirm Labels In Pie Chart
