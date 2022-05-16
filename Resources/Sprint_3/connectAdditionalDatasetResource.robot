@@ -2,11 +2,11 @@
 ${MenyDatasetButton}  //*[@id="app"]/div[4]/div/div[1]/div[4]/a/div[1]/div
 ${ModelsViewButton}  //*[@id="app"]/div[6]/div[1]/nav/div/a[1]/div
 ${ModelOverviewButton}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div/div/div/div[2]/a/div
-${connectAdditionalDatasetButton}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[3]/nav/div/span/button/div
-${connectAdditionalDatasetButton2}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[3]/nav/div/span/button/div
+${connectAdditionalDatasetButton}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[3]/nav/div/span/button
+${connectAdditionalDatasetButton2}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[3]/nav/div/span/button
 ${workspace_menu}    //*[@id="app"]/div[6]/div[1]/nav/div/div[3]/div/button/div/i
 ${workspace_mySecondWorkspace}  //*[@id="app"]/div[3]/div/div[2]/div[4]/a/div[1]/div
-${TestDatasetContinueBotton}  //*[@id="app"]/div[5]/div/div/div/div[3]/div/div/div[1]/div/div/div/div[2]/button/div
+${TestDatasetContinueBotton}  //*[@id="continue-dataset-card"]
 ${button_connect}   //*[@id="app"]/div[5]/div/div/div/div[5]/div/div/div[3]/button/div
 ${existing_model_overview}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div/div/div/div[2]/a/div
 ${model_overview_button}   //*[@id="app"]/div[7]/div[1]/main/div/div/div[1]/div/div/div/div/nav/div/a[3]/div
@@ -65,7 +65,8 @@ User Is On The Model Overview Page
 # Testet har redan navigerat till sidan
 
 User Clicks On The "Connect Additional Dataset"-Button
-    Execute Javascript  window.scrollTo(0,1500)
+    #Execute Javascript  window.scrollTo(0,1500)
+    Wait Until Page Contains Element  ${connectAdditionalDatasetButton}
     Scroll Element Into View  ${connectAdditionalDatasetButton}
     Click Element  ${connectAdditionalDatasetButton}
     Wait Until Page Contains  Datasets available to connect
