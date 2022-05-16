@@ -10,16 +10,6 @@ ${connect220506}  //*[@id="connect-button"]/div
 
 *** Keywords ***
 
-#gherkin:
-#a single label dataset with the same labels as in the model is not yet connected
-#    Login Jennifer
-#    Go To  https://app.labelf.ai/main/377/datasets/view
-#    Wait Until Page Contains  Dataset ID: 454
-#    Wait Until Page Contains  Dataset ID: 455
-#    Go To  https://app.labelf.ai/main/377/models/2999/dashboard/dashboard
-#    Verify Current Number Of Total Items ### """""
-
-
 a dataset has been uploaded
    Login
    Go To  https://app.labelf.ai/main/375/datasets/view
@@ -31,9 +21,7 @@ a dataset has been uploaded
 the dataset is connected to a model
     Add Demo Model To Workspace
     Connect The Dataset To The Model
-    #User Clicks On The "Connect Additional Dataset"-Button
-    #The Continue Button For A Dataset Is Clicked
-    #User Clicks On The Connect Button
+
 
 model shall be in state Processing
 
@@ -47,7 +35,8 @@ Add Demo Model To Workspace
     #Reload Page
     #Sleep  5s
     Wait Until Page Contains Element  ${Overview220516}
-    Click Element  ${Overview220516}
+    Run Keyword Until Success     Click Element      ${Overview220516}
+
 
 Run Keyword Until Success
     [Arguments]    ${KW}      @{KWARGS}
@@ -64,3 +53,4 @@ Connect The Dataset To The Model
     Scroll Element Into View  ${connect220506}
     Wait Until Element Is Visible  ${connect220506}
     Run Keyword Until Success     Click Element      ${connect220506}
+    Wait Until Page Contains   Connected Datasets

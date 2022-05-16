@@ -4,7 +4,7 @@ Resource  ../Resources/resourceGate.robot
 Library  ../Scripts/remove_text.py
 Library  ../Scripts/removeMyDatasets().py
 Suite Setup  Start WebTest
-#Suite Teardown  End WebTest
+Suite Teardown  End WebTest
 
 *** Test Cases ***
 
