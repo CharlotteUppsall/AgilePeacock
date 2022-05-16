@@ -2,8 +2,11 @@
 ${AddToWorkspace}  //*[@id="app"]/div[4]/div/div/div[2]/div/div[2]/div/div[2]/div/div/div/div[2]/button/div
 ${Overview}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div/div/div/div[2]/a/div
 ${MyDatasets(x)}  //*[@id="app"]/div[9]/div[1]/main/div/div/nav[1]/div/div[1]
-${Overview220516}  //*[@id="model-card-title"]/a
-
+#${Overview220516}  //*[@id="model-card-title"]/a
+${Overview220516}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div/div/div/div[1]
+${connectAdditionalDatasetButton220506}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[3]/nav/div/span/button/div
+${DatasetContinueBotton220506}  //*[@id="continue-dataset-card"]/div
+${connect220506}  //*[@id="connect-button"]/div
 
 *** Keywords ***
 
@@ -46,20 +49,18 @@ Add Demo Model To Workspace
     Wait Until Page Contains Element  ${Overview220516}
     Click Element  ${Overview220516}
 
+Run Keyword Until Success
+    [Arguments]    ${KW}      @{KWARGS}
+    Wait Until Keyword Succeeds    10s      1s     ${KW}      @{KWARGS}
+
 Connect The Dataset To The Model
-#User Clicks On The "Connect Additional Dataset"-Button
     Execute Javascript  window.scrollTo(0,1500)
-    Scroll Element Into View  ${connectAdditionalDatasetButton}
-    Click Element  ${connectAdditionalDatasetButton}
+    Wait Until Page Contains Element  ${connectAdditionalDatasetButton220506}
+    Run Keyword Until Success     Click Element      ${connectAdditionalDatasetButton220506}
     Wait Until Page Contains  Datasets available to connect
-
-#The Continue Button For A Dataset Is Clicked
-    Wait Until Element Is Visible  ${TestDatasetContinueBotton}
-    Click Element  ${TestDatasetContinueBotton}
+    Wait Until Page Contains Element  ${DatasetContinueBotton220506}
+    Run Keyword Until Success     Click Element      ${DatasetContinueBotton220506}
     Wait Until Page Contains   Please click on the column containing the text you want to classify
-
-    #User Clicks On The Connect Button
-    User Clicks On The Connect Button
-    Scroll Element Into View  ${button_connect}
-    Wait Until Element Is Visible  ${button_connect}
-    Click Element  ${button_connect}
+    Scroll Element Into View  ${connect220506}
+    Wait Until Element Is Visible  ${connect220506}
+    Run Keyword Until Success     Click Element      ${connect220506}
