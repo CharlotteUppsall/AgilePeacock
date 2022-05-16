@@ -22,3 +22,11 @@ Confirm Text Has Changed When Function Disabled
 
    Train Directly[...] Function Active To Disabled
    Verify Slide Button Is Disabled
+
+That “Train directly on labels from an existing column” Has Been Selected
+    Wait Until Page Contains  Please click on the column containing the text you want to classify
+The Slider Is Set To Disabled
+    Train Directly[...] Function Active To Disabled
+The Column Select Step Shall Be Removed From The Setup Steps
+    Verify Slide Button Is Disabled
+    Go Back
