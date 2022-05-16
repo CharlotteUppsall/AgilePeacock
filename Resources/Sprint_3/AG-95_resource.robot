@@ -1,5 +1,6 @@
 *** Variables ***
 ${datapoints}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div/div/div/nav/div/span[2]
+${datapoints_processing}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div/div/div/nav/div/span[3]
 ${demo_model_button}  //*[@id="app"]/div[2]/div/div/div[2]/div/div[2]/div/div[2]/div/div/div/div[2]/button
 ${overview_button}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div/div/div/nav/div
 ${connect_additional_datasets_button}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[3]/nav/div/span/button
@@ -68,8 +69,8 @@ Verify Number of Datapoints Second Dataset - Cultural Centers Survey
     Should Be True  ${datapoint_third_dataset} == 637
 
 Verify Number Of Datapoints Increased
-    Wait Until Element Is Visible  ${datapoints}
-    ${datapoint_as_string_two_datasets}  Get Text  ${datapoints}
+    Wait Until Element Is Visible  ${datapoints_processing}
+    ${datapoint_as_string_two_datasets}  Get Text  ${datapoints_processing}
     ${datapoint_two_dataset}  remove comma and convert  ${datapoint_as_string_two_datasets}
     ${status}=  Run Keyword And Return Status  Should Be True  ${datapoint_two_dataset} <= ${datapoint_one_dataset}+${datapoint_second_dataset}
     ${status}=  Run Keyword And Return Status  Should Be True  ${datapoint_two_dataset} > ${datapoint_one_dataset}
@@ -77,8 +78,8 @@ Verify Number Of Datapoints Increased
     Run Keyword If  '${status}'=='False'  Delete And Skip
 
 Verify Number Of Datapoints Increased - Cultural Centers Survey
-    Wait Until Element Is Visible  ${datapoints}
-    ${datapoint_as_string_two_datasets}  Get Text  ${datapoints}
+    Wait Until Element Is Visible  ${datapoints_processing}
+    ${datapoint_as_string_two_datasets}  Get Text  ${datapoints_processing}
     ${datapoint_two_dataset}  remove comma and convert  ${datapoint_as_string_two_datasets}
     ${status}=  Run Keyword And Return Status  Should Be True  ${datapoint_two_dataset} <= ${datapoint_one_dataset}+${datapoint_third_dataset}
     ${status}=  Run Keyword And Return Status  Should Be True  ${datapoint_two_dataset} > ${datapoint_one_dataset}
