@@ -3,12 +3,17 @@ pipeline {
             stages{
                
    
+                    stage('Delete Old Screenshots'){
+                            steps{
+                          sh 'sudo rm Results/selenium-screenshot-*.png'  
+                          }
+                    }
 
-stage('AG_56') {
+                    stage('AG_56') {
         steps {   
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE')  { 
                 
-                sh 'sudo rm Results/selenium-screenshot-*.png'
+
                 sh 'robot -d Results Tests/AG-56.robot' }
               
                 
