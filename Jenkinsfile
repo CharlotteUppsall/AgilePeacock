@@ -14,7 +14,7 @@ pipeline {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE')  { 
                 
 
-                sh 'robot -d Results Tests/AG-56.robot' }
+                sh 'robot -d Results -o AG-56-output -l AG-56-log -r AG-56-report Tests/AG-56.robot' }
               
                 
                     }
@@ -43,7 +43,7 @@ stage('AG-95') {
             steps {      
 
                     catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE'){
-                sh 'robot -d Results Tests/AG-95.robot'
+                sh 'robot -d Results -o AG-95-output -l AG-95-log -r AG-95-report Tests/AG-95.robot'
                     }
                 
                     }
@@ -72,7 +72,7 @@ stage('AG-52') {
             steps {      
                     catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE'){
 
-                sh 'robot -d Results Tests/AG-52.robot'
+                sh 'robot -d Results -o AG-52-output -l AG-52-log -r AG-52-report Tests/AG-52.robot'
                    }
                 
                     }
