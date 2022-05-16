@@ -2,7 +2,6 @@
 ${AddToWorkspace}  //*[@id="app"]/div[4]/div/div/div[2]/div/div[2]/div/div[2]/div/div/div/div[2]/button/div
 ${Overview}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div/div/div/div[2]/a/div
 ${MyDatasets(x)}  //*[@id="app"]/div[9]/div[1]/main/div/div/nav[1]/div/div[1]
-#${Overview220516}  //*[@id="model-card-title"]/a
 ${Overview220516}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div/div/div/div[1]
 ${connectAdditionalDatasetButton220506}  //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[3]/nav/div/span/button/div
 ${DatasetContinueBotton220506}  //*[@id="continue-dataset-card"]/div
@@ -24,23 +23,20 @@ the dataset is connected to a model
 
 
 model shall be in state Processing
+    # här har Oskar färdig kod att klistra in
 
 #--------------------------------------------------------------------
-Add Demo Model To Workspace
-    Go To  https://app.labelf.ai/main/375/models/upload
-    #Reload Page
-    #Sleep  5s
-    Wait Until Page Contains Element   ${AddToWorkspace}
-    Click Element  ${AddToWorkspace}
-    #Reload Page
-    #Sleep  5s
-    Wait Until Page Contains Element  ${Overview220516}
-    Run Keyword Until Success     Click Element      ${Overview220516}
-
 
 Run Keyword Until Success
     [Arguments]    ${KW}      @{KWARGS}
     Wait Until Keyword Succeeds    10s      1s     ${KW}      @{KWARGS}
+
+Add Demo Model To Workspace
+    Go To  https://app.labelf.ai/main/375/models/upload
+    Wait Until Page Contains Element   ${AddToWorkspace}
+    Click Element  ${AddToWorkspace}
+    Wait Until Page Contains Element  ${Overview220516}
+    Run Keyword Until Success     Click Element      ${Overview220516}
 
 Connect The Dataset To The Model
     Execute Javascript  window.scrollTo(0,1500)
