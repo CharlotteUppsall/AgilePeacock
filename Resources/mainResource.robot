@@ -5,7 +5,7 @@ ${password}  123456789
 *** Keywords ***
 Start WebTest
     Open Browser  about:blank  chrome
-    Set Selenium Speed  0.1s
+    Set Selenium Speed  0.4s
     Set Window Size  1920  1080
     Go To  https://app.labelf.ai/login
     Wait Until Element Is Visible  //*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/div
