@@ -1,145 +1,145 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220519 08:18:17.622" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220519 09:16:13.688" rpa="false" schemaversion="2">
 <suite id="s1" name="AG-111-117" source="C:\Users\User\PycharmProjects\AgilePeacockProject\Tests\AG-111-117.robot">
 <kw name="Start WebTest" library="mainResource" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>about:blank</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220519 08:18:17.803" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20220519 08:18:17.803" endtime="20220519 08:18:19.266"/>
+<msg timestamp="20220519 09:16:13.878" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220519 09:16:13.877" endtime="20220519 09:16:15.316"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>0.2s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220519 08:18:19.266" endtime="20220519 08:18:19.266"/>
+<status status="PASS" starttime="20220519 09:16:15.317" endtime="20220519 09:16:15.317"/>
 </kw>
 <kw name="Set Window Size" library="SeleniumLibrary">
 <arg>1920</arg>
 <arg>1080</arg>
 <doc>Sets current windows size to given ``width`` and ``height``.</doc>
-<status status="PASS" starttime="20220519 08:18:19.267" endtime="20220519 08:18:19.592"/>
+<status status="PASS" starttime="20220519 09:16:15.317" endtime="20220519 09:16:15.663"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>https://app.labelf.ai/login</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220519 08:18:19.593" level="INFO">Opening url 'https://app.labelf.ai/login'</msg>
-<status status="PASS" starttime="20220519 08:18:19.593" endtime="20220519 08:18:21.038"/>
+<msg timestamp="20220519 09:16:15.664" level="INFO">Opening url 'https://app.labelf.ai/login'</msg>
+<status status="PASS" starttime="20220519 09:16:15.664" endtime="20220519 09:16:17.417"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>//*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/div</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220519 08:18:21.039" endtime="20220519 08:18:21.761"/>
+<status status="PASS" starttime="20220519 09:16:17.417" endtime="20220519 09:16:17.862"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>//*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/button[3]</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220519 08:18:21.761" level="INFO">Clicking button '//*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/button[3]'.</msg>
-<status status="PASS" starttime="20220519 08:18:21.761" endtime="20220519 08:18:22.879"/>
+<msg timestamp="20220519 09:16:17.862" level="INFO">Clicking button '//*[@id="diffuse-cookie-notice"]/div/div/div/div[2]/button[3]'.</msg>
+<status status="PASS" starttime="20220519 09:16:17.862" endtime="20220519 09:16:18.976"/>
 </kw>
-<status status="PASS" starttime="20220519 08:18:17.803" endtime="20220519 08:18:22.879"/>
+<status status="PASS" starttime="20220519 09:16:13.877" endtime="20220519 09:16:18.976"/>
 </kw>
-<test id="s1-t1" name="Confirm AG-111">
+<test id="s1-t1" name="Verify Additional Connected Dataset Is Not Shown In List">
 <kw name="Login" library="mainResource">
 <kw name="Enter Account Information" library="mainResource">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//*[@id="app"]/div/main/div/div/div/div/div/div[1]/form/div[1]/div[2]/div[1]/div/input</arg>
 <arg>${e-mail}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220519 08:18:22.881" level="INFO">Typing text 'oskar.hagman@iths.se' into text field '//*[@id="app"]/div/main/div/div/div/div/div/div[1]/form/div[1]/div[2]/div[1]/div/input'.</msg>
-<status status="PASS" starttime="20220519 08:18:22.881" endtime="20220519 08:18:23.699"/>
+<msg timestamp="20220519 09:16:18.978" level="INFO">Typing text 'oskar.hagman@iths.se' into text field '//*[@id="app"]/div/main/div/div/div/div/div/div[1]/form/div[1]/div[2]/div[1]/div/input'.</msg>
+<status status="PASS" starttime="20220519 09:16:18.977" endtime="20220519 09:16:19.810"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>//*[@id="password"]</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220519 08:18:23.700" level="INFO">Typing text '123456789' into text field '//*[@id="password"]'.</msg>
-<status status="PASS" starttime="20220519 08:18:23.700" endtime="20220519 08:18:24.429"/>
+<msg timestamp="20220519 09:16:19.811" level="INFO">Typing text '123456789' into text field '//*[@id="password"]'.</msg>
+<status status="PASS" starttime="20220519 09:16:19.811" endtime="20220519 09:16:20.550"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Labelf</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220519 08:18:24.429" endtime="20220519 08:18:24.648"/>
+<status status="PASS" starttime="20220519 09:16:20.550" endtime="20220519 09:16:20.766"/>
 </kw>
-<status status="PASS" starttime="20220519 08:18:22.881" endtime="20220519 08:18:24.648"/>
+<status status="PASS" starttime="20220519 09:16:18.977" endtime="20220519 09:16:20.766"/>
 </kw>
 <kw name="Press Login Button" library="mainResource">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>//*[@id="app"]/div/main/div/div/div/div/div/div[2]/button[2]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220519 08:18:24.649" level="INFO">Clicking element '//*[@id="app"]/div/main/div/div/div/div/div/div[2]/button[2]'.</msg>
-<status status="PASS" starttime="20220519 08:18:24.648" endtime="20220519 08:18:25.112"/>
+<msg timestamp="20220519 09:16:20.767" level="INFO">Clicking element '//*[@id="app"]/div/main/div/div/div/div/div/div[2]/button[2]'.</msg>
+<status status="PASS" starttime="20220519 09:16:20.767" endtime="20220519 09:16:21.244"/>
 </kw>
-<status status="PASS" starttime="20220519 08:18:24.648" endtime="20220519 08:18:25.112"/>
+<status status="PASS" starttime="20220519 09:16:20.767" endtime="20220519 09:16:21.244"/>
 </kw>
 <kw name="Verify Login" library="mainResource">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Models</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220519 08:18:25.112" endtime="20220519 08:18:25.750"/>
+<status status="PASS" starttime="20220519 09:16:21.245" endtime="20220519 09:16:21.896"/>
 </kw>
-<status status="PASS" starttime="20220519 08:18:25.112" endtime="20220519 08:18:25.750"/>
+<status status="PASS" starttime="20220519 09:16:21.244" endtime="20220519 09:16:21.896"/>
 </kw>
-<status status="PASS" starttime="20220519 08:18:22.881" endtime="20220519 08:18:25.750"/>
+<status status="PASS" starttime="20220519 09:16:18.977" endtime="20220519 09:16:21.896"/>
 </kw>
 <kw name="User Can Confirm AG-111" library="AG-111_117Resource">
-<kw name="Verification Of AG-111" library="AG-111_117Resource">
+<kw name="User Connects An Additional Dataset - Test" library="AG-111_117Resource">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>https://app.labelf.ai/main/384/models/view</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220519 08:18:25.753" level="INFO">Opening url 'https://app.labelf.ai/main/384/models/view'</msg>
-<status status="PASS" starttime="20220519 08:18:25.753" endtime="20220519 08:18:26.893"/>
+<msg timestamp="20220519 09:16:21.898" level="INFO">Opening url 'https://app.labelf.ai/main/384/models/view'</msg>
+<status status="PASS" starttime="20220519 09:16:21.898" endtime="20220519 09:16:23.128"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${overview_model}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220519 08:18:26.894" level="INFO">Clicking element '//*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div/div/div/div[2]/a/div'.</msg>
-<status status="PASS" starttime="20220519 08:18:26.894" endtime="20220519 08:18:27.389"/>
+<msg timestamp="20220519 09:16:23.129" level="INFO">Clicking element '//*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div/div/div/div[2]/a/div'.</msg>
+<status status="PASS" starttime="20220519 09:16:23.129" endtime="20220519 09:16:23.621"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${button_connectAdditionalDataset}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220519 08:18:27.390" endtime="20220519 08:18:28.405"/>
+<status status="PASS" starttime="20220519 09:16:23.622" endtime="20220519 09:16:24.584"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${button_connectAdditionalDataset}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220519 08:18:28.406" level="INFO">Clicking element '//*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[3]/nav/div/span/button/div'.</msg>
-<status status="PASS" starttime="20220519 08:18:28.405" endtime="20220519 08:18:28.903"/>
+<msg timestamp="20220519 09:16:24.584" level="INFO">Clicking element '//*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[3]/nav/div/span/button/div'.</msg>
+<status status="PASS" starttime="20220519 09:16:24.584" endtime="20220519 09:16:25.085"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Pick a dataset to connect</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220519 08:18:28.903" endtime="20220519 08:18:29.122"/>
+<status status="PASS" starttime="20220519 09:16:25.086" endtime="20220519 09:16:25.318"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Dataset ID: 344</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220519 08:18:29.122" endtime="20220519 08:18:29.340"/>
+<status status="PASS" starttime="20220519 09:16:25.319" endtime="20220519 09:16:25.553"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${continueButton_id}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220519 08:18:29.342" level="INFO">Clicking element '//*[@id="continue-dataset-card"]/div'.</msg>
-<status status="PASS" starttime="20220519 08:18:29.340" endtime="20220519 08:18:29.822"/>
+<msg timestamp="20220519 09:16:25.554" level="INFO">Clicking element '//*[@id="continue-dataset-card"]/div'.</msg>
+<status status="PASS" starttime="20220519 09:16:25.553" endtime="20220519 09:16:26.031"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Choose a column containg the text</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220519 08:18:29.822" endtime="20220519 08:18:30.058"/>
+<status status="PASS" starttime="20220519 09:16:26.031" endtime="20220519 09:16:26.264"/>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <arg>${connectButton_id}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20220519 08:18:30.058" endtime="20220519 08:18:30.760"/>
+<status status="PASS" starttime="20220519 09:16:26.265" endtime="20220519 09:16:26.964"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${connectButton_id}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220519 08:18:30.761" level="INFO">Clicking element '//*[@id="connect-button"]/div'.</msg>
-<status status="PASS" starttime="20220519 08:18:30.760" endtime="20220519 08:18:31.256"/>
+<msg timestamp="20220519 09:16:26.965" level="INFO">Clicking element '//*[@id="connect-button"]/div'.</msg>
+<status status="PASS" starttime="20220519 09:16:26.964" endtime="20220519 09:16:27.448"/>
 </kw>
-<status status="PASS" starttime="20220519 08:18:25.752" endtime="20220519 08:18:31.256"/>
+<status status="PASS" starttime="20220519 09:16:21.897" endtime="20220519 09:16:27.448"/>
 </kw>
 <kw name="Wait Until Element Is Active" library="AG-111_117Resource">
 <for flavor="IN RANGE">
@@ -151,12 +151,12 @@
 <var name="${i}">0</var>
 <kw name="Reload Page" library="SeleniumLibrary">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20220519 08:18:31.258" endtime="20220519 08:18:32.680"/>
+<status status="PASS" starttime="20220519 09:16:27.450" endtime="20220519 09:16:28.977"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>support ticket routing model (1)</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220519 08:18:32.680" endtime="20220519 08:18:32.897"/>
+<status status="PASS" starttime="20220519 09:16:28.977" endtime="20220519 09:16:29.208"/>
 </kw>
 <kw name="Run Keyword And Return Status" library="BuiltIn">
 <var>${status}</var>
@@ -166,41 +166,41 @@
 <kw name="Page Should Not Contain Element" library="SeleniumLibrary">
 <arg>${connect_additional_dataset_greyed_out}</arg>
 <doc>Verifies that element ``locator`` is not found on the current page.</doc>
-<msg timestamp="20220519 08:18:32.903" level="FAIL">Variable '${connect_additional_dataset_greyed_out}' not found.</msg>
-<status status="FAIL" starttime="20220519 08:18:32.898" endtime="20220519 08:18:32.903"/>
+<msg timestamp="20220519 09:16:29.215" level="FAIL">Variable '${connect_additional_dataset_greyed_out}' not found.</msg>
+<status status="FAIL" starttime="20220519 09:16:29.208" endtime="20220519 09:16:29.215"/>
 </kw>
-<msg timestamp="20220519 08:18:32.903" level="INFO">${status} = False</msg>
-<status status="PASS" starttime="20220519 08:18:32.898" endtime="20220519 08:18:32.903"/>
+<msg timestamp="20220519 09:16:29.215" level="INFO">${status} = False</msg>
+<status status="PASS" starttime="20220519 09:16:29.208" endtime="20220519 09:16:29.215"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>'${status}'=='True'</arg>
 <arg>Connect Another Additional Dataset</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220519 08:18:32.904" endtime="20220519 08:18:32.904"/>
+<status status="PASS" starttime="20220519 09:16:29.215" endtime="20220519 09:16:29.216"/>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <arg>'${status}'=='True'</arg>
 <doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220519 08:18:32.904" endtime="20220519 08:18:32.905"/>
+<status status="PASS" starttime="20220519 09:16:29.216" endtime="20220519 09:16:29.217"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>10s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220519 08:18:42.922" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20220519 08:18:32.905" endtime="20220519 08:18:42.922"/>
+<msg timestamp="20220519 09:16:39.222" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20220519 09:16:29.217" endtime="20220519 09:16:39.222"/>
 </kw>
-<status status="PASS" starttime="20220519 08:18:31.258" endtime="20220519 08:18:42.922"/>
+<status status="PASS" starttime="20220519 09:16:27.449" endtime="20220519 09:16:39.222"/>
 </iter>
 <iter>
 <var name="${i}">1</var>
 <kw name="Reload Page" library="SeleniumLibrary">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20220519 08:18:42.923" endtime="20220519 08:18:43.170"/>
+<status status="PASS" starttime="20220519 09:16:39.223" endtime="20220519 09:16:39.440"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>support ticket routing model (1)</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220519 08:18:43.170" endtime="20220519 08:18:44.146"/>
+<status status="PASS" starttime="20220519 09:16:39.440" endtime="20220519 09:16:40.727"/>
 </kw>
 <kw name="Run Keyword And Return Status" library="BuiltIn">
 <var>${status}</var>
@@ -210,41 +210,41 @@
 <kw name="Page Should Not Contain Element" library="SeleniumLibrary">
 <arg>${connect_additional_dataset_greyed_out}</arg>
 <doc>Verifies that element ``locator`` is not found on the current page.</doc>
-<msg timestamp="20220519 08:18:44.151" level="FAIL">Variable '${connect_additional_dataset_greyed_out}' not found.</msg>
-<status status="FAIL" starttime="20220519 08:18:44.147" endtime="20220519 08:18:44.152"/>
+<msg timestamp="20220519 09:16:40.733" level="FAIL">Variable '${connect_additional_dataset_greyed_out}' not found.</msg>
+<status status="FAIL" starttime="20220519 09:16:40.728" endtime="20220519 09:16:40.733"/>
 </kw>
-<msg timestamp="20220519 08:18:44.152" level="INFO">${status} = False</msg>
-<status status="PASS" starttime="20220519 08:18:44.146" endtime="20220519 08:18:44.152"/>
+<msg timestamp="20220519 09:16:40.733" level="INFO">${status} = False</msg>
+<status status="PASS" starttime="20220519 09:16:40.727" endtime="20220519 09:16:40.733"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>'${status}'=='True'</arg>
 <arg>Connect Another Additional Dataset</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220519 08:18:44.152" endtime="20220519 08:18:44.152"/>
+<status status="PASS" starttime="20220519 09:16:40.733" endtime="20220519 09:16:40.734"/>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <arg>'${status}'=='True'</arg>
 <doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220519 08:18:44.153" endtime="20220519 08:18:44.153"/>
+<status status="PASS" starttime="20220519 09:16:40.734" endtime="20220519 09:16:40.734"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>10s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220519 08:18:54.162" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20220519 08:18:44.154" endtime="20220519 08:18:54.162"/>
+<msg timestamp="20220519 09:16:50.749" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20220519 09:16:40.735" endtime="20220519 09:16:50.749"/>
 </kw>
-<status status="PASS" starttime="20220519 08:18:42.923" endtime="20220519 08:18:54.162"/>
+<status status="PASS" starttime="20220519 09:16:39.222" endtime="20220519 09:16:50.749"/>
 </iter>
 <iter>
 <var name="${i}">2</var>
 <kw name="Reload Page" library="SeleniumLibrary">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20220519 08:18:54.162" endtime="20220519 08:18:54.378"/>
+<status status="PASS" starttime="20220519 09:16:50.749" endtime="20220519 09:16:52.099"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>support ticket routing model (1)</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220519 08:18:54.378" endtime="20220519 08:18:55.650"/>
+<status status="PASS" starttime="20220519 09:16:52.099" endtime="20220519 09:16:52.379"/>
 </kw>
 <kw name="Run Keyword And Return Status" library="BuiltIn">
 <var>${status}</var>
@@ -254,41 +254,41 @@
 <kw name="Page Should Not Contain Element" library="SeleniumLibrary">
 <arg>${connect_additional_dataset_greyed_out}</arg>
 <doc>Verifies that element ``locator`` is not found on the current page.</doc>
-<msg timestamp="20220519 08:18:55.655" level="FAIL">Variable '${connect_additional_dataset_greyed_out}' not found.</msg>
-<status status="FAIL" starttime="20220519 08:18:55.650" endtime="20220519 08:18:55.655"/>
+<msg timestamp="20220519 09:16:52.384" level="FAIL">Variable '${connect_additional_dataset_greyed_out}' not found.</msg>
+<status status="FAIL" starttime="20220519 09:16:52.380" endtime="20220519 09:16:52.384"/>
 </kw>
-<msg timestamp="20220519 08:18:55.655" level="INFO">${status} = False</msg>
-<status status="PASS" starttime="20220519 08:18:55.650" endtime="20220519 08:18:55.655"/>
+<msg timestamp="20220519 09:16:52.384" level="INFO">${status} = False</msg>
+<status status="PASS" starttime="20220519 09:16:52.379" endtime="20220519 09:16:52.384"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>'${status}'=='True'</arg>
 <arg>Connect Another Additional Dataset</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220519 08:18:55.656" endtime="20220519 08:18:55.656"/>
+<status status="PASS" starttime="20220519 09:16:52.385" endtime="20220519 09:16:52.385"/>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <arg>'${status}'=='True'</arg>
 <doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220519 08:18:55.656" endtime="20220519 08:18:55.657"/>
+<status status="PASS" starttime="20220519 09:16:52.386" endtime="20220519 09:16:52.386"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>10s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220519 08:19:05.670" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20220519 08:18:55.658" endtime="20220519 08:19:05.671"/>
+<msg timestamp="20220519 09:17:02.402" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20220519 09:16:52.386" endtime="20220519 09:17:02.402"/>
 </kw>
-<status status="PASS" starttime="20220519 08:18:54.162" endtime="20220519 08:19:05.671"/>
+<status status="PASS" starttime="20220519 09:16:50.749" endtime="20220519 09:17:02.402"/>
 </iter>
 <iter>
 <var name="${i}">3</var>
 <kw name="Reload Page" library="SeleniumLibrary">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20220519 08:19:05.671" endtime="20220519 08:19:06.419"/>
+<status status="PASS" starttime="20220519 09:17:02.403" endtime="20220519 09:17:03.891"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>support ticket routing model (1)</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220519 08:19:06.419" endtime="20220519 08:19:06.650"/>
+<status status="PASS" starttime="20220519 09:17:03.891" endtime="20220519 09:17:04.109"/>
 </kw>
 <kw name="Run Keyword And Return Status" library="BuiltIn">
 <var>${status}</var>
@@ -298,41 +298,41 @@
 <kw name="Page Should Not Contain Element" library="SeleniumLibrary">
 <arg>${connect_additional_dataset_greyed_out}</arg>
 <doc>Verifies that element ``locator`` is not found on the current page.</doc>
-<msg timestamp="20220519 08:19:06.656" level="FAIL">Variable '${connect_additional_dataset_greyed_out}' not found.</msg>
-<status status="FAIL" starttime="20220519 08:19:06.651" endtime="20220519 08:19:06.656"/>
+<msg timestamp="20220519 09:17:04.115" level="FAIL">Variable '${connect_additional_dataset_greyed_out}' not found.</msg>
+<status status="FAIL" starttime="20220519 09:17:04.110" endtime="20220519 09:17:04.115"/>
 </kw>
-<msg timestamp="20220519 08:19:06.656" level="INFO">${status} = False</msg>
-<status status="PASS" starttime="20220519 08:19:06.650" endtime="20220519 08:19:06.656"/>
+<msg timestamp="20220519 09:17:04.115" level="INFO">${status} = False</msg>
+<status status="PASS" starttime="20220519 09:17:04.109" endtime="20220519 09:17:04.115"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>'${status}'=='True'</arg>
 <arg>Connect Another Additional Dataset</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220519 08:19:06.657" endtime="20220519 08:19:06.658"/>
+<status status="PASS" starttime="20220519 09:17:04.116" endtime="20220519 09:17:04.116"/>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <arg>'${status}'=='True'</arg>
 <doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220519 08:19:06.658" endtime="20220519 08:19:06.658"/>
+<status status="PASS" starttime="20220519 09:17:04.116" endtime="20220519 09:17:04.117"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>10s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220519 08:19:16.661" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20220519 08:19:06.658" endtime="20220519 08:19:16.661"/>
+<msg timestamp="20220519 09:17:14.129" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20220519 09:17:04.117" endtime="20220519 09:17:14.129"/>
 </kw>
-<status status="PASS" starttime="20220519 08:19:05.671" endtime="20220519 08:19:16.661"/>
+<status status="PASS" starttime="20220519 09:17:02.402" endtime="20220519 09:17:14.129"/>
 </iter>
 <iter>
 <var name="${i}">4</var>
 <kw name="Reload Page" library="SeleniumLibrary">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20220519 08:19:16.662" endtime="20220519 08:19:17.751"/>
+<status status="PASS" starttime="20220519 09:17:14.130" endtime="20220519 09:17:15.487"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>support ticket routing model (1)</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220519 08:19:17.751" endtime="20220519 08:19:17.969"/>
+<status status="PASS" starttime="20220519 09:17:15.487" endtime="20220519 09:17:15.783"/>
 </kw>
 <kw name="Run Keyword And Return Status" library="BuiltIn">
 <var>${status}</var>
@@ -342,41 +342,41 @@
 <kw name="Page Should Not Contain Element" library="SeleniumLibrary">
 <arg>${connect_additional_dataset_greyed_out}</arg>
 <doc>Verifies that element ``locator`` is not found on the current page.</doc>
-<msg timestamp="20220519 08:19:17.974" level="FAIL">Variable '${connect_additional_dataset_greyed_out}' not found.</msg>
-<status status="FAIL" starttime="20220519 08:19:17.970" endtime="20220519 08:19:17.974"/>
+<msg timestamp="20220519 09:17:15.789" level="FAIL">Variable '${connect_additional_dataset_greyed_out}' not found.</msg>
+<status status="FAIL" starttime="20220519 09:17:15.784" endtime="20220519 09:17:15.789"/>
 </kw>
-<msg timestamp="20220519 08:19:17.975" level="INFO">${status} = False</msg>
-<status status="PASS" starttime="20220519 08:19:17.969" endtime="20220519 08:19:17.975"/>
+<msg timestamp="20220519 09:17:15.789" level="INFO">${status} = False</msg>
+<status status="PASS" starttime="20220519 09:17:15.783" endtime="20220519 09:17:15.790"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>'${status}'=='True'</arg>
 <arg>Connect Another Additional Dataset</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220519 08:19:17.976" endtime="20220519 08:19:17.976"/>
+<status status="PASS" starttime="20220519 09:17:15.790" endtime="20220519 09:17:15.790"/>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <arg>'${status}'=='True'</arg>
 <doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220519 08:19:17.976" endtime="20220519 08:19:17.977"/>
+<status status="PASS" starttime="20220519 09:17:15.791" endtime="20220519 09:17:15.791"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>10s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220519 08:19:27.989" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20220519 08:19:17.977" endtime="20220519 08:19:27.989"/>
+<msg timestamp="20220519 09:17:25.806" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20220519 09:17:15.791" endtime="20220519 09:17:25.806"/>
 </kw>
-<status status="PASS" starttime="20220519 08:19:16.661" endtime="20220519 08:19:27.989"/>
+<status status="PASS" starttime="20220519 09:17:14.129" endtime="20220519 09:17:25.806"/>
 </iter>
 <iter>
 <var name="${i}">5</var>
 <kw name="Reload Page" library="SeleniumLibrary">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20220519 08:19:27.990" endtime="20220519 08:19:29.140"/>
+<status status="PASS" starttime="20220519 09:17:25.807" endtime="20220519 09:17:27.109"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>support ticket routing model (1)</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220519 08:19:29.141" endtime="20220519 08:19:29.371"/>
+<status status="PASS" starttime="20220519 09:17:27.109" endtime="20220519 09:17:27.389"/>
 </kw>
 <kw name="Run Keyword And Return Status" library="BuiltIn">
 <var>${status}</var>
@@ -386,41 +386,41 @@
 <kw name="Page Should Not Contain Element" library="SeleniumLibrary">
 <arg>${connect_additional_dataset_greyed_out}</arg>
 <doc>Verifies that element ``locator`` is not found on the current page.</doc>
-<msg timestamp="20220519 08:19:29.377" level="FAIL">Variable '${connect_additional_dataset_greyed_out}' not found.</msg>
-<status status="FAIL" starttime="20220519 08:19:29.372" endtime="20220519 08:19:29.378"/>
+<msg timestamp="20220519 09:17:27.394" level="FAIL">Variable '${connect_additional_dataset_greyed_out}' not found.</msg>
+<status status="FAIL" starttime="20220519 09:17:27.390" endtime="20220519 09:17:27.394"/>
 </kw>
-<msg timestamp="20220519 08:19:29.378" level="INFO">${status} = False</msg>
-<status status="PASS" starttime="20220519 08:19:29.371" endtime="20220519 08:19:29.378"/>
+<msg timestamp="20220519 09:17:27.395" level="INFO">${status} = False</msg>
+<status status="PASS" starttime="20220519 09:17:27.390" endtime="20220519 09:17:27.395"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>'${status}'=='True'</arg>
 <arg>Connect Another Additional Dataset</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220519 08:19:29.378" endtime="20220519 08:19:29.379"/>
+<status status="PASS" starttime="20220519 09:17:27.395" endtime="20220519 09:17:27.396"/>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <arg>'${status}'=='True'</arg>
 <doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220519 08:19:29.379" endtime="20220519 08:19:29.380"/>
+<status status="PASS" starttime="20220519 09:17:27.396" endtime="20220519 09:17:27.397"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>10s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220519 08:19:39.389" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20220519 08:19:29.380" endtime="20220519 08:19:39.389"/>
+<msg timestamp="20220519 09:17:37.407" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20220519 09:17:27.397" endtime="20220519 09:17:37.407"/>
 </kw>
-<status status="PASS" starttime="20220519 08:19:27.989" endtime="20220519 08:19:39.389"/>
+<status status="PASS" starttime="20220519 09:17:25.806" endtime="20220519 09:17:37.407"/>
 </iter>
 <iter>
 <var name="${i}">6</var>
 <kw name="Reload Page" library="SeleniumLibrary">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20220519 08:19:39.390" endtime="20220519 08:19:39.606"/>
+<status status="PASS" starttime="20220519 09:17:37.408" endtime="20220519 09:17:38.759"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>support ticket routing model (1)</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220519 08:19:39.606" endtime="20220519 08:19:40.662"/>
+<status status="PASS" starttime="20220519 09:17:38.759" endtime="20220519 09:17:38.991"/>
 </kw>
 <kw name="Run Keyword And Return Status" library="BuiltIn">
 <var>${status}</var>
@@ -430,133 +430,150 @@
 <kw name="Page Should Not Contain Element" library="SeleniumLibrary">
 <arg>${connect_additional_dataset_greyed_out}</arg>
 <doc>Verifies that element ``locator`` is not found on the current page.</doc>
-<msg timestamp="20220519 08:19:40.667" level="FAIL">Variable '${connect_additional_dataset_greyed_out}' not found.</msg>
-<status status="FAIL" starttime="20220519 08:19:40.663" endtime="20220519 08:19:40.667"/>
+<msg timestamp="20220519 09:17:38.996" level="FAIL">Variable '${connect_additional_dataset_greyed_out}' not found.</msg>
+<status status="FAIL" starttime="20220519 09:17:38.992" endtime="20220519 09:17:38.996"/>
 </kw>
-<msg timestamp="20220519 08:19:40.668" level="INFO">${status} = False</msg>
-<status status="PASS" starttime="20220519 08:19:40.662" endtime="20220519 08:19:40.668"/>
+<msg timestamp="20220519 09:17:38.997" level="INFO">${status} = False</msg>
+<status status="PASS" starttime="20220519 09:17:38.991" endtime="20220519 09:17:38.997"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>'${status}'=='True'</arg>
 <arg>Connect Another Additional Dataset</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20220519 08:19:40.668" endtime="20220519 08:19:40.668"/>
+<status status="PASS" starttime="20220519 09:17:38.997" endtime="20220519 09:17:38.998"/>
 </kw>
 <kw name="Exit For Loop If" library="BuiltIn">
 <arg>'${status}'=='True'</arg>
 <doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
-<status status="PASS" starttime="20220519 08:19:40.669" endtime="20220519 08:19:40.669"/>
+<status status="PASS" starttime="20220519 09:17:38.998" endtime="20220519 09:17:38.999"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>10s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220519 08:19:50.672" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20220519 08:19:40.669" endtime="20220519 08:19:50.672"/>
+<msg timestamp="20220519 09:17:49.015" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20220519 09:17:38.999" endtime="20220519 09:17:49.015"/>
 </kw>
-<status status="PASS" starttime="20220519 08:19:39.389" endtime="20220519 08:19:50.672"/>
+<status status="PASS" starttime="20220519 09:17:37.407" endtime="20220519 09:17:49.015"/>
 </iter>
-<status status="PASS" starttime="20220519 08:18:31.258" endtime="20220519 08:19:50.672"/>
+<status status="PASS" starttime="20220519 09:16:27.449" endtime="20220519 09:17:49.015"/>
 </for>
-<status status="PASS" starttime="20220519 08:18:31.257" endtime="20220519 08:19:50.672"/>
+<status status="PASS" starttime="20220519 09:16:27.449" endtime="20220519 09:17:49.015"/>
 </kw>
-<kw name="Confirm AG-111 Connected Dataset Is Not In List" library="AG-111_117Resource">
+<kw name="Confirm Added Additional Dataset Is Shown Under Connected Dataset" library="AG-111_117Resource">
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Dataset ID: 344</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220519 08:19:50.673" endtime="20220519 08:19:50.890"/>
+<status status="PASS" starttime="20220519 09:17:49.016" endtime="20220519 09:17:49.234"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${button_connectAdditionalDataset}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220519 08:19:50.890" endtime="20220519 08:19:51.325"/>
+<status status="PASS" starttime="20220519 09:17:49.234" endtime="20220519 09:17:49.683"/>
 </kw>
+<status status="PASS" starttime="20220519 09:17:49.015" endtime="20220519 09:17:49.683"/>
+</kw>
+<kw name="User Clicks Connect Additional Dataset" library="AG-111_117Resource">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${button_connectAdditionalDataset}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220519 08:19:51.325" level="INFO">Clicking element '//*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[3]/nav/div/span/button/div'.</msg>
-<status status="PASS" starttime="20220519 08:19:51.325" endtime="20220519 08:19:51.836"/>
+<msg timestamp="20220519 09:17:49.685" level="INFO">Clicking element '//*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[3]/nav/div/span/button/div'.</msg>
+<status status="PASS" starttime="20220519 09:17:49.684" endtime="20220519 09:17:50.210"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Pick a dataset to connect</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220519 08:19:51.836" endtime="20220519 08:19:52.070"/>
+<status status="PASS" starttime="20220519 09:17:50.210" endtime="20220519 09:17:50.430"/>
 </kw>
+<status status="PASS" starttime="20220519 09:17:49.684" endtime="20220519 09:17:50.431"/>
+</kw>
+<kw name="Additional Connected Dataset Is Not Shown In List" library="AG-111_117Resource">
 <kw name="Page Should Not Contain Element" library="SeleniumLibrary">
 <arg>//*[@id="app"]/div[5]/div/div/div/div[3]/div/div/div[1]/div/div/div/div[2]/p</arg>
 <doc>Verifies that element ``locator`` is not found on the current page.</doc>
-<msg timestamp="20220519 08:19:52.288" level="INFO">Current page does not contain element '//*[@id="app"]/div[5]/div/div/div/div[3]/div/div/div[1]/div/div/div/div[2]/p'.</msg>
-<status status="PASS" starttime="20220519 08:19:52.070" endtime="20220519 08:19:52.288"/>
+<msg timestamp="20220519 09:17:50.663" level="INFO">Current page does not contain element '//*[@id="app"]/div[5]/div/div/div/div[3]/div/div/div[1]/div/div/div/div[2]/p'.</msg>
+<status status="PASS" starttime="20220519 09:17:50.431" endtime="20220519 09:17:50.663"/>
 </kw>
 <kw name="Reload Page" library="SeleniumLibrary">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20220519 08:19:52.288" endtime="20220519 08:19:53.396"/>
+<status status="PASS" starttime="20220519 09:17:50.663" endtime="20220519 09:17:51.978"/>
 </kw>
-<status status="PASS" starttime="20220519 08:19:50.673" endtime="20220519 08:19:53.396"/>
+<status status="PASS" starttime="20220519 09:17:50.431" endtime="20220519 09:17:51.978"/>
 </kw>
-<kw name="Verification Of AG-117" library="AG-111_117Resource">
+<status status="PASS" starttime="20220519 09:16:21.897" endtime="20220519 09:17:51.978"/>
+</kw>
+<tag>AG_87, AG_111</tag>
+<status status="PASS" starttime="20220519 09:16:18.976" endtime="20220519 09:17:51.979"/>
+</test>
+<test id="s1-t2" name="Verify Disconnected Dataset Is Not Shown Under Connected Dataset">
+<kw name="User Can Confirm AG-117" library="AG-111_117Resource">
+<kw name="Disconnects Connected Dataset" library="AG-111_117Resource">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${disconnectDataset}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220519 08:19:53.397" endtime="20220519 08:19:53.861"/>
+<status status="PASS" starttime="20220519 09:17:51.984" endtime="20220519 09:17:52.494"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${disconnectDataset}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220519 08:19:53.862" level="INFO">Clicking element '//*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[2]/div/div/div/div/div/div[2]/span/button/div'.</msg>
-<status status="PASS" starttime="20220519 08:19:53.861" endtime="20220519 08:19:54.375"/>
+<msg timestamp="20220519 09:17:52.495" level="INFO">Clicking element '//*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[2]/div/div/div/div/div/div[2]/span/button/div'.</msg>
+<status status="PASS" starttime="20220519 09:17:52.494" endtime="20220519 09:17:53.023"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>This will completely remove your dataset and its contents from the model, are you sure?</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220519 08:19:54.375" endtime="20220519 08:19:54.593"/>
+<status status="PASS" starttime="20220519 09:17:53.023" endtime="20220519 09:17:53.241"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${confirmDisconnect}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220519 08:19:54.595" level="INFO">Clicking element '//*[@id="app"]/div[4]/div/div/div[3]/button[2]/div'.</msg>
-<status status="PASS" starttime="20220519 08:19:54.593" endtime="20220519 08:19:55.092"/>
+<msg timestamp="20220519 09:17:53.242" level="INFO">Clicking element '//*[@id="app"]/div[4]/div/div/div[3]/button[2]/div'.</msg>
+<status status="PASS" starttime="20220519 09:17:53.241" endtime="20220519 09:17:53.725"/>
 </kw>
+<status status="PASS" starttime="20220519 09:17:51.983" endtime="20220519 09:17:53.725"/>
+</kw>
+<kw name="Confirmation Of Dataset Has Been Disconnected" library="AG-111_117Resource">
 <kw name="Reload Page" library="SeleniumLibrary">
 <doc>Simulates user reloading page.</doc>
-<status status="PASS" starttime="20220519 08:19:55.093" endtime="20220519 08:19:55.309"/>
+<status status="PASS" starttime="20220519 09:17:53.726" endtime="20220519 09:17:55.062"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>Connected Datasets</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220519 08:19:55.309" endtime="20220519 08:19:56.269"/>
+<status status="PASS" starttime="20220519 09:17:55.062" endtime="20220519 09:17:55.357"/>
 </kw>
 <kw name="Page Should Not Contain" library="SeleniumLibrary">
-<arg>344</arg>
+<arg>Dataset ID: 344</arg>
 <doc>Verifies the current page does not contain ``text``.</doc>
-<msg timestamp="20220519 08:19:57.299" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-222.png"&gt;&lt;img src="selenium-screenshot-222.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20220519 08:19:57.323" level="FAIL">Page should not have contained text '344'.</msg>
-<status status="FAIL" starttime="20220519 08:19:56.269" endtime="20220519 08:19:57.323"/>
+<msg timestamp="20220519 09:17:56.377" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-230.png"&gt;&lt;img src="selenium-screenshot-230.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220519 09:17:56.393" level="FAIL">Page should not have contained text 'Dataset ID: 344'.</msg>
+<status status="FAIL" starttime="20220519 09:17:55.357" endtime="20220519 09:17:56.393"/>
 </kw>
-<status status="FAIL" starttime="20220519 08:19:53.396" endtime="20220519 08:19:57.325"/>
+<status status="FAIL" starttime="20220519 09:17:53.725" endtime="20220519 09:17:56.395"/>
 </kw>
-<status status="FAIL" starttime="20220519 08:18:25.752" endtime="20220519 08:19:57.326"/>
+<status status="FAIL" starttime="20220519 09:17:51.982" endtime="20220519 09:17:56.396"/>
 </kw>
-<tag>AG-111</tag>
-<status status="FAIL" starttime="20220519 08:18:22.879" endtime="20220519 08:19:57.327">Page should not have contained text '344'.</status>
+<tag>AG_87, AG_117</tag>
+<status status="FAIL" starttime="20220519 09:17:51.981" endtime="20220519 09:17:56.398">Page should not have contained text 'Dataset ID: 344'.</status>
 </test>
 <kw name="End WebTest" library="mainResource" type="TEARDOWN">
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220519 08:19:57.332" endtime="20220519 08:19:59.652"/>
+<status status="PASS" starttime="20220519 09:17:56.401" endtime="20220519 09:17:58.699"/>
 </kw>
-<status status="PASS" starttime="20220519 08:19:57.332" endtime="20220519 08:19:59.652"/>
+<status status="PASS" starttime="20220519 09:17:56.401" endtime="20220519 09:17:58.700"/>
 </kw>
-<status status="FAIL" starttime="20220519 08:18:17.624" endtime="20220519 08:19:59.652"/>
+<status status="FAIL" starttime="20220519 09:16:13.689" endtime="20220519 09:17:58.700"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">AG-111</stat>
+<stat pass="1" fail="0" skip="0">AG_87, AG_111</stat>
+<stat pass="0" fail="1" skip="0">AG_87, AG_117</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="AG-111-117">AG-111-117</stat>
+<stat pass="1" fail="1" skip="0" id="s1" name="AG-111-117">AG-111-117</stat>
 </suite>
 </statistics>
 <errors>

@@ -8,13 +8,11 @@ ${closeWindow}   //*[@id="app"]/div[4]/div/div/nav/div/button/div/i
 ${disconnectDataset}   //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[2]/div/div/div/div/div/div[2]/span/button/div
 ${confirmDisconnect}   //*[@id="app"]/div[4]/div/div/div[3]/button[2]/div
 
-# disconnect knapp aktiv     //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[2]/div/div/div/div/div/div[2]/span/button/div
-${disconnect-knapp-låst}   //*[@id="app"]/div[9]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[2]/div/div/div/div/div/div[2]/span/span[1]
-${connect-additional-låst}    //*[@id="app"]/div[9]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[3]/nav/div/span/span[1]
-# coonect additonal aktiv    //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[3]/nav/div/span/button/div
 *** Keywords ***
+User Is Logged In
+   Login
 
-User Connects An Additional Dataset
+User Connects An Additional Dataset - Test
    Go To   https://app.labelf.ai/main/384/models/view
    Click Element    ${overview_model}
    Wait Until Element Is Visible    ${button_connectAdditionalDataset}
@@ -63,19 +61,23 @@ Confirmation Of Dataset Has Been Disconnected
 #   Page Should Not Contain Element   //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[2]/div/div/div/div/div/div[2]/p
 
 
-User Can Confirm AG-111 And AG-117
-    User Connects An Additional Dataset
-    Wait Until Element Is Active
-    Confirm Added Additional Dataset Is Shown Under Connected Dataset
-    User Clicks Connect Additional Dataset
-    Additional Connected Dataset Is Not Shown In List
-    Disconnects Connected Dataset
-    User Can Confirm Dataset Has Been Disconnected
-
 # User Can Confirm AG-111 And AG-117
+#    User Is Logged In
 #    User Connects An Additional Dataset
 #    Wait Until Element Is Active
 #    Confirm Added Additional Dataset Is Shown Under Connected Dataset
 #    User Clicks Connect Additional Dataset
 #    Additional Connected Dataset Is Not Shown In List
-#    Confirmation Of Dataset Has Been Disconnected
+#    Disconnects Connected Dataset
+#    User Can Confirm Dataset Has Been Disconnected
+
+User Can Confirm AG-111
+    User Connects An Additional Dataset - Test
+    Wait Until Element Is Active
+    Confirm Added Additional Dataset Is Shown Under Connected Dataset
+    User Clicks Connect Additional Dataset
+    Additional Connected Dataset Is Not Shown In List
+
+User Can Confirm AG-117
+    Disconnects Connected Dataset
+    Confirmation Of Dataset Has Been Disconnected
