@@ -4,7 +4,7 @@ ${password}  123456789
 
 *** Keywords ***
 Start WebTest
-    Open Browser  about:blank  chrome
+    Open Browser  about:blank  headlesschrome
     Set Selenium Speed  0.2s
     Set Window Size  1920  1080
     Go To  https://app.labelf.ai/login
