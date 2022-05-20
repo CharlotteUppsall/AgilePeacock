@@ -4,7 +4,6 @@ ${overview_model}   //*[@id="app"]/div[7]/div[1]/main/div/div/div[3]/div/div/div
 ${button_connectAdditionalDataset}   //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[3]/nav/div/span/button/div
 ${continueButton_id}   //*[@id="continue-dataset-card"]/div
 ${connectButton_id}   //*[@id="connect-button"]/div
-${closeWindow}   //*[@id="app"]/div[4]/div/div/nav/div/button/div/i
 ${disconnectDataset}   //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[2]/div/div/div/div/div/div[2]/span/button/div
 ${confirmDisconnect}   //*[@id="app"]/div[4]/div/div/div[3]/button[2]/div
 
@@ -57,11 +56,8 @@ Confirmation Of Dataset Has Been Disconnected
    Reload Page
    Wait Until Page Contains   Connected Datasets
    Page Should Not Contain   Dataset ID: 344    # verification AG-117
-#  Page Should Not Contain Element   //*[@id="app"]/div[7]/div[1]/main/div/div/div[2]/div/div[1]/div/div[6]/div/div[2]/div/div/div/div/div/div[2]/p
-
 
 # GHERKIN
-
 # User Can Confirm AG-111 And AG-117
 #    User Is Logged In
 #    User Connects An Additional Dataset
