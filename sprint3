@@ -15,6 +15,7 @@ pipeline {
                 
 
                 sh 'robot -d Results Tests/AG-16.robot' 
+                sh 'robot -d Results Tests/AG-56.robot'
                 sh 'robot -d Results Tests/AG-52.robot'}
               
                 
