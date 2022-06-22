@@ -157,6 +157,33 @@ stage('AG-51') {
                         }
                     }
                 }
+              stage('AG-111-117') {
+            steps {      
+                    catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE'){
+
+                sh 'robot -d Results -o AG-111-output -l AG-111-log -r AG-111-report Tests/AG-111.robot'
+                   }
                 
+                    }
+                    post {
+                        always {
+                            script {
+                                  step(
+                                        [
+                                          $class              : 'RobotPublisher',
+                                          outputPath          : 'Results',
+                                          outputFileName      : '**/AG-111-output.xml',
+                                          reportFileName      : '**/AG-111-report.html',
+                                          logFileName         : '**/AG-111-log.html',
+                                          disableArchiveOutput: false,
+                                          passThreshold       : 50,
+                                          unstableThreshold   : 40,
+                                          otherFiles          : "**/*.png,**/*.jpg",
+                                        ]
+                                  )
+                            }
+                        }
+                    }
+                }  
        }
     }
