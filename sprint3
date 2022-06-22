@@ -1,7 +1,11 @@
 pipeline {
         agent any
             stages{
-
+                    stage('Delete Old Screenshots'){
+                            steps{
+                          sh 'sudo rm Results/selenium-screenshot-*.png'  
+                          }
+                    }
                     
                     stage('Base Stage') {
         steps {   
