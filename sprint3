@@ -1,0 +1,44 @@
+pipeline {
+        agent any
+            stages{
+               
+   
+                    stage('Delete Old Screenshots'){
+                            steps{
+                          sh 'sudo rm Results/selenium-screenshot-*.png'  
+                          }
+                    }
+                    
+                    stage('Base Stage') {
+        steps {   
+                catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE')  { 
+                
+
+                sh 'robot -d Results -o AG-18-output -l AG-16-log -r AG-16-report Tests/AG-16.robot' }
+              
+                
+                    }
+                    post {
+                        always {
+                            script {
+                                  step(
+                                        [
+                                          $class              : 'RobotPublisher',
+                                          outputPath          : 'Results',
+                                          outputFileName      : '**/AG-16-output.xml',
+                                          reportFileName      : '**/AG-16-report.html',
+                                          logFileName         : '**/AG-16-log.html',
+                                          disableArchiveOutput: false,
+                                          passThreshold       : 50,
+                                          unstableThreshold   : 40,
+                                          otherFiles          : "**/*.png,**/*.jpg",
+                                        ]
+                                  )
+                            }
+                        }
+                    }
+                }
+                    
+                
+       }
+    }
