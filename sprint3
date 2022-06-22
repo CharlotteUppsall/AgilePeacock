@@ -1,13 +1,7 @@
 pipeline {
         agent any
             stages{
-               
-   
-                    stage('Delete Old Screenshots'){
-                            steps{
-                          
-                          }
-                    }
+
                     
                     stage('Base Stage') {
         steps {   
