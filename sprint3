@@ -14,7 +14,8 @@ pipeline {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE')  { 
                 
 
-                sh 'robot -d Results Tests/AG-16.robot' }
+                sh 'robot -d Results Tests/AG-16.robot' 
+                sh 'robot -d Results Tests/AG-52.robot'}
               
                 
                     }
