@@ -5,16 +5,17 @@ pipeline {
    
                     stage('Delete Old Screenshots'){
                             steps{
+                                     catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                           sh 'sudo rm Results/selenium-screenshot-*.png'  
+                                  }
                           }
                     }
-                    
-                    stage('AG_18') {
+                    stage('AG-16') {
         steps {   
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE')  { 
                 
 
-                sh 'robot -d Results -o AG-18-output -l AG-18-log -r AG-18-report Tests/AG-18.robot' }
+                sh 'robot -d Results -o AG-16-output -l AG-16-log -r AG-16-report Tests/AG-16.robot' }
               
                 
                     }
@@ -25,9 +26,9 @@ pipeline {
                                         [
                                           $class              : 'RobotPublisher',
                                           outputPath          : 'Results',
-                                          outputFileName      : '**/AG-18-output.xml',
-                                          reportFileName      : '**/AG-18-report.html',
-                                          logFileName         : '**/AG-18-log.html',
+                                          outputFileName      : '**/AG-16-output.xml',
+                                          reportFileName      : '**/AG-16-report.html',
+                                          logFileName         : '**/AG-16-log.html',
                                           disableArchiveOutput: false,
                                           passThreshold       : 50,
                                           unstableThreshold   : 40,
@@ -39,37 +40,7 @@ pipeline {
                     }
                 }
                     
-                    stage('AG_51') {
-        steps {   
-                catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE')  { 
-                
-
-                sh 'robot -d Results -o AG-51-output -l AG-51-log -r AG-51-report Tests/AG-51.robot' }
-              
-                
-                    }
-                    post {
-                        always {
-                            script {
-                                  step(
-                                        [
-                                          $class              : 'RobotPublisher',
-                                          outputPath          : 'Results',
-                                          outputFileName      : '**/AG-51-output.xml',
-                                          reportFileName      : '**/AG-51-report.html',
-                                          logFileName         : '**/AG-51-log.html',
-                                          disableArchiveOutput: false,
-                                          passThreshold       : 50,
-                                          unstableThreshold   : 40,
-                                          otherFiles          : "**/*.png,**/*.jpg",
-                                        ]
-                                  )
-                            }
-                        }
-                    }
-                }                    
-
-                    stage('AG_56') {
+                    stage('AG-56') {
         steps {   
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE')  { 
                 
@@ -88,6 +59,36 @@ pipeline {
                                           outputFileName      : '**/AG-56-output.xml',
                                           reportFileName      : '**/AG-56-report.html',
                                           logFileName         : '**/AG-56-log.html',
+                                          disableArchiveOutput: false,
+                                          passThreshold       : 50,
+                                          unstableThreshold   : 40,
+                                          otherFiles          : "**/*.png,**/*.jpg",
+                                        ]
+                                  )
+                            }
+                        }
+                    }
+                }                    
+
+                    stage('AG-52') {
+        steps {   
+                catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE')  { 
+                
+
+                sh 'robot -d Results -o AG-52-output -l AG-52-log -r AG-52-report Tests/AG-52.robot' }
+              
+                
+                    }
+                    post {
+                        always {
+                            script {
+                                  step(
+                                        [
+                                          $class              : 'RobotPublisher',
+                                          outputPath          : 'Results',
+                                          outputFileName      : '**/AG-52-output.xml',
+                                          reportFileName      : '**/AG-52-report.html',
+                                          logFileName         : '**/AG-52-log.html',
                                           disableArchiveOutput: false,
                                           passThreshold       : 50,
                                           unstableThreshold   : 40,
@@ -128,11 +129,11 @@ stage('AG-95') {
                     }
                 }
                     
-stage('AG-52') {
+stage('AG-51') {
             steps {      
                     catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE'){
 
-                sh 'robot -d Results -o AG-52-output -l AG-52-log -r AG-52-report Tests/AG-52.robot'
+                sh 'robot -d Results -o AG-51-output -l AG-51-log -r AG-51-report Tests/AG-51.robot'
                    }
                 
                     }
@@ -143,9 +144,9 @@ stage('AG-52') {
                                         [
                                           $class              : 'RobotPublisher',
                                           outputPath          : 'Results',
-                                          outputFileName      : '**/AG-52-output.xml',
-                                          reportFileName      : '**/AG-52-report.html',
-                                          logFileName         : '**/AG-52-log.html',
+                                          outputFileName      : '**/AG-51-output.xml',
+                                          reportFileName      : '**/AG-51-report.html',
+                                          logFileName         : '**/AG-51-log.html',
                                           disableArchiveOutput: false,
                                           passThreshold       : 50,
                                           unstableThreshold   : 40,
