@@ -8,7 +8,7 @@ pipeline {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE')  { 
                 
 
-                sh 'robot -d Results -o AG-18-output -l AG-16-log -r AG-16-report Tests/AG-16.robot' }
+                sh 'robot -d Results Tests/AG-16.robot' }
               
                 
                     }
@@ -19,9 +19,9 @@ pipeline {
                                         [
                                           $class              : 'RobotPublisher',
                                           outputPath          : 'Results',
-                                          outputFileName      : '**/AG-16-output.xml',
-                                          reportFileName      : '**/AG-16-report.html',
-                                          logFileName         : '**/AG-16-log.html',
+                                          outputFileName      : '**/output.xml',
+                                          reportFileName      : '**/report.html',
+                                          logFileName         : '**/log.html',
                                           disableArchiveOutput: false,
                                           passThreshold       : 50,
                                           unstableThreshold   : 40,
